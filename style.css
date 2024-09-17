@@ -3,7 +3,6 @@ body {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   background-color: rgb(176, 201, 251);
-  padding-bottom: 500px; /* Adjust this value as needed */
 
   text-align: center; /* Center text and inline elements */
   margin: 0; /* Remove default margin */
@@ -37,4 +36,10 @@ nav {
 .small-gif {
   width: 500px;
   height: auto; /* keeps aspect ratio */
+}
+
+footer {
+  margin-top: 20px; /* Adds space above the footer */
+  padding-bottom: 50px; /* Adds space below the footer */
+  text-align: center; /* Centers the footer content */
 }
