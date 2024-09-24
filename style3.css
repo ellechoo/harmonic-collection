@@ -21,7 +21,7 @@ body {
   }
   
   .image-container img {
-    width: 400px; /* Set your preferred width */
+    width: 400px; /* Set width */
     height: auto;
     transition: opacity 0.3s ease-in-out;
     display: block;
@@ -35,7 +35,7 @@ body {
     background-image: url('images_1/cinnapic2.png'); /* Change to the hovered image */
     background-size: cover;
     background-position: center;
-    width: 400px; /* Same width as the original image */
+    width: 400px; /* Same width as original image */
     height: auto;
   }
   
@@ -73,6 +73,30 @@ body {
 
   .image-container.img-6:hover {
     background-image: url('images_1/lucina2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-7:hover {
+    background-image: url('images_1/walle2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-8:hover {
+    background-image: url('images_1/eve2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-9:hover {
+    background-image: url('images_1/peridot2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
