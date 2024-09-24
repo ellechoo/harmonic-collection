@@ -1,0 +1,47 @@
+body {
+
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(28, 56, 113);
+  
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
+  
+    .gif-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 10px; 
+      justify-content: center; 
+      padding: 10px;
+    }
+    
+    .gif-grid img {
+      width: 100%; 
+      height: auto; 
+      max-width: 200px; 
+      object-fit: cover; 
+  }
+  
+  img {
+    display: block; 
+    margin: 0 auto; 
+  }
+  
+  nav {
+    text-align: center; 
+  }
+  
+  
+  .small-gif {
+    width: 500px;
+    height: auto;
+  }
+  
+  footer {
+    margin-top: 20px; 
+    padding-bottom: 50px; 
+    text-align: center; 
+  }
+  

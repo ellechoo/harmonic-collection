@@ -2,7 +2,7 @@ body {
 
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  background-color: rgb(176, 201, 251);
+  background-color: rgb(162, 186, 233);
 
   text-align: center; 
   margin: 0; 
@@ -32,7 +32,7 @@ nav {
   text-align: center; 
 }
 
-/* style.css */
+
 .small-gif {
   width: 500px;
   height: auto;
