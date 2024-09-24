@@ -38,7 +38,7 @@ body {
   }
   
   .image-container.img-2:hover {
-    background-image: url('images_1/cinnaonslide2.png'); /* Image specific to hover */
+    background-image: url('images_1/cinnaonslide2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -46,10 +46,33 @@ body {
   }
   
   .image-container.img-3:hover {
-    background-image: url('images_1/tancinna2.png'); /* Image specific to hover */
+    background-image: url('images_1/tancinna2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
     height: auto;
   }
-  
+
+  .image-container.img-4:hover {
+    background-image: url('images_1/cinnabox2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-5:hover {
+    background-image: url('images_1/rengoku2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-6:hover {
+    background-image: url('images_1/lucina2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
