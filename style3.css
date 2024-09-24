@@ -11,4 +11,57 @@ body {
     font-family: Arial, sans-serif;
     color: white;
   }
+
+
+
+  .image-container {
+    display: inline-block;
+    position: relative; /* This ensures the hovered image stays in place */
+  }
+  
+  .image-container img {
+    width: 500px; /* Set your preferred width */
+    height: auto;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    display: block;
+  }
+  
+  .image-container:hover .img-1 {
+    opacity: 0;
+  }
+  
+  .image-container:hover .img-1::before {
+    content: url('images_1/cinnapic2.png'); /* Image to display on hover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+  }
+  
+  .image-container:hover .img-2 {
+    opacity: 0;
+  }
+  
+  .image-container:hover .img-2::before {
+    content: url('images_1/cinnaonslide2.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+  }
+  
+  .image-container:hover .img-3 {
+    opacity: 0;
+  }
+  
+  .image-container:hover .img-3::before {
+    content: url('images_1/tancinna2.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: auto;
+  }
   
