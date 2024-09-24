@@ -1,13 +1,21 @@
 body {
-
     font-family: 'Times New Roman', Times, serif;
     color: white;
     font-weight: bold;
     background-color: rgb(28, 56, 113);
+}
   
-    text-align: center; 
-    margin: 0; 
-    padding: 0; 
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    margin-left: 20px; 
+  }  
+
+  p {
+    font-family: Arial, sans-serif;
+    color: rgb(159, 189, 235);
+    margin-left: 22px;
+  }
   
     .gif-grid {
       display: grid;
