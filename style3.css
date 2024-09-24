@@ -80,7 +80,7 @@ body {
   }
 
   .image-container.img-7:hover {
-    background-image: url('images_1/walle2.png'); 
+    background-image: url('images_1/peridot2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -88,7 +88,7 @@ body {
   }
 
   .image-container.img-8:hover {
-    background-image: url('images_1/eve2.png'); 
+    background-image: url('images_1/walle2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -96,7 +96,7 @@ body {
   }
 
   .image-container.img-9:hover {
-    background-image: url('images_1/peridot2.png'); 
+    background-image: url('images_1/eve.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
