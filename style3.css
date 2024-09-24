@@ -13,55 +13,43 @@ body {
   }
 
 
-
   .image-container {
     display: inline-block;
-    position: relative; /* This ensures the hovered image stays in place */
+    position: relative;
   }
   
   .image-container img {
     width: 400px; /* Set your preferred width */
     height: auto;
-    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    transition: opacity 0.3s ease-in-out;
     display: block;
   }
   
-  .image-container:hover .img-1 {
-    opacity: 0;
+  .image-container:hover img {
+    opacity: 0; /* Hides the original image on hover */
   }
   
-  .image-container:hover .img-1::before {
-    content: url('images_1/cinnapic2.png'); /* Image to display on hover */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
+  .image-container:hover {
+    background-image: url('images_1/cinnapic2.png'); /* Change to the hovered image */
+    background-size: cover;
+    background-position: center;
+    width: 400px; /* Same width as the original image */
     height: auto;
   }
   
-  .image-container:hover .img-2 {
-    opacity: 0;
-  }
-  
-  .image-container:hover .img-2::before {
-    content: url('images_1/cinnaonslide2.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
+  .image-container.img-2:hover {
+    background-image: url('images_1/cinnaonslide2.png'); /* Image specific to hover */
+    background-size: cover;
+    background-position: center;
+    width: 400px;
     height: auto;
   }
   
-  .image-container:hover .img-3 {
-    opacity: 0;
-  }
-  
-  .image-container:hover .img-3::before {
-    content: url('images_1/tancinna2.png');
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
+  .image-container.img-3:hover {
+    background-image: url('images_1/tancinna2.png'); /* Image specific to hover */
+    background-size: cover;
+    background-position: center;
+    width: 400px;
     height: auto;
   }
   
