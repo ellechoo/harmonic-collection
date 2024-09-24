@@ -20,7 +20,7 @@ body {
   }
   
   .image-container img {
-    width: 500px; /* Set your preferred width */
+    width: 400px; /* Set your preferred width */
     height: auto;
     transition: opacity 0.3s ease-in-out; /* Smooth transition */
     display: block;
