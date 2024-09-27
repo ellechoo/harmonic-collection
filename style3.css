@@ -142,3 +142,43 @@ body {
     width: 400px;
     height: auto;
   }
+
+  .image-container.img-15:hover {
+    background-image: url('images_1/whaleshark2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-16:hover {
+    background-image: url('images_1/gard2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-17:hover {
+    background-image: url('images_1/venti2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-18:hover {
+    background-image: url('images_1/kokomi22.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-19:hover {
+    background-image: url('images_1/kazuha2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
