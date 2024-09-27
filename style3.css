@@ -102,3 +102,43 @@ body {
     width: 400px;
     height: auto;
   }
+
+  .image-container.img-10:hover {
+    background-image: url('images_1/yor2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-11:hover {
+    background-image: url('images_1/aki2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-12:hover {
+    background-image: url('images_1/blake2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-13:hover {
+    background-image: url('images_1/kirby2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-14:hover {
+    background-image: url('images_1/darkknight2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
