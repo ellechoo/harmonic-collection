@@ -20,13 +20,21 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-template-rows: repeat(2, auto);  /* 2 rows */
-  gap: 0px; /* Remove gap between grid items */
+  gap: 0; /* Remove gap between grid items */
   justify-content: center;
-  align-items: center;
-  padding: 0px; /* Ensure no padding in the grid */
+  padding: 0; /* Ensure no padding in the grid */
   width: fit-content; /* Shrink grid to the size of its content */
   margin: 0 auto; /* Center grid horizontally */
   line-height: 0; /* Remove any extra space caused by line height */
+}
+
+/* Adjust row alignment */
+.background-grid > img:nth-child(-n+3) {
+  align-self: end; /* Align first row images to the bottom */
+}
+
+.background-grid > img:nth-child(n+4) {
+  align-self: start; /* Align second row images to the top */
 }
 
 /* Control the size of the images */
@@ -34,8 +42,8 @@ p {
   width: 440px; /* Adjust the size of the images */
   height: 440px; /* Keep images uniform in size */
   object-fit: contain; /* Ensure images maintain their aspect ratio */
-  margin: 0px; /* Remove any default margin around the images */
-  padding: 0px; /* Ensure no padding around the images */
+  margin: 0; /* Remove any default margin around the images */
+  padding: 0; /* Ensure no padding around the images */
   vertical-align: top; /* Remove potential baseline alignment issues */
 }
 
