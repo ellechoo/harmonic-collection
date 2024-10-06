@@ -11,6 +11,53 @@
     </nav>
 
     <h1>(Entry 4) Collection Four - Posters</h1>
-    <p>Hover over the images!</p>
+   
+    <p>Laufey</p>
 
-    /</body>
+    <div class="background-grid">
+      <img src="ikeaboard.png" alt="Ikea">
+      <img src="ikeaboard.png" alt="Ikea">
+      <img src="ikeaboard.png" alt="Ikea">
+      <img src="ikeaboard.png" alt="Ikea">
+      <img src="ikeaboard.png" alt="Ikea">
+      <img src="ikeaboard.png" alt="Ikea">
+    </div>
+    
+    <div class="overlay-images">
+      <img src="o.png" alt="Overlay 1" class="overlay-image" data-description="This is the description for Overlay 1">
+      <img src="o.png" alt="Overlay 2" class="overlay-image" data-description="This is the description for Overlay 2">
+      <img src="o.png" alt="Overlay 3" class="overlay-image" data-description="This is the description for Overlay 3">
+    </div>
+    
+    <div class="popup" id="popup">
+      <span id="popup-text"></span>
+      <button id="close-popup">Close</button>
+    </div>
+
+    <script>
+      const overlayImages = document.querySelectorAll('.overlay-image');
+      const popup = document.getElementById('popup');
+      const popupText = document.getElementById('popup-text');
+      const closeButton = document.getElementById('close-popup');
+    
+      overlayImages.forEach(image => {
+        image.addEventListener('click', function() {
+          const description = this.getAttribute('data-description');
+          popupText.textContent = description;
+          popup.style.display = 'block';
+        });
+      });
+    
+      closeButton.addEventListener('click', function() {
+        popup.style.display = 'none';
+      });
+    
+      // Optional: Close the popup when clicking outside of it
+      window.addEventListener('click', function(event) {
+        if (event.target == popup) {
+          popup.style.display = 'none';
+        }
+      });
+    </script>    
+
+</body>
