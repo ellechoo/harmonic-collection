@@ -1,6 +1,18 @@
 body {
-    background-color: #99c8d8; /* Light blue background */
+    background-color: #7facc2;
     position: relative;
+  }
+
+  h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    margin-left: 18px; 
+  }
+  
+  p {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin-left: 22px; 
   }
   
   .background-grid {
