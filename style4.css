@@ -1,81 +1,89 @@
 body {
-    background-color: #7facc2;
-    position: relative;
-  }
+  background-color: #7facc2;
+  position: relative;
+}
 
-  h1 {
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    margin-left: 18px; 
-  }
-  
-  p {
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    margin-left: 22px; 
-  }
-  
-  .background-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    grid-template-rows: repeat(3, auto);  /* 3 rows */
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .background-grid img {
-    max-width: 100%;
-    object-fit: contain;
-  }
-  
-  .overlay-images {
-    position: relative; /* Ensure the images are positioned within the page context */
-  }
-  
-  .overlay-image {
-    position: absolute; /* Allows free placement */
-    max-width: 10%; /* Adjust size */
-    cursor: pointer; /* Change cursor to pointer to indicate clickability */
-  }
-  
-  /* Positioning overlay images sporadically */
-  .overlay-image:nth-child(1) {
-    top: 50px;
-    left: 200px;
-  }
-  
-  .overlay-image:nth-child(2) {
-    top: 300px;
-    left: 100px;
-  }
-  
-  .overlay-image:nth-child(3) {
-    top: 150px;
-    right: 50px;
-  }
-  
-  /* Popup styles */
-  .popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 1000;
-    border-radius: 10px;
-    width: 300px;
-  }
-  
-  .popup button {
-    margin-top: 10px;
-    background-color: #add8e6;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  margin-left: 18px; 
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  margin-left: 22px; 
+}
+
+/* Center the grid within the container */
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto);  /* 2 rows */
+  gap: 0px; /* Remove gap between grid items */
+  justify-content: center;
+  align-items: center;
+  padding: 0px; /* Ensure no padding in the grid */
+  width: fit-content; /* Shrink grid to the size of its content */
+  margin: 0 auto; /* Center grid horizontally */
+  line-height: 0; /* Remove any extra space caused by line height */
+}
+
+/* Control the size of the images */
+.background-grid img {
+  width: 440px; /* Adjust the size of the images */
+  height: 440px; /* Keep images uniform in size */
+  object-fit: contain; /* Ensure images maintain their aspect ratio */
+  margin: 0px; /* Remove any default margin around the images */
+  padding: 0px; /* Ensure no padding around the images */
+  vertical-align: top; /* Remove potential baseline alignment issues */
+}
+
+.overlay-images {
+  position: relative; /* Ensure the images are positioned within the page context */
+}
+
+.overlay-image {
+  position: absolute; /* Allows free placement */
+  max-width: 10%; /* Adjust size */
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}
+
+/* Positioning overlay images sporadically */
+.overlay-image:nth-child(1) {
+  top: 50px;
+  left: 200px;
+}
+
+.overlay-image:nth-child(2) {
+  top: 300px;
+  left: 100px;
+}
+
+.overlay-image:nth-child(3) {
+  top: 150px;
+  right: 50px;
+}
+
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.popup button {
+  margin-top: 10px;
+  background-color: #add8e6;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
