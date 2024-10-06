@@ -12,7 +12,7 @@
 
     <h1>(Entry 4) Collection Four - Posters</h1>
    
-    <p>Laufey</p>
+    <p>Click on the posters!</p>
 
     <div class="background-grid">
       <img src="pegboardpng.png" alt="Ikea">
@@ -31,33 +31,31 @@
     
     <div class="popup" id="popup">
       <span id="popup-text"></span>
-      <button id="close-popup">Close</button>
     </div>
 
     <script>
       const overlayImages = document.querySelectorAll('.overlay-image');
       const popup = document.getElementById('popup');
       const popupText = document.getElementById('popup-text');
-      const closeButton = document.getElementById('close-popup');
+      let activeImage = null; // Track which image is currently active
     
       overlayImages.forEach(image => {
         image.addEventListener('click', function() {
           const description = this.getAttribute('data-description');
-          popupText.textContent = description;
-          popup.style.display = 'block';
+    
+          // If the same image is clicked again, hide the popup
+          if (activeImage === this) {
+            popup.style.display = 'none';
+            activeImage = null; // Reset active image
+          } else {
+            // Show popup with the new description
+            popupText.textContent = description;
+            popup.style.display = 'block';
+            activeImage = this; // Set current image as active
+          }
         });
       });
     
-      closeButton.addEventListener('click', function() {
-        popup.style.display = 'none';
-      });
-    
-      // Optional: Close the popup when clicking outside of it
-      window.addEventListener('click', function(event) {
-        if (event.target == popup) {
-          popup.style.display = 'none';
-        }
-      });
-    </script>    
-
+    </script>
+     
 </body>
