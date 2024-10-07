@@ -51,9 +51,9 @@ p {
 }
 
 .overlay-image:nth-child(1) { 
-  top: 270px;
-  left: 280px;
-  width: 235px; 
+  top: 290px;
+  left: 260px;
+  width: 250px; 
 }
 
 .overlay-image:nth-child(2) {
@@ -75,9 +75,9 @@ p {
 }
 
 .overlay-image:nth-child(5) {
-  top: 320px;
-  right: 1180px;
-  width: 150px; 
+  top: 270px;
+  right: 1195px;
+  width: 135px; 
 }
 
 .overlay-image:nth-child(6) {
@@ -87,7 +87,7 @@ p {
 }
 
 .overlay-image:nth-child(7) {
-  top: 600px;
+  top: 590px;
   right: 980px;
   width: 330px; 
 }
