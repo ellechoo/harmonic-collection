@@ -29,14 +29,14 @@ body {
   }
   
   .image-container:hover img {
-    opacity: 0; /* Hides the original image on hover */
+    opacity: 0; /* Hides original pic */
   }
   
   .image-container:hover {
-    background-image: url('images_1/cinnapic2.png'); /* Change to the hovered image */
+    background-image: url('images_1/cinnapic2.png'); /* hovered image */
     background-size: cover;
     background-position: center;
-    width: 400px; /* Same width as original image */
+    width: 400px;
     height: auto;
   }
   

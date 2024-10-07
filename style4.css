@@ -51,7 +51,7 @@ p {
   cursor: pointer; /* Change cursor to pointer to indicate clickability */
 }
 
-/* Positioning overlay images sporadically */
+/* Positioning of overlay images */
 .overlay-image:nth-child(1) {
   top: 50px;
   left: 200px;
@@ -63,11 +63,31 @@ p {
 }
 
 .overlay-image:nth-child(3) {
-  top: 150px;
+  top: 50px;
   right: 50px;
 }
 
-/* Popup styles */
+.overlay-image:nth-child(4) {
+  top: 250px;
+  right: 50px;
+}
+
+.overlay-image:nth-child(5) {
+  top: 150px;
+  right: 150px;
+}
+
+.overlay-image:nth-child(6) {
+  top: 30px;
+  right: 100px;
+}
+
+.overlay-image:nth-child(7) {
+  top: 30px;
+  right: 200px;
+}
+
+
 .popup {
   display: none;
   position: fixed;
