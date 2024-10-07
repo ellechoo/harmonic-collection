@@ -5,14 +5,17 @@ body {
 
 h1 {
   color: rgb(255, 255, 255);
-  font-size: 50px;
+  font-size: 20px;
   margin-left: 18px; 
+  text-align: center;
 }
 
 p {
   font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
   color: white;
   margin-left: 22px; 
+  text-align: center;
 }
 
 .background-grid {
@@ -51,43 +54,43 @@ p {
 }
 
 .overlay-image:nth-child(1) { 
-  top: 290px;
+  top: 200px;
   left: 260px;
   width: 250px; 
 }
 
 .overlay-image:nth-child(2) {
-  top: 330px;
+  top: 240px;
   left: 552px;
   width: 320px; 
 }
 
 .overlay-image:nth-child(3) {
-  top: 266px;
+  top: 176px;
   right: 150px;
   width: 260px; 
 }
 
 .overlay-image:nth-child(4) {
-  top: 560px;
+  top: 470px;
   right: 360px;
   width: 170px; 
 }
 
 .overlay-image:nth-child(5) {
-  top: 270px;
+  top: 180px;
   right: 1195px;
   width: 135px; 
 }
 
 .overlay-image:nth-child(6) {
-  top: 670px;
+  top: 580px;
   right: 100px;
   width: 230px; 
 }
 
 .overlay-image:nth-child(7) {
-  top: 590px;
+  top: 500px;
   right: 980px;
   width: 330px; 
 }
