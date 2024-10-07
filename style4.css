@@ -15,26 +15,15 @@ p {
   margin-left: 22px; 
 }
 
-/* Center the grid within the container */
 .background-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto);  /* 2 rows */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 440px);
   gap: 0; /* Remove gap between grid items */
   justify-content: center;
-  padding: 0; /* Ensure no padding in the grid */
+  padding: 0;
   width: fit-content; /* Shrink grid to the size of its content */
-  margin: 0 auto; /* Center grid horizontally */
-  line-height: 0; /* Remove any extra space caused by line height */
-}
-
-/* Adjust row alignment */
-.background-grid > img:nth-child(-n+3) {
-  align-self: end; /* Align first row images to the bottom */
-}
-
-.background-grid > img:nth-child(n+4) {
-  align-self: start; /* Align second row images to the top */
+  margin: 0 auto;
 }
 
 /* Control the size of the images */
@@ -45,6 +34,11 @@ p {
   margin: 0; /* Remove any default margin around the images */
   padding: 0; /* Ensure no padding around the images */
   vertical-align: top; /* Remove potential baseline alignment issues */
+}
+
+/* Negative margin */
+.background-grid img:nth-child(n+4) {
+  margin-top: -116px; /* Adjust the value as needed */
 }
 
 .overlay-images {
