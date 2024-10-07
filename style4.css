@@ -19,21 +19,20 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 440px);
-  gap: 0; /* Remove gap between grid items */
+  gap: 0; 
   justify-content: center;
   padding: 0;
-  width: fit-content; /* Shrink grid to the size of its content */
+  width: fit-content;
   margin: 0 auto;
   position: relative;
 }
 
-/* size of the images */
 .background-grid img {
-  width: 440px; /* Adjust the size of the images */
-  height: 440px; /* Keep images uniform in size */
-  object-fit: contain; /* Ensure images maintain their aspect ratio */
-  margin: 0; /* Remove any default margin around the images */
-  padding: 0; /* Ensure no padding around the images */
+  width: 440px; /* size of the images */
+  height: 440px; /* images uniform in size */
+  object-fit: contain; /* maintain aspect ratio */
+  margin: 0; 
+  padding: 0; 
   position: relative;
   z-index: 0; /* Ensure background images are behind the overlays */
 }
@@ -44,45 +43,53 @@ p {
 }
 
 .overlay-image {
-  position: absolute; /* Allows free placement */
-  max-width: 10%; /* Adjust size */
-  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+  position: absolute;
+  width: 150px; /* Fixed size */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer;
   z-index: 1; /* overlays on top of background images */
 }
 
 .overlay-image:nth-child(1) { 
-  top: 300px;
-  left: 300px;
+  top: 270px;
+  left: 280px;
+  width: 235px; 
 }
 
 .overlay-image:nth-child(2) {
-  top: 450px;
-  left: 640px;
+  top: 330px;
+  left: 552px;
+  width: 320px; 
 }
 
 .overlay-image:nth-child(3) {
-  top: 290px;
-  right: 300px;
+  top: 266px;
+  right: 200px;
+  width: 260px; 
 }
 
 .overlay-image:nth-child(4) {
   top: 300px;
   right: 90px;
+  width: 170px; 
 }
 
 .overlay-image:nth-child(5) {
-  top: 350px;
+  top: 320px;
   right: 1180px;
+  width: 150px; 
 }
 
 .overlay-image:nth-child(6) {
-  top: 640px;
+  top: 660px;
   right: 130px;
+  width: 230px; 
 }
 
 .overlay-image:nth-child(7) {
-  top: 670px;
-  right: 1050px;
+  top: 600px;
+  right: 980px;
+  width: 330px; 
 }
 
 
