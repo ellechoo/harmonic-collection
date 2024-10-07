@@ -47,7 +47,7 @@
         image.addEventListener('click', function() {
           const description = this.getAttribute('data-description');
     
-          // If the same image is clicked again, hide the popup
+          // clicked again, hide the popup
           if (activeImage === this) {
             popup.style.display = 'none';
             activeImage = null; // Reset active image
