@@ -64,13 +64,13 @@ p {
 
 .overlay-image:nth-child(3) {
   top: 266px;
-  right: 200px;
+  right: 150px;
   width: 260px; 
 }
 
 .overlay-image:nth-child(4) {
-  top: 300px;
-  right: 90px;
+  top: 560px;
+  right: 360px;
   width: 170px; 
 }
 
@@ -81,8 +81,8 @@ p {
 }
 
 .overlay-image:nth-child(6) {
-  top: 660px;
-  right: 130px;
+  top: 670px;
+  right: 100px;
   width: 230px; 
 }
 
