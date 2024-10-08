@@ -2,7 +2,6 @@
     background-color: #89C8EB;
     width: 700px;
     height: 700px;
-    border-radius: 0px;
     position: relative;
     z-index: 5;
     margin-left: 20px;
@@ -13,7 +12,6 @@
     background-color: #C2C1BD;
     width: 550px;
     height: 550px;
-    border-radius: 0px;
     position: absolute;
     z-index: 10;
     margin-left: 73px;
@@ -22,20 +20,21 @@
 
 #white-square {
     background-color: #ffffff;
-    width: 400px;
-    height: 400px;
-    border-radius: 0px;
+    width: 410px;
+    height: 410px;
     position: absolute;
     z-index: 10;
-    margin-left: 73px;
+    margin-left: 70px;
     margin-top: 110px;
 }
 
 #yellow-square {
     background-color: #FFE210;
-    width: 220px;
-    height: 220px;
-    border-radius: 0px;
+    width: 280px;
+    height: 280px;
     position: absolute;
     z-index: 10;
+    margin-left: 63px;
+    margin-top: 93px;
 }
+
