@@ -95,7 +95,6 @@ p {
   width: 330px; 
 }
 
-
 .popup {
   display: none;
   position: fixed;
@@ -116,4 +115,12 @@ p {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  margin-bottom: 200px;
 }
