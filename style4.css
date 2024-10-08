@@ -31,13 +31,13 @@ p {
 }
 
 .background-grid img {
-  width: 440px; /* size of the images */
-  height: 440px; /* images uniform in size */
-  object-fit: contain; /* maintain aspect ratio */
+  width: 440px; 
+  height: 440px;
+  object-fit: contain; 
   margin: 0; 
   padding: 0; 
   position: relative;
-  z-index: 0; /* Ensure background images are behind the overlays */
+  z-index: 0; /* background images behind the overlays */
 }
 
 /* negative margin */
@@ -48,7 +48,7 @@ p {
 .overlay-image {
   position: absolute;
   width: 150px; /* Fixed size */
-  height: auto; /* Maintain aspect ratio */
+  height: auto; 
   cursor: pointer;
   z-index: 1; /* overlays on top of background images */
 }
