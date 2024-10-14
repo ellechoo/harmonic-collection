@@ -7,6 +7,28 @@ body {
   padding: 0;
 }
 
+.carousel {
+  width: 100%;
+  overflow: hidden; /* Hides overflow from non-visible slides */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex; /* Arrange the slides horizontally */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%; /* Each slide takes up full width of the carousel */
+  height: auto; /* Adjust height based on content */
+}
+
+.carousel-slide img {
+  max-width: 100%; /* Ensure the images fit inside the slide */
+  height: auto;
+  
+}
+
 .carousel-nav {
   display: flex;
   justify-content: center;
