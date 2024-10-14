@@ -1,45 +1,27 @@
 body {
-
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   background-color: rgb(162, 186, 233);
-
   text-align: center; 
   margin: 0; 
-  padding: 0; 
-
-  .gif-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 10px; 
-    justify-content: center; 
-    padding: 10px;
-  }
-  
-  .gif-grid img {
-    width: 100%; 
-    height: auto; 
-    max-width: 200px; 
-    object-fit: cover; 
+  padding: 0;
 }
 
-img {
-  display: block; 
-  margin: 0 auto; 
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-nav {
-  text-align: center; 
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-
-.small-gif {
-  width: 500px;
-  height: auto;
-}
-
-footer {
-  margin-top: 20px; 
-  padding-bottom: 50px; 
-  text-align: center; 
+.nav-dot.active {
+  background-color: #333;
 }
