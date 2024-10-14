@@ -13,8 +13,11 @@
       <a href="/harmonic-collection/entry-3.html">Entry 3</a>
       <a href="/harmonic-collection/entry-4.html">Entry 4</a>
     </nav>
-    
-    <h1>ELLE'S HOMEPAGE</h1>
+
+    <div class="center-content">
+      <h1>THE MUSEUM OF ELLE</h1>
+    </div>
+
     <p>Access to Entries are at the top of the screen.</p>
 
     <!-- Carousel starts here -->
@@ -23,7 +26,7 @@
         <!-- Clone of the last slide -->
         <div class="carousel-slide"><img src="images_1/laufeyposter.png" alt="Image 4"></div>
         
-        <div class="carousel-slide"><img src="images_1/cinnapic.png" alt="Image 1"></div>
+        <div class="carousel-slide"><img src="images_1/cinnapic2.png" alt="Image 1"></div>
         <div class="carousel-slide"><img src="images_1/cinnaonslide.png" alt="Image 2"></div>
         <div class="carousel-slide"><img src="images_1/kazuha.png" alt="Image 3"></div>
         <div class="carousel-slide"><img src="images_1/laufeyposter.png" alt="Image 4"></div>
@@ -34,43 +37,41 @@
     </div>
     <!-- Carousel ends here -->
     
-  </body>
+    <!-- JavaScript for the carousel -->
+    <script>
+      const track = document.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+      const slideWidth = slides[0].getBoundingClientRect().width;
 
-  <!-- JavaScript for the carousel -->
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const slideWidth = slides[0].getBoundingClientRect().width;
+      let currentIndex = 1; // Start at the real first slide (skip the clone)
+      let slideInterval = setInterval(moveToNextSlide, 3000);
 
-    let currentIndex = 1; // Start at the real first slide (skip the clone)
-    let slideInterval = setInterval(moveToNextSlide, 3000);
-
-    track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-
-    function moveToNextSlide() {
-      currentIndex++;
-      
-      track.style.transition = 'transform 0.5s ease-in-out'; // Enable transition
       track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-      
-      // When reaching the end, reset to the first real slide (skip the clone)
-      if (currentIndex === slides.length - 1) {
-        setTimeout(() => {
-          track.style.transition = 'none'; // Disable transition for immediate jump
-          currentIndex = 1; // Reset to the first real slide
-          track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-        }, 500); // Wait for the transition to finish
-      }
-      
-      // If going back to the first slide, handle looping
-      if (currentIndex === 0) {
-        setTimeout(() => {
-          track.style.transition = 'none';
-          currentIndex = slides.length - 2; // Reset to the last real slide
-          track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-        }, 500);
-      }
-    }
-  </script>
 
+      function moveToNextSlide() {
+        currentIndex++;
+        
+        track.style.transition = 'transform 0.5s ease-in-out'; // Enable transition
+        track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+        
+        // When reaching the end, reset to the first real slide (skip the clone)
+        if (currentIndex === slides.length - 1) {
+          setTimeout(() => {
+            track.style.transition = 'none'; // Disable transition for immediate jump
+            currentIndex = 1; // Reset to the first real slide
+            track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+          }, 500); // Wait for the transition to finish
+        }
+        
+        // If going back to the first slide, handle looping
+        if (currentIndex === 0) {
+          setTimeout(() => {
+            track.style.transition = 'none';
+            currentIndex = slides.length - 2; // Reset to the last real slide
+            track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+          }, 500);
+        }
+      }
+    </script>
+  </body>
 </html>
