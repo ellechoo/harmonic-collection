@@ -1,10 +1,10 @@
 body {
-  background-color: rgb(88, 119, 213);
+  background-color: rgb(47, 74, 149);
   display: grid;
   place-items: center; 
   height: 100vh;  
   margin: 0;           
-  position: relative; /* Allows stacking of absolute elements properly */
+  position: relative; 
 }
 
 nav {
@@ -12,8 +12,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-  text-align: center;
+  background-color: rgba(19, 29, 104, 0.5); 
+  text-align: left;
   padding: 10px 0;
   z-index: 3; /* Higher than the carousel and content */
 }
@@ -73,11 +73,21 @@ body {
   margin-top: 10px;
 }
 
-h1, p {
+h1 {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  margin: 0; 
+  margin: 0 0 5px 0; /* Add a small margin below h1 */
   text-align: center;
-  transform: translateY(-40px);
+  transform: translateY(-65px);
+  font-size: 40px;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  margin: -60px 0 0 0; /* Negative top margin to reduce space */
+  text-align: center;
+  font-size: 16px;
 }
