@@ -1,13 +1,50 @@
 body {
+  background-color: rgb(88, 119, 213);
   display: grid;
   place-items: center; 
   height: 100vh;  
   margin: 0;           
+  position: relative; /* Allows stacking of absolute elements properly */
+}
+
+/* Navigation stays at the top */
+nav {
+  position: fixed; /* Keeps nav at the top of the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+  text-align: center;
+  padding: 10px 0;
+  z-index: 3; /* Higher than the carousel and content */
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Adjust space for nav */
+body {
+  padding-top: 50px; /* Adjust this value based on nav height */
+}
+
+/* Center content */
+.center-content {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  position: relative;
+  z-index: 2; 
 }
 
 .carousel {
   width: 100%;
-  overflow: hidden; /* Hides overflow from non-visible slides */
+  overflow: hidden;
   position: absolute;
   top: 0;            
   left: 0;
@@ -17,19 +54,18 @@ body {
 }
 
 .carousel-track {
-  display: flex; /* Arrange the slides horizontally */
+  display: flex; 
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
-  min-width: 100%; /* Each slide takes up full width of the carousel */
-  height: auto; /* Adjust height based on content */
+  min-width: 100%; 
+  height: auto;
 }
 
 .carousel-slide img {
   max-width: 100%; 
   height: auto;
-  
 }
 
 .carousel-nav {
@@ -38,29 +74,10 @@ body {
   margin-top: 10px;
 }
 
-.nav-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.nav-dot.active {
-  background-color: #333;
-}
-
-h1 {
+h1, p {
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  position: relative; 
-  z-index: 2;       
-  color: rgb(0, 0, 0);   
-}
-
-.center-content {
-  display: grid;
-  place-items: center;
-  height: 100vh;     
+  color: rgb(255, 255, 255);
+  margin: 0; 
+  text-align: center;
 }
