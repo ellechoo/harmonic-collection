@@ -7,7 +7,6 @@ body {
   position: relative; /* Allows stacking of absolute elements properly */
 }
 
-/* Navigation stays at the top */
 nav {
   position: fixed; /* Keeps nav at the top of the screen */
   top: 0;
@@ -80,4 +79,5 @@ h1, p {
   color: rgb(255, 255, 255);
   margin: 0; 
   text-align: center;
+  transform: translateY(-40px);
 }
