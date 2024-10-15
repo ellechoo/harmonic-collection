@@ -1,46 +1,59 @@
 body {
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(52, 75, 121);
+  text-align: center; 
+  margin: 0; 
+  padding: 0; 
+}
 
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    font-weight: bold;
-    background-color: rgb(52, 75, 121);
-  
-    text-align: center; 
-    margin: 0; 
-    padding: 0; 
-  
-    .gif-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 10px; 
-      justify-content: center; 
-      padding: 10px;
-    }
-    
-    .gif-grid img {
-      width: 100%; 
-      height: auto; 
-      max-width: 200px; 
-      object-fit: cover; 
-  }
-  
-  img {
-    display: block; 
-    margin: 0 auto; 
-  }
-  
-  nav {
-    text-align: center; 
-  }
-  
-  
-  .small-gif {
-    width: 500px;
-    height: auto;
-  }
-  
-  footer {
-    margin-top: 20px; 
-    padding-bottom: 50px; 
-    text-align: center; 
-  }
+nav {
+  position: fixed; /* Keeps nav at the top of the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(19, 29, 104, 0.5); 
+  text-align: left; /* Center text in nav */
+  padding: 10px 0;
+  z-index: 3; /* Higher than the carousel and content */
+}
+
+nav a {
+  color: white;
+  margin: 0 15px; /* Space between links */
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+  justify-content: center; 
+  padding: 10px;
+}
+
+.gif-grid img {
+  width: 100%; 
+  height: auto; 
+  max-width: 200px; 
+  object-fit: cover; 
+}
+
+img {
+  display: block; 
+  margin: 0 auto; 
+}
+
+.small-gif {
+  width: 500px; /* Ensure this width is appropriate for your layout */
+  height: auto; 
+}
+
+footer {
+  margin-top: 20px; 
+  padding-bottom: 50px; 
+  text-align: center; 
+}
