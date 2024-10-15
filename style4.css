@@ -1,6 +1,7 @@
 body {
   background-color: #7facc2;
   position: relative;
+  margin-top: 80px;
 }
 
 nav {
@@ -56,7 +57,7 @@ p {
   margin: 0; 
   padding: 0; 
   position: relative;
-  z-index: 0; /* background images behind the overlays */
+  z-index: 0;
 }
 
 /* negative margin */

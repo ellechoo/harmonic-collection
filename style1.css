@@ -4,24 +4,24 @@ body {
   font-weight: bold;
   background-color: rgb(52, 75, 121);
   text-align: center; 
-  margin: 0; 
+  margin-top: 60px;
   padding: 0; 
 }
 
 nav {
-  position: fixed; /* Keeps nav at the top of the screen */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(19, 29, 104, 0.5); 
-  text-align: left; /* Center text in nav */
+  text-align: left; 
   padding: 10px 0;
-  z-index: 3; /* Higher than the carousel and content */
+  z-index: 3; 
 }
 
 nav a {
   color: white;
-  margin: 0 15px; /* Space between links */
+  margin: 0 15px; 
   text-decoration: none;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
@@ -48,7 +48,7 @@ img {
 }
 
 .small-gif {
-  width: 500px; /* Ensure this width is appropriate for your layout */
+  width: 500px;
   height: auto; 
 }
 
