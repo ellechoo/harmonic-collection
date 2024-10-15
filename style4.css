@@ -3,6 +3,25 @@ body {
   position: relative;
 }
 
+nav {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(19, 29, 104, 0.5); 
+  text-align: left;
+  padding: 10px 0;
+  z-index: 3;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;

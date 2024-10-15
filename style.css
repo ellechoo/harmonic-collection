@@ -26,12 +26,10 @@ nav a {
   font-family: 'Times New Roman', Times, serif;
 }
 
-/* Adjust space for nav */
 body {
-  padding-top: 50px; /* Adjust this value based on nav height */
+  padding-top: 50px;
 }
 
-/* Center content */
 .center-content {
   display: flex;
   flex-direction: column; 
@@ -87,7 +85,7 @@ p {
   font-family: 'Times New Roman', Times, serif;
   font-weight: normal;
   color: rgb(255, 255, 255);
-  margin: -60px 0 0 0; /* Negative top margin to reduce space */
+  margin: -60px 0 0 0; /* Negative top margin*/
   text-align: center;
   font-size: 16px;
 }
