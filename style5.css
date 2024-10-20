@@ -37,4 +37,148 @@ body {
     margin-left: 22px; 
     text-align: center;
   }
+
+  .image-container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 400px; /* Set width */
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+  }
+  
+  .image-container:hover img {
+    opacity: 0; /* Hides original pic */
+  }
+  
+  .image-container:hover {
+    background-image: url('images_1/newjeansnewjeans2.png');
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+  
+  .image-container.img-2:hover {
+    background-image: url('images_1/nwjns_weverse2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+  
+  .image-container.img-3:hover {
+    background-image: url('images_1/getup2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-4:hover {
+    background-image: url('images_1/omgditto2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-5:hover {
+    background-image: url('images_1/dittoweverse2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-6:hover {
+    background-image: url('images_1/supernatural2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-7:hover {
+    background-image: url('images_1/howsweet.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-8:hover {
+    background-image: url('images_1/yor2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-9:hover {
+    background-image: url('images_1/eve.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-10:hover {
+    background-image: url('images_1/aki2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-11:hover {
+    background-image: url('images_1/walle2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-12:hover {
+    background-image: url('images_1/blake2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-13:hover {
+    background-image: url('images_1/kirby2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-14:hover {
+    background-image: url('images_1/darkknight2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-15:hover {
+    background-image: url('images_1/whaleshark2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+
+  .image-container.img-16:hover {
+    background-image: url('images_1/gard2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
   
