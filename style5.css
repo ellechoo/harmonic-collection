@@ -55,7 +55,7 @@ body {
   }
   
   .image-container:hover {
-    background-image: url('images_1/newjeansnewjeans2.png');
+    background-image: url('images_1/newjeansnewjeans.png');
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -111,7 +111,7 @@ body {
   }
 
   .image-container.img-8:hover {
-    background-image: url('images_1/yor2.png'); 
+    background-image: url('images_1/maxident2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -119,7 +119,7 @@ body {
   }
 
   .image-container.img-9:hover {
-    background-image: url('images_1/eve.png'); 
+    background-image: url('images_1/fivestar2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -127,7 +127,7 @@ body {
   }
 
   .image-container.img-10:hover {
-    background-image: url('images_1/aki2.png'); 
+    background-image: url('images_1/rockstar2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -135,7 +135,7 @@ body {
   }
 
   .image-container.img-11:hover {
-    background-image: url('images_1/walle2.png'); 
+    background-image: url('images_1/rockstarhan2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
@@ -143,7 +143,7 @@ body {
   }
 
   .image-container.img-12:hover {
-    background-image: url('images_1/blake2.png'); 
+    background-image: url('images_1/rockstarroll2.png'); 
     background-size: cover;
     background-position: center;
     width: 400px;
