@@ -149,36 +149,3 @@ body {
     width: 400px;
     height: auto;
   }
-
-  .image-container.img-13:hover {
-    background-image: url('images_1/kirby2.png'); 
-    background-size: cover;
-    background-position: center;
-    width: 400px;
-    height: auto;
-  }
-
-  .image-container.img-14:hover {
-    background-image: url('images_1/darkknight2.png'); 
-    background-size: cover;
-    background-position: center;
-    width: 400px;
-    height: auto;
-  }
-
-  .image-container.img-15:hover {
-    background-image: url('images_1/whaleshark2.png'); 
-    background-size: cover;
-    background-position: center;
-    width: 400px;
-    height: auto;
-  }
-
-  .image-container.img-16:hover {
-    background-image: url('images_1/gard2.png'); 
-    background-size: cover;
-    background-position: center;
-    width: 400px;
-    height: auto;
-  }
-  
