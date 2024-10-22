@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ 
+  <body>
+<script>
+    
+    const photocardsData = {
+  "sets": {
+    "Get Up - Bunny Beach Bag Hanni Version": [
+      { "id": 1, "name": "Hanni" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Hanni" },
+      { "id": 4, "name": "Hanni" },
+      { "id": 5, "name": "Hanni" }
+    ],
+    "OMG & Ditto": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "OMG & Ditto - Weverse Version": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "Supernatural - NJ X MURAKAMI Drawstring Bag Version": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "How Sweet": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "New Jeans New Jeans": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "New Jeans New Jeans - Weverse Version": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ]
+  }
+};
+
+// Loop through each set and log photocard names
+for (const setName in photocardsData.sets) {
+  console.log(`Photocards in set: ${setName}`);
+  
+  photocardsData.sets[setName].forEach(photocard => {
+    console.log(`- ${photocard.name}`);
+  });
+}
+
+
+</script>
+    </body>
+
+</html>
