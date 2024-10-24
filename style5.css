@@ -76,6 +76,9 @@ p {
 
 .image-container.img-2:hover {
   background-image: url('images_1/nwjns_weverse2.png');
+  background-position: center;
+  width: 200px;
+  height: auto;
 }
 
 .image-container.img-3:hover {
@@ -118,9 +121,8 @@ p {
   background-image: url('images_1/rockstarroll2.png');
 }
 
-/* General hover effect for all */
 .image-container:hover img {
-  opacity: 0; /* Hides the original image on hover */
+  opacity: 0; 
 }
 
 .image-container:hover {
