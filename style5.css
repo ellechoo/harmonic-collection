@@ -26,7 +26,7 @@ nav a {
 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
-  margin-left: 18px; 
+  margin-left: 18px;
   text-align: center;
 }
 
@@ -34,32 +34,29 @@ p {
   font-family: 'Times New Roman', Times, serif;
   font-size: 12px;
   color: white;
-  margin-left: 22px; 
+  margin-left: 22px;
   text-align: center;
 }
 
+/* Full-screen container */
 .container {
   display: flex;
-  justify-content: space-between; /* Creates space between two sections */
-  margin-top: 20px; /* Adjust as needed */
-  height: 400px;
-  overflow: hidden; /* Hide overflow */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  margin: 0 auto; /* Auto margins for centering */
+  height: 100vh; /* Full height of viewport */
+  width: 100%; /* Full width of viewport */
+  overflow: hidden;
 }
 
-/* Each section takes up equal space and applies animation */
+/* Full-height sections */
 .section-1, .section-2 {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 48%;
-  animation: scroll-up 20s linear infinite; /* Apply scrolling animation */
-}
-
-/* Duplicate the image containers for smooth scrolling */
-.section-1, .section-2::before {
-  content: "";
-  display: flex;
-  flex-direction: column;
+  width: 48%; /* Adjust width for each section */
+  height: 100%; /* Each section takes full height */
+  animation: scroll-up 20s linear infinite;
 }
 
 .section-1 .image-container,
@@ -68,14 +65,15 @@ p {
   width: 100%;
 }
 
+/* Increase image size proportionally */
 .image-container img {
-  width: 100%; /* Adjust to fit container */
-  height: auto;
+  width: 100%; /* Image takes full width of container */
+  height: auto; /* Adjust height to maintain aspect ratio */
   transition: opacity 0.3s ease-in-out;
   display: block;
 }
 
-/* Hover effects for images */
+/* Hover effects */
 .image-container:hover img {
   opacity: 0; /* Hides original pic */
 }
@@ -84,54 +82,16 @@ p {
 .image-container:hover {
   background-size: cover;
   background-position: center;
-  width: 400px;
-  height: auto;
+  width: 100%; /* Fill the entire width */
+  height: 100%; /* Fill the height as well */
 }
 
-/* Hover images for specific containers */
-.image-container.img-1:hover {
-  background-image: url('images_1/newjeansnewjeans.png');
-}
-.image-container.img-2:hover {
-  background-image: url('images_1/nwjns_weverse2.png');
-}
-.image-container.img-3:hover {
-  background-image: url('images_1/getup2.png');
-}
-.image-container.img-4:hover {
-  background-image: url('images_1/omgditto2.png');
-}
-.image-container.img-5:hover {
-  background-image: url('images_1/dittoweverse2.png');
-}
-.image-container.img-6:hover {
-  background-image: url('images_1/supernatural2.png');
-}
-.image-container.img-7:hover {
-  background-image: url('images_1/howsweet.png');
-}
-.image-container.img-8:hover {
-  background-image: url('images_1/maxident2.png');
-}
-.image-container.img-9:hover {
-  background-image: url('images_1/fivestar2.png');
-}
-.image-container.img-10:hover {
-  background-image: url('images_1/rockstar2.png');
-}
-.image-container.img-11:hover {
-  background-image: url('images_1/rockstarhan2.png');
-}
-.image-container.img-12:hover {
-  background-image: url('images_1/rockstarroll2.png');
-}
-
-/* Keyframes for vertical scrolling */
+/* Keyframes for smooth scrolling */
 @keyframes scroll-up {
   0% {
     transform: translateY(0); /* Start at the top */
   }
   100% {
-    transform: translateY(-1300%); /* Move the section up by two times its height */
+    transform: translateY(-800%); /* Move the entire section up by one full section height */
   }
 }
