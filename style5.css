@@ -52,7 +52,7 @@ p {
   display: flex;
   flex-direction: column;
   width: 48%; /* Adjust width for each section */
-  height: 400%; /* Height doubled to fit both original and duplicate sets */
+  height: 630%; /* Height doubled to fit both original and duplicate sets */
   animation: scroll-up 10s linear infinite; /* Adjust duration to control speed */
 }
 
