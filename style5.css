@@ -38,9 +38,22 @@ body {
     text-align: center;
   }
 
+/* Wrapper for the sections */
+.container {
+  display: flex;
+  justify-content: space-between; /* Creates space between two sections */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+/* Each section takes up equal space */
+.section-1, .section-2 {
+  width: 48%; /* Adjust width for spacing */
+}
+
   .image-container {
     display: inline-block;
     position: relative;
+    margin-bottom: 20px;
   }
   
   .image-container img {
