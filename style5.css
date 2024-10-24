@@ -71,7 +71,7 @@ p {
 
 /* Hover effects with background images */
 .image-container.img-1:hover {
-  background-image: url('images_1/newjeansnewjeans2.png');
+  background-image: url('images_1/newjeansnewjeans.png');
 }
 
 .image-container.img-2:hover {
@@ -95,7 +95,7 @@ p {
 }
 
 .image-container.img-7:hover {
-  background-image: url('images_1/howsweet2.png');
+  background-image: url('images_1/howsweet.png');
 }
 
 .image-container.img-8:hover {
