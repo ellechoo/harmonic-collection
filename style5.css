@@ -69,9 +69,58 @@ p {
   display: block;
 }
 
-/* Hover effects */
+/* Hover effects with background images */
+.image-container.img-1:hover {
+  background-image: url('images_1/newjeansnewjeans2.png');
+}
+
+.image-container.img-2:hover {
+  background-image: url('images_1/nwjns_weverse2.png');
+}
+
+.image-container.img-3:hover {
+  background-image: url('images_1/getup2.png');
+}
+
+.image-container.img-4:hover {
+  background-image: url('images_1/omgditto2.png');
+}
+
+.image-container.img-5:hover {
+  background-image: url('images_1/dittoweverse2.png');
+}
+
+.image-container.img-6:hover {
+  background-image: url('images_1/supernatural2.png');
+}
+
+.image-container.img-7:hover {
+  background-image: url('images_1/howsweet2.png');
+}
+
+.image-container.img-8:hover {
+  background-image: url('images_1/maxident2.png');
+}
+
+.image-container.img-9:hover {
+  background-image: url('images_1/fivestar2.png');
+}
+
+.image-container.img-10:hover {
+  background-image: url('images_1/rockstar2.png');
+}
+
+.image-container.img-11:hover {
+  background-image: url('images_1/rockstarhan2.png');
+}
+
+.image-container.img-12:hover {
+  background-image: url('images_1/rockstarroll2.png');
+}
+
+/* General hover effect for all */
 .image-container:hover img {
-  opacity: 0; /* Hides original pic */
+  opacity: 0; /* Hides the original image on hover */
 }
 
 .image-container:hover {
