@@ -114,7 +114,7 @@ p {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80vw; /* Increase width to make images larger */
-  height: 50vh; /* Increase height */
+  height: 80vh; /* Increase height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,7 +125,7 @@ p {
 .carousel-photo {
   width: 48%; /* Fit width of the container */
   height: auto; /* Maintain aspect ratio */
-  max-width: 80%; /* Adjust max width as needed to reduce cropping */
+  max-width: 100%; /* Adjust max width as needed to reduce cropping */
   object-fit: contain; /* Keep the whole image in view */
   animation: slide 3s infinite;
   opacity: 0;
