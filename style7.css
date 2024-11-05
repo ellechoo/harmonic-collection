@@ -1,0 +1,104 @@
+body {
+  background-color: #616161;
+  position: relative;
+  margin-top: 30px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(19, 29, 104, 0.5);
+  text-align: left;
+  padding: 10px 0;
+  z-index: 3;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-left: 18px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  color: white;
+  margin-left: 22px;
+  text-align: center;
+}
+
+.binder-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: flex-end; /* Align closed binder to the right initially */
+  overflow: hidden;
+}
+
+/* Closed Binder Image - Right Aligned and Slightly Moved Up */
+#closedBinder {
+  max-width: 50vw; /* Scale down to fit within half the screen width */
+  max-height: 80vh; /* Fit within screen height */
+  cursor: pointer;
+  object-fit: contain;
+  margin-right: 500px;
+  margin-top: -100px; /* Move it up by 20px; adjust as needed */
+}
+
+/* Open Binder Container - Centered, Moved Slightly Up and Left */
+#openBinderContainer {
+  display: none; /* Hidden initially */
+  position: absolute;
+  top: 43%; /* Adjusted from 50% to move up */
+  left: 50%;
+  transform: translate(-60%, -50%); /* Center align and moved slightly left */
+  width: 80vw; /* Scale to fit within screen width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80vh;
+}
+
+/* Open Binder Image - Centered in the Container */
+#openBinderContainer .binder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Additional images (photos) on the open binder */
+.binder-photo {
+  position: absolute;
+  width: 15%; /* Adjust size as needed */
+  /* Position them relative to the open binder */
+}
+
+/* Reset Button styling */
+.reset-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.reset-button:hover {
+  background-color: #0056b3;
+}

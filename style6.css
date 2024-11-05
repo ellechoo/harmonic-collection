@@ -1,7 +1,7 @@
 body {
-  background-color: #616161;
+  background-color: #091239;
   position: relative;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 nav {
@@ -38,67 +38,106 @@ p {
   text-align: center;
 }
 
-.binder-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
+.container {
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: flex-end; /* Align closed binder to the right initially */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  margin: 0 auto;
+  height: 100vh; /* Full height of viewport */
+  width: 100%; /* Full width of viewport */
   overflow: hidden;
 }
 
-/* Closed Binder Image - Right Aligned and Slightly Moved Up */
-#closedBinder {
-  max-width: 50vw; /* Scale down to fit within half the screen width */
-  max-height: 80vh; /* Fit within screen height */
-  cursor: pointer;
-  object-fit: contain;
-  margin-right: 500px;
-  margin-top: -100px; /* Move it up by 20px; adjust as needed */
+.section-1, .section-2 {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Adjust width for each section */
+  height: 655%; /* Height doubled to fit both original and duplicate sets */
+  animation: scroll-up 10s linear infinite; /* Adjust duration to control speed */
 }
 
-/* Open Binder Container - Centered, Moved Slightly Up and Left */
-#openBinderContainer {
-  display: none; /* Hidden initially */
-  position: absolute;
-  top: 43%; /* Adjusted from 50% to move up */
-  left: 50%;
-  transform: translate(-60%, -50%); /* Center align and moved slightly left */
-  width: 80vw; /* Scale to fit within screen width */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 80vh;
+.section-1 .image-container,
+.section-2 .image-container {
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-/* Open Binder Image - Centered in the Container */
-#openBinderContainer .binder-img {
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+}
+
+/* Hover effects with background images */
+.image-container.img-1:hover {
+  background-image: url('images_1/newjeansnewjeans.png');
+}
+
+.image-container.img-2:hover {
+  background-image: url('images_1/nwjns_weverse2.png');
+  background-position: center;
+  width: 200px;
+  height: auto;
+}
+
+.image-container.img-3:hover {
+  background-image: url('images_1/getup2.png');
+}
+
+.image-container.img-4:hover {
+  background-image: url('images_1/omgditto2.png');
+}
+
+.image-container.img-5:hover {
+  background-image: url('images_1/dittoweverse2.png');
+}
+
+.image-container.img-6:hover {
+  background-image: url('images_1/supernatural2.png');
+}
+
+.image-container.img-7:hover {
+  background-image: url('images_1/howsweet.png');
+}
+
+.image-container.img-8:hover {
+  background-image: url('images_1/maxident2.png');
+}
+
+.image-container.img-9:hover {
+  background-image: url('images_1/fivestar2.png');
+}
+
+.image-container.img-10:hover {
+  background-image: url('images_1/rockstar2.png');
+}
+
+.image-container.img-11:hover {
+  background-image: url('images_1/rockstarhan2.png');
+}
+
+.image-container.img-12:hover {
+  background-image: url('images_1/rockstarroll2.png');
+}
+
+.image-container:hover img {
+  opacity: 0; 
+}
+
+.image-container:hover {
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
-/* Additional images (photos) on the open binder */
-.binder-photo {
-  position: absolute;
-  width: 15%; /* Adjust size as needed */
-  /* Position them relative to the open binder */
-}
-
-/* Reset Button styling */
-.reset-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.reset-button:hover {
-  background-color: #0056b3;
+/* Keyframes for seamless continuous scrolling */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0); /* Start at the top */
+  }
+  100% {
+    transform: translateY(-100%); /* Scroll past both original and duplicated images */
+  }
 }
