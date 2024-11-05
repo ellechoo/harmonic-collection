@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href = "style7.css">
-    <title>Title</title>
-  </head>
+<head>
+  <link rel="stylesheet" href="style7.css">
+  <title>Title</title>
+</head>
 
-  <body>
-    <nav>
-      <a href="/harmonic-collection/index.html">Home</a>
-      <a href="/harmonic-collection/entry-1.html">Entry 1</a>
-      <a href="/harmonic-collection/entry-2.html">Entry 2</a>
-      <a href="/harmonic-collection/entry-3.html">Entry 3</a>
-      <a href="/harmonic-collection/entry-4.html">Entry 4</a>
-      <a href="/harmonic-collection/entry-6.html">Entry 6</a>
-      <a href="/harmonic-collection/entry-7.html">Entry 7</a>
-    </nav>
+<body>
+  <nav>
+    <a href="/harmonic-collection/index.html">Home</a>
+    <a href="/harmonic-collection/entry-1.html">Entry 1</a>
+    <a href="/harmonic-collection/entry-2.html">Entry 2</a>
+    <a href="/harmonic-collection/entry-3.html">Entry 3</a>
+    <a href="/harmonic-collection/entry-4.html">Entry 4</a>
+    <a href="/harmonic-collection/entry-6.html">Entry 6</a>
+    <a href="/harmonic-collection/entry-7.html">Entry 7</a>
+  </nav>
 
-    <h1>(Entry 7) Collection Six - Kpop Photocards</h1>
-    <p>Click on the binder!</p>
+  <h1>(Entry 7) Collection Six - Kpop Photocards</h1>
+  <p>Click on the binder!</p>
 
-    <div class="binder-container">
-      <!-- Closed Binder Image -->
-      <img src="images_1/binder.png" alt="Closed Binder" id="closedBinder" onclick="openBinder()" class="binder-img">
-      
-      <!-- Open Binder Image with Photos, initially hidden -->
-      <div id="openBinderContainer" style="display: none;">
-        <img src="images_1/insidebinder.png" alt="Open Binder" class="binder-img">
-        <img src="images_1/njcards1.png" alt="Photo 1" class="binder-photo" style="top: 20px; left: 30px;">
-        <img src="images_1/njcards1.png" alt="Photo 2" class="binder-photo" style="top: 60px; left: 100px;">
-        <!-- More photos can be added as needed -->
-        
-        <!-- Reset Button -->
-        <button onclick="resetBinder()" class="reset-button">Close Binder</button>
-      </div>
-    </div>    
-
-    <script>
-  function openBinder() {
-  document.getElementById("closedBinder").style.display = "none";
-  document.getElementById("openBinderContainer").style.display = "block";}
-
-  function resetBinder() {
-  document.getElementById("openBinderContainer").style.display = "none";
-  document.getElementById("closedBinder").style.display = "block";}
-    </script>
+  <div class="binder-container">
+    <!-- Closed Binder Image -->
+    <img src="images_1/binder.png" alt="Closed Binder" id="closedBinder" onclick="openBinder()" class="binder-img">
     
-  </body>
+    <!-- Open Binder Image with Photos, initially hidden -->
+    <div id="openBinderContainer" style="display: none;">
+      <img src="images_1/insidebinder.png" alt="Open Binder" class="binder-img">
+      
+      <!-- Infinite Carousel of Photos -->
+      <div class="carousel" id="carouselContainer">
+        <img src="images_1/njcards1.png" alt="Photo 1" class="carousel-photo">
+        <img src="images_1/njcards2.png" alt="Photo 2" class="carousel-photo">
+        <img src="images_1/njcards3.png" alt="Photo 3" class="carousel-photo">
+        <!-- Add more images as needed -->
+      </div>
+      
+      <!-- Reset Button -->
+      <button onclick="resetBinder()" class="reset-button">Close Binder</button>
+    </div>
+  </div>    
+
+  <script>
+    function openBinder() {
+      document.getElementById("closedBinder").style.display = "none";
+      document.getElementById("openBinderContainer").style.display = "block";
+      document.getElementById("carouselContainer").style.display = "flex"; // Show carousel
+    }
+
+    function resetBinder() {
+      document.getElementById("openBinderContainer").style.display = "none";
+      document.getElementById("closedBinder").style.display = "block";
+      document.getElementById("carouselContainer").style.display = "none"; // Hide carousel
+    }
+  </script>
+</body>
+</html>

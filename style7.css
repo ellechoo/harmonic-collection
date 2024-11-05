@@ -1,9 +1,11 @@
+/* Body and Background */
 body {
-  background-color: #616161;
+  background-color: #000000;
   position: relative;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
+/* Navigation Bar */
 nav {
   position: fixed;
   top: 0;
@@ -23,6 +25,7 @@ nav a {
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* Headings and Paragraphs */
 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
@@ -38,53 +41,53 @@ p {
   text-align: center;
 }
 
+/* Binder Container */
 .binder-container {
   position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: flex-end; /* Align closed binder to the right initially */
+  align-items: center;
+  justify-content: flex-end;
   overflow: hidden;
 }
 
-/* Closed Binder Image - Right Aligned and Slightly Moved Up */
+/* Closed Binder Image */
 #closedBinder {
-  max-width: 50vw; /* Scale down to fit within half the screen width */
-  max-height: 80vh; /* Fit within screen height */
+  max-width: 50vw;
+  max-height: 80vh;
   cursor: pointer;
   object-fit: contain;
   margin-right: 500px;
-  margin-top: -100px; /* Move it up by 20px; adjust as needed */
+  margin-top: -110px;
 }
 
-/* Open Binder Container - Centered, Moved Slightly Up and Left */
+/* Open Binder Container */
 #openBinderContainer {
-  display: none; /* Hidden initially */
+  display: none;
   position: absolute;
-  top: 43%; /* Adjusted from 50% to move up */
+  top: 43%;
   left: 50%;
-  transform: translate(-60%, -50%); /* Center align and moved slightly left */
-  width: 80vw; /* Scale to fit within screen width */
-  height: auto; /* Maintain aspect ratio */
+  transform: translate(-60%, -50%);
+  width: 80vw;
+  height: auto;
   max-height: 80vh;
 }
 
-/* Open Binder Image - Centered in the Container */
+/* Open Binder Image */
 #openBinderContainer .binder-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* Additional images (photos) on the open binder */
+/* Additional Images (Photos) */
 .binder-photo {
   position: absolute;
-  width: 15%; /* Adjust size as needed */
-  /* Position them relative to the open binder */
+  width: 15%;
 }
 
-/* Reset Button styling */
+/* Reset Button */
 .reset-button {
   position: absolute;
   bottom: 20px;
@@ -102,3 +105,43 @@ p {
 .reset-button:hover {
   background-color: #0056b3;
 }
+
+/* Carousel container */
+.carousel {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw; /* Increase width to make images larger */
+  height: 50vh; /* Increase height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Optionally, change to 'visible' if cutting is an issue */
+}
+
+/* Carousel photos */
+.carousel-photo {
+  width: 48%; /* Fit width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 80%; /* Adjust max width as needed to reduce cropping */
+  object-fit: contain; /* Keep the whole image in view */
+  animation: slide 3s infinite;
+  opacity: 0;
+  position: absolute;
+}
+
+/* Keyframes for infinite carousel */
+@keyframes slide {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Animation delay for each photo */
+.carousel-photo:nth-child(1) { animation-delay: 0s; }
+.carousel-photo:nth-child(2) { animation-delay: 1s; }
+.carousel-photo:nth-child(3) { animation-delay: 2s; }
