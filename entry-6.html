@@ -20,16 +20,24 @@
 
     <div class="binder-container">
       <!-- Closed Binder Image -->
-      <img src="closed-binder.png" alt="Closed Binder" id="closedBinder" onclick="openBinder()" class="binder-img">
+      <img src="binder.png" alt="Closed Binder" id="closedBinder" onclick="openBinder()" class="binder-img">
       
       <!-- Open Binder Image with Photos, initially hidden -->
       <div id="openBinderContainer" style="display: none;">
-        <img src="open-binder.png" alt="Open Binder" class="binder-img">
+        <img src="insidebinder.png" alt="Open Binder" class="binder-img">
         <!-- Additional images overlayed on top of the open binder -->
         <img src="photo1.png" alt="Photo 1" class="binder-photo" style="top: 20px; left: 30px;">
         <img src="photo2.png" alt="Photo 2" class="binder-photo" style="top: 60px; left: 100px;">
         <!-- Add more photos as needed -->
       </div>
     </div>
+
+    <script>
+      function openBinder() {
+  // Hide the closed binder
+  document.getElementById("closedBinder").style.display = "none";
+  // Show the open binder and photos
+  document.getElementById("openBinderContainer").style.display = "block"; }
+    </script>
     
   </body>
