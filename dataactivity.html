@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html>
- 
-  <body>
-<script>
-    
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="/harmonic-collection/index.html">Home</a>
+    <a href="/harmonic-collection/entry-1.html">Entry 1</a>
+    <a href="/harmonic-collection/entry-2.html">Entry 2</a>
+    <a href="/harmonic-collection/entry-3.html">Entry 3</a>
+    <a href="/harmonic-collection/entry-4.html">Entry 4</a>
+    <a href="/harmonic-collection/entry-6.html">Entry 6</a>
+    <a href="/harmonic-collection/entry-7.html">Entry 7</a>
+    <a href="/harmonic-collection/dataactivity.html">Data Activity</a>
+  </nav>
+
+  <canvas id="idolChart" width="400" height="200"></canvas>
+
+  <script>
     const photocardsData = {
-  "NewJeans": {
-    "sets": {
-      "Get Up - Bunny Beach Bag Hanni Version": [
-        { "id": 1, "name": "Hanni" },
-        { "id": 2, "name": "Hanni" },
-        { "id": 3, "name": "Hanni" },
-        { "id": 4, "name": "Hanni" },
-        { "id": 5, "name": "Hanni" }
-      ],
-      "OMG & Ditto": [
-        { "id": 1, "name": "Minji" },
-        { "id": 2, "name": "Hanni" },
-        { "id": 3, "name": "Danielle" },
-        { "id": 4, "name": "Haerin" },
-        { "id": 5, "name": "Hyein" }
-      ],
-      "OMG & Ditto - Weverse Version": [
+      "NewJeans": {
+        "sets": {
+          "Get Up - Bunny Beach Bag Hanni Version": [
+            { "id": 1, "name": "Hanni" },
+            { "id": 2, "name": "Hanni" },
+            { "id": 3, "name": "Hanni" },
+            { "id": 4, "name": "Hanni" },
+            { "id": 5, "name": "Hanni" }
+          ],
+          "OMG & Ditto": [
+            { "id": 1, "name": "Minji" },
+            { "id": 2, "name": "Hanni" },
+            { "id": 3, "name": "Danielle" },
+            { "id": 4, "name": "Haerin" },
+            { "id": 5, "name": "Hyein" }
+          ],
+          "OMG & Ditto - Weverse Version": [
         { "id": 1, "name": "Minji" },
         { "id": 2, "name": "Hanni" },
         { "id": 3, "name": "Danielle" },
@@ -58,13 +72,12 @@
       ]
     }
   },
-
-  "StrayKids": {
+      "StrayKids": {
     "sets": {
       "NoEasy": [
         { "id": 1, "name": "Han" },
         { "id": 2, "name": "I.N" },
-        { "id": 2, "name": "Bang Chan (Double-Sided)" }
+        { "id": 2, "name": "Bang Chan" }
       ],
 
       "Maxident": [
@@ -75,7 +88,7 @@
 
       "Five Star": [
         { "id": 1, "name": "Lee Know" },
-        { "id": 2, "name": "Han (Double-Sided)" }
+        { "id": 2, "name": "Han" }
       ],
 
       "Rockstar - Limited Star Version": [
@@ -83,14 +96,14 @@
         { "id": 2, "name": "Han & Hyunjin" },
         { "id": 3, "name": "Seungmin & I.N" },
         { "id": 4, "name": "Felix & Lee Know" },
-        { "id": 5, "name": "Bang Chan Polaroid" },
-        { "id": 6, "name": "Lee Know Polaroid" },
-        { "id": 7, "name": "Changbin Polaroid" },
-        { "id": 8, "name": "Hyunjin Polaroid" },
-        { "id": 9, "name": "Han Polaroid" },
-        { "id": 10, "name": "Felix Polaroid" },
-        { "id": 11, "name": "Seungmin Polaroid" },
-        { "id": 12, "name": "I.N Polaroid" }
+        { "id": 5, "name": "Bang Chan" },
+        { "id": 6, "name": "Lee Know" },
+        { "id": 7, "name": "Changbin" },
+        { "id": 8, "name": "Hyunjin" },
+        { "id": 9, "name": "Han" },
+        { "id": 10, "name": "Felix" },
+        { "id": 11, "name": "Seungmin" },
+        { "id": 12, "name": "I.N" }
 
       ],
       "Rockstar - Postcard Han Version": [
@@ -117,21 +130,55 @@
   }
 };
 
+    // Step 1: Count the number of cards per idol
+    const idolCounts = {};
 
+    for (const bandName in photocardsData) {
+      const sets = photocardsData[bandName].sets;
+      for (const setName in sets) {
+        sets[setName].forEach(photocard => {
+          const idolName = photocard.name;
+          idolCounts[idolName] = (idolCounts[idolName] || 0) + 1;
+        });
+      }
+    }
 
-for (const bandName in photocardsData) {
-  console.log(`Band: ${bandName}`);
-  
-  for (const setName in photocardsData[bandName].sets) {
-    console.log(`  Photocards in set: ${setName}`);
-    
-    photocardsData[bandName].sets[setName].forEach(photocard => {
-      console.log(`    - ${photocard.name}`);
+    // Step 2: Prepare data for Chart.js
+    const labels = Object.keys(idolCounts);
+    const counts = Object.values(idolCounts);
+
+    // Step 3: Create the bar chart
+    const ctx = document.getElementById('idolChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Number of Photocards',
+          data: counts,
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Number of Photocards'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Idol'
+            }
+          }
+        }
+      }
     });
-  }
-}
-
-</script>
-    </body>
-
+  </script>
+</body>
 </html>

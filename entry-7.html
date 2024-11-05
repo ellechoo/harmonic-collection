@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style7.css">
-  <title>Title</title>
+  <title>Collection Six - Kpop Photocards</title>
 </head>
 
 <body>
@@ -19,6 +21,15 @@
   <h1>(Entry 7) Collection Six - Kpop Photocards</h1>
   <p>Click on the binder!</p>
 
+  <div class="sidebar">
+    <h3>Image Menu</h3>
+    <button onclick="skipToImage(0)">Image 1</button>
+    <button onclick="skipToImage(1)">Image 2</button>
+    <button onclick="skipToImage(2)">Image 3</button>
+    <!-- Add more buttons as needed for more images -->
+    <button onclick="toggleCarousel()">Pause/Resume Carousel</button>
+  </div>
+
   <div class="binder-container">
     <!-- Closed Binder Image -->
     <img src="images_1/binder.png" alt="Closed Binder" id="closedBinder" onclick="openBinder()" class="binder-img">
@@ -28,7 +39,7 @@
       <img src="images_1/insidebinder.png" alt="Open Binder" class="binder-img">
       
       <!-- Infinite Carousel of Photos -->
-      <div class="carousel" id="carouselContainer">
+      <div class="carousel" id="carouselContainer" style="display: none;">
         <img src="images_1/njcards1.png" alt="Photo 1" class="carousel-photo">
         <img src="images_1/njcards2.png" alt="Photo 2" class="carousel-photo">
         <img src="images_1/njcards3.png" alt="Photo 3" class="carousel-photo">
@@ -41,16 +52,54 @@
   </div>    
 
   <script>
+    let currentImageIndex = 0;
+    let carouselInterval;
+
     function openBinder() {
       document.getElementById("closedBinder").style.display = "none";
       document.getElementById("openBinderContainer").style.display = "block";
-      document.getElementById("carouselContainer").style.display = "flex"; // Show carousel
+      startCarousel(); // Start the carousel when the binder is opened
     }
 
     function resetBinder() {
       document.getElementById("openBinderContainer").style.display = "none";
       document.getElementById("closedBinder").style.display = "block";
-      document.getElementById("carouselContainer").style.display = "none"; // Hide carousel
+      stopCarousel(); // Stop the carousel when the binder is closed
+    }
+
+    function startCarousel() {
+      showImage(currentImageIndex);
+      document.getElementById("carouselContainer").style.display = "flex"; // Show carousel
+      carouselInterval = setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % document.querySelectorAll('.carousel-photo').length;
+        showImage(currentImageIndex);
+      }, 3000); // Change image every 3 seconds
+    }
+
+    function stopCarousel() {
+      clearInterval(carouselInterval);
+      carouselInterval = null; // Set to null to indicate the carousel is stopped
+    }
+
+    function showImage(index) {
+      const images = document.querySelectorAll('.carousel-photo');
+      images.forEach((img, i) => {
+        img.style.opacity = i === index ? '1' : '0';
+      });
+    }
+
+    function skipToImage(index) {
+      currentImageIndex = index;
+      showImage(currentImageIndex);
+      stopCarousel(); // Optionally stop the carousel when skipping
+    }
+
+    function toggleCarousel() {
+      if (carouselInterval) {
+        stopCarousel(); // If running, stop the carousel
+      } else {
+        startCarousel(); // If stopped, start the carousel
+      }
     }
   </script>
 </body>
