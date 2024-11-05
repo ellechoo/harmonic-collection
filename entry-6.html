@@ -25,19 +25,23 @@
       <!-- Open Binder Image with Photos, initially hidden -->
       <div id="openBinderContainer" style="display: none;">
         <img src="insidebinder.png" alt="Open Binder" class="binder-img">
-        <!-- Additional images overlayed on top of the open binder -->
         <img src="njcards1.png" alt="Photo 1" class="binder-photo" style="top: 20px; left: 30px;">
         <img src="njcards1.png" alt="Photo 2" class="binder-photo" style="top: 60px; left: 100px;">
-        <!-- Add more photos as needed -->
+        <!-- More photos can be added as needed -->
+        
+        <!-- Reset Button -->
+        <button onclick="resetBinder()" class="reset-button">Close Binder</button>
       </div>
-    </div>
+    </div>    
 
     <script>
-      function openBinder() {
-  // Hide the closed binder
+  function openBinder() {
   document.getElementById("closedBinder").style.display = "none";
-  // Show the open binder and photos
-  document.getElementById("openBinderContainer").style.display = "block"; }
+  document.getElementById("openBinderContainer").style.display = "block";}
+
+  function resetBinder() {
+  document.getElementById("openBinderContainer").style.display = "none";
+  document.getElementById("closedBinder").style.display = "block";}
     </script>
     
   </body>
