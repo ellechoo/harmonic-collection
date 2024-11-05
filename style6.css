@@ -1,0 +1,16 @@
+.binder-container {
+    position: relative;
+    width: 400px; /* Adjust the size as needed */
+  }
+  
+  .binder-img {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .binder-photo {
+    position: absolute;
+    width: 80px; /* Adjust size as needed */
+    /* Adjust positions of each photo as needed */
+  }
+  
