@@ -1,5 +1,5 @@
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Poppins', sans-serif;
   color: white;
   font-weight: bold;
   background-color: rgb(52, 75, 121);
@@ -24,7 +24,7 @@ nav a {
   margin: 0 15px; 
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 img {
@@ -42,6 +42,7 @@ h2 {
   margin-bottom: 30px;
   margin-left: 60px;
   margin-right: 60px;
+  font-family: 'Poppins', sans-serif;
 }
 
 p {
@@ -49,6 +50,7 @@ p {
   margin-left: 60px;
   margin-right: 60px;
   line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
 }
 
 .section:nth-of-type(odd) {

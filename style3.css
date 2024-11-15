@@ -1,6 +1,6 @@
 body {
     background-color: rgb(12, 12, 96);
-    font-family: 'Bodoni Moda', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin-top: 60px;
   }
   
@@ -11,7 +11,7 @@ body {
   }
   
   p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
     color: white;
     margin-left: 22px; 
   }
@@ -201,5 +201,5 @@ body {
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
   }
