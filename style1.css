@@ -9,22 +9,80 @@ body {
 }
 
 nav {
-  position: fixed; 
+  position: fixed; /* Keeps nav at the top of the screen */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(19, 29, 104, 0.5); 
-  text-align: left; 
+  text-align: left;
   padding: 10px 0;
-  z-index: 3; 
+  z-index: 3; /* Higher than the carousel and content */
+  display: flex;
+  align-items: center;
 }
 
 nav a {
   color: white;
-  margin: 0 15px; 
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+}
+
+nav a:hover {
+  transform: scale(1.2); /* Increase size when hovering */
+  color: #FFD700; /* Change color to gold (or any color you prefer) */
+}
+
+.home-btn {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: rgba(19, 29, 104, 0.5);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Drop-down Content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(47, 74, 149, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the drop-down */
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show the drop-down on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 img {
