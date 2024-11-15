@@ -1,227 +1,260 @@
-/* Body and Background */
 body {
-  background-color: #000000;
-  position: relative;
-  margin-top: 60px;
-  font-family: 'Poppins', sans-serif;
-}
+    background-color: rgb(12, 12, 96);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+  }
+  
+  h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    margin-left: 18px; 
+  }
+  
+  p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-left: 22px; 
+  }
 
-nav {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  text-align: left;
-  padding: 10px 0;
-  z-index: 3; 
-  display: flex;
-  align-items: center;
-}
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  transition: transform 0.3s ease, color 0.3s ease; 
-}
+  .image-container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .image-container img {
+    width: 400px; /* Set width */
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+  }
+  
+  .image-container:hover img {
+    opacity: 0; /* Hides original pic */
+  }
+  
+  .image-container:hover {
+    background-image: url('images_1/cinnapic2.png'); /* hovered image */
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+  
+  .image-container.img-2:hover {
+    background-image: url('images_1/cinnaonslide2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
+  
+  .image-container.img-3:hover {
+    background-image: url('images_1/tancinna2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-nav a:hover {
-  transform: scale(1.2); 
-  color: #FFD700;
-}
+  .image-container.img-4:hover {
+    background-image: url('images_1/cinnabox2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.home-btn {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px;
-}
+  .image-container.img-5:hover {
+    background-image: url('images_1/rengoku2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+  .image-container.img-6:hover {
+    background-image: url('images_1/lucina2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.dropbtn {
-  background-color: rgba(19, 29, 104, 0.5);
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
+  .image-container.img-7:hover {
+    background-image: url('images_1/peridot2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: rgba(47, 74, 149, 0.9);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
+  .image-container.img-8:hover {
+    background-image: url('images_1/yor2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.dropdown-content a {
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-  font-family: 'Poppins', sans-serif;
-}
+  .image-container.img-9:hover {
+    background-image: url('images_1/eve.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+  .image-container.img-10:hover {
+    background-image: url('images_1/aki2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+  .image-container.img-11:hover {
+    background-image: url('images_1/walle2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-h1 {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  margin-left: 18px;
-  text-align: center;
-}
+  .image-container.img-12:hover {
+    background-image: url('images_1/blake2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  color: white;
-  margin-left: 22px;
-  text-align: center;
-}
+  .image-container.img-13:hover {
+    background-image: url('images_1/kirby2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-/* Binder Container */
-.binder-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: hidden;
-}
+  .image-container.img-14:hover {
+    background-image: url('images_1/darkknight2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-/* Closed Binder Image */
-#closedBinder {
-  max-width: 50vw;
-  max-height: 80vh;
-  cursor: pointer;
-  object-fit: contain;
-  margin-right: 500px;
-  margin-top: -110px;
-}
+  .image-container.img-15:hover {
+    background-image: url('images_1/whaleshark2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-/* Open Binder Container */
-#openBinderContainer {
-  display: none;
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  transform: translate(-60%, -50%);
-  width: 80vw;
-  height: auto;
-  max-height: 80vh;
-}
+  .image-container.img-16:hover {
+    background-image: url('images_1/gard2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-/* Open Binder Image */
-#openBinderContainer .binder-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+  .image-container.img-17:hover {
+    background-image: url('images_1/venti2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-/* Additional Images (Photos) */
-.binder-photo {
-  position: absolute;
-  width: 15%;
-}
+  .image-container.img-18:hover {
+    background-image: url('images_1/kokomi22.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-/* Reset Button */
-.reset-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
+  .image-container.img-19:hover {
+    background-image: url('images_1/kazuha2.png'); 
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: auto;
+  }
 
-.reset-button:hover {
-  background-color: #0056b3;
-}
-
-/* Carousel container */
-.carousel {
-  display: none; /* Initially hidden */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw; /* Increase width to make images larger */
-  height: 80vh; /* Increase height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Optionally, change to 'visible' if cutting is an issue */
-}
-
-/* Carousel photos */
-.carousel-photo {
-  width: 48%; /* Fit width of the container */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Adjust max width as needed to reduce cropping */
-  object-fit: contain; /* Keep the whole image in view */
-  animation: slide 3s infinite;
-  opacity: 0;
-  position: absolute;
-}
-
-/* Keyframes for infinite carousel */
-@keyframes slide {
-  0% { opacity: 0; }
-  10% { opacity: 1; }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* Animation delay for each photo */
-.carousel-photo:nth-child(1) { animation-delay: 0s; }
-.carousel-photo:nth-child(2) { animation-delay: 1s; }
-.carousel-photo:nth-child(3) { animation-delay: 2s; }
-
-.sidebar {
-  position: fixed;
-  top: 60px; /* Below the nav */
-  left: 1200px;
-  width: 200px; /* Adjust as necessary */
-  background-color: rgba(19, 29, 104, 0.8); /* Background color */
-  color: white;
-  padding: 15px;
-  z-index: 2; /* Ensure it is above other content */
-}
-
-.sidebar button {
-  display: block; /* Each button on a new line */
-  margin: 10px 0;
-  padding: 10px;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.sidebar button:hover {
-  background-color: #0056b3; /* Darker on hover */
-}
+  nav {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    z-index: 3; 
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease; 
+  }
+  
+  nav a:hover {
+    transform: scale(1.2); 
+    color: #FFD700;
+  }
+  
+  .home-btn {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: rgba(19, 29, 104, 0.5);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(47, 74, 149, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
