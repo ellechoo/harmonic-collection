@@ -31,10 +31,10 @@
     <p>Note: I have a very cool-toned complexion, so *most* of my makeup is suited for Cool Summer and Cool Winter people. I realized that my face has low visual weight (like many East Asians), so over the years, I have pivoted towards more pastel makeup. You will notice that the harsher and more unflattering products in my collection tend to be older. My makeup routine has evolved tremendously over the past four years, as these have been the greatest leaps in my journey of self-discovery and self-expression. On this page, I specifically catalog my lip tint and eyeshadow collection because they happen to be the biggest categories in my makeup collection.</p>
 
     <div class="floating-images">
-      <img src="images_1/grapyway.png" alt="Image 1" class="float-img">
-      <img src="images_1/mauvemoon.png" alt="Image 2" class="float-img">
-      <img src="images_1/custardmauve.png" alt="Image 3" class="float-img">
-      <!-- Add more images as needed -->
+      <img src="images_1/grapyway.png" alt="Image 1" class="float-img" style="top: 10%; left: 15%;">
+      <img src="images_1/mauvemoon.png" alt="Image 2" class="float-img" style="top: 50%; left: 30%;">
+      <img src="images_1/custardmauve.png" alt="Image 3" class="float-img" style="top: 20%; left: 70%;">
+      <!-- Add more images as needed, each with unique style attributes for positioning -->
   </div>
 
     <div class="section">
@@ -94,5 +94,17 @@
       </p>
     </div>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const images = document.querySelectorAll('.float-img');
+          images.forEach(img => {
+              const randomX = Math.random() * 100; // Random percentage for X
+              const randomY = Math.random() * 100; // Random percentage for Y
+              img.style.top = `${randomY}%`;
+              img.style.left = `${randomX}%`;
+          });
+      });
+  </script>
+  
   </body>
 </html>
