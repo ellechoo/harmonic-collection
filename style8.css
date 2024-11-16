@@ -1,0 +1,153 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(52, 75, 121);
+    text-align: center; 
+    margin-top: 60px;
+    padding: 0;
+  }
+  
+  nav {
+    position: fixed; /* Keeps nav at the top of the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    z-index: 3; /* Higher than the carousel and content */
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  }
+  
+  nav a:hover {
+    transform: scale(1.2); /* Increase size when hovering */
+    color: #FFD700; /* Change color to gold (or any color you prefer) */
+  }
+  
+  .home-btn {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: rgba(19, 29, 104, 0.5);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(47, 74, 149, 0.9);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  img {
+    display: block; 
+    margin: 0 auto; 
+  }
+  
+  footer {
+    margin-top: 20px; 
+    padding-bottom: 50px; 
+    text-align: center; 
+  }
+  
+  h2 {
+    margin-bottom: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  p {
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .section:nth-of-type(odd) {
+    text-align: right;
+  }
+  
+  .section:nth-of-type(even) {
+    text-align: left;
+  }
+  
+  .floating-images {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Ensure images don’t overflow */
+  }
+  
+  /* Individual Floating Images */
+  .float-img {
+    position: absolute;
+    width: 100px; /* Set image size */
+    height: auto;
+    animation: float 10s infinite ease-in-out;
+    opacity: 0.8; /* Optional for a soft look */
+    z-index: 10; /* Ensure images appear above the background */
+  }
+  
+  /* Animation Keyframes for Floating Effect */
+  @keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-20px, 30px) rotate(10deg);
+    }
+    50% {
+        transform: translate(20px, -20px) rotate(-10deg);
+    }
+    75% {
+        transform: translate(-10px, 20px) rotate(5deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+  }
