@@ -1,8 +1,188 @@
 body {
-  background-color: #7facc2;
-  position: relative;
-  margin-top: 80px;
+  background-color: rgb(12, 12, 96);
   font-family: 'Poppins', sans-serif;
+  margin-top: 60px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  margin-left: 18px; 
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  margin-left: 22px; 
+}
+
+
+.image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.image-container img {
+  width: 400px; /* Set width */
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+  display: block;
+}
+
+.image-container:hover img {
+  opacity: 0; /* Hides original pic */
+}
+
+.image-container:hover {
+  background-image: url('images_1/cinnapic2.png'); /* hovered image */
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-2:hover {
+  background-image: url('images_1/cinnaonslide2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-3:hover {
+  background-image: url('images_1/tancinna2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-4:hover {
+  background-image: url('images_1/cinnabox2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-5:hover {
+  background-image: url('images_1/rengoku2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-6:hover {
+  background-image: url('images_1/lucina2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-7:hover {
+  background-image: url('images_1/peridot2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-8:hover {
+  background-image: url('images_1/yor2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-9:hover {
+  background-image: url('images_1/eve.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-10:hover {
+  background-image: url('images_1/aki2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-11:hover {
+  background-image: url('images_1/walle2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-12:hover {
+  background-image: url('images_1/blake2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-13:hover {
+  background-image: url('images_1/kirby2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-14:hover {
+  background-image: url('images_1/darkknight2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-15:hover {
+  background-image: url('images_1/whaleshark2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-16:hover {
+  background-image: url('images_1/gard2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-17:hover {
+  background-image: url('images_1/venti2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-18:hover {
+  background-image: url('images_1/kokomi22.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
+}
+
+.image-container.img-19:hover {
+  background-image: url('images_1/kazuha2.png'); 
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: auto;
 }
 
 nav {
@@ -77,126 +257,4 @@ nav a:hover {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-h1 {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  margin-left: 18px; 
-  text-align: center;
-}
-
-p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  color: white;
-  margin-left: 22px; 
-  text-align: center;
-}
-
-.background-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 440px);
-  gap: 0; 
-  justify-content: center;
-  padding: 0;
-  width: fit-content;
-  margin: 0 auto;
-  position: relative;
-}
-
-.background-grid img {
-  width: 440px; 
-  height: 440px;
-  object-fit: contain; 
-  margin: 0; 
-  padding: 0; 
-  position: relative;
-  z-index: 0;
-}
-
-/* negative margin */
-.background-grid img:nth-child(n+4) {
-  margin-top: -116px; 
-}
-
-.overlay-image {
-  position: absolute;
-  width: 150px; /* Fixed size */
-  height: auto; 
-  cursor: pointer;
-  z-index: 1; /* overlays on top of background images */
-}
-
-.overlay-image:nth-child(1) { 
-  top: 180px;
-  left: 260px;
-  width: 250px; 
-}
-
-.overlay-image:nth-child(2) {
-  top: 220px;
-  left: 552px;
-  width: 320px; 
-}
-
-.overlay-image:nth-child(3) {
-  top: 156px;
-  right: 150px;
-  width: 260px; 
-}
-
-.overlay-image:nth-child(4) {
-  top: 450px;
-  right: 360px;
-  width: 170px; 
-}
-
-.overlay-image:nth-child(5) {
-  top: 160px;
-  right: 1195px;
-  width: 135px; 
-}
-
-.overlay-image:nth-child(6) {
-  top: 560px;
-  right: 100px;
-  width: 230px; 
-}
-
-.overlay-image:nth-child(7) {
-  top: 480px;
-  right: 980px;
-  width: 330px; 
-}
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  z-index: 1000;
-  border-radius: 10px;
-  width: 300px;
-}
-
-.popup button {
-  margin-top: 10px;
-  background-color: #add8e6;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.center-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  margin-bottom: 200px;
 }
