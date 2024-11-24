@@ -39,3 +39,93 @@
         Grad Bear <br>
     
         </p>
+
+        <body>
+          <nav>
+            <a href="/harmonic-collection/index.html" class="home-btn">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Entries</button>
+              <div class="dropdown-content">
+                <a href="/harmonic-collection/entry-1.html">liptints</a>
+                <a href="/harmonic-collection/entry-2.html">albums</a>
+                <a href="/harmonic-collection/entry-3.html">photocards</a>
+                <a href="/harmonic-collection/entry-4.html">posters</a>
+                <a href="/harmonic-collection/entry-6.html">manga</a>
+                <a href="/harmonic-collection/entry-7.html">figurines</a>
+                <a href="/harmonic-collection/entry-8.html">squishies</a>
+                <a href="/harmonic-collection/entry-9.html">plushies</a>
+                <a href="/harmonic-collection/entry-10.html">the memory box</a> 
+              </div>
+            </div>
+          </nav>
+      
+          <h1>Collection Four - Posters</h1> <p>Click on the posters for more details! Click again to close details.</p>
+        
+          <div class="background-grid">
+            <img src="images_1/pegboardpng.png" alt="Ikea 1">
+            <img src="images_1/pegboardpng.png" alt="Ikea 2">
+            <img src="images_1/pegboardpng.png" alt="Ikea 3">
+            <img src="images_1/pegboardpng.png" alt="Ikea 4">
+            <img src="images_1/pegboardpng.png" alt="Ikea 5">
+            <img src="images_1/pegboardpng.png" alt="Ikea 6">
+          </div>
+          
+          <div class="overlay-images">
+            <img src="images_1/drowningposter.png" alt="Overlay 1" class="overlay-image" 
+            data-description="Drowning Girl by Roy Lichtenstein MOMA Print. I don't remember when I bought this but it's most likely been over 3 years. It's been so long that this version of the print is no longer available for purchase from MOMA. When I moved into a college dorm for the first time last year, this print came with me and took center stage on my wall. Going from my bedroom in NJ to my NYC dorm and then coming back (I commute this year yipee); it has been with me during a time period of enormous change.">
+      
+            <img src="images_1/ponyoposter.jpg" alt="Overlay 2" class="overlay-image" 
+            data-description="Ponyo by Studio Ghibli Movie Poster. I got this poster during my trip to Japan during the summer of 2023 (right before I started college). I went to the Studio Ghibli Museum in Mitaka and it was an amazing experience that I could go on and on about. The gift shop had many wonderful things but the biggest thing I got was this vintage Ponyo movie poster. Studio Ghibli movies like Ponyo literally made my childhood; making this poster all the more meaningful. During the long plane ride back to America, the poster got crushed in the suitcase. I kind of fixed it but the wrinkles are still there.">
+      
+            <img src="images_1/laufeyposter.png" alt="Overlay 3" class="overlay-image" 
+            data-description="Laufey - The Bewitched Tour 2023 Poster. I had only gone to one concert total before I went to Laufey's Bewitched NYC show at The Town Hall. Laufey is one of my favorite musical artists of all time and seeing her perform live was incredible (if I could sing like Laufey I would never shut up). My roommate and I didn't know this when we first bought the tickets, but we somehow got front row balcony seats. We could see the entire stage with nothing blocking our view and it was perfect. I bought this poster and a t-shirt at the merch table after the show. The poster was worth every penny but the shirt is pretty lame.">
+      
+            <img src="images_1/peperonj.png" alt="Overlay 4" class="overlay-image" 
+            data-description="A cutout from a New Jeans X Pepero collab box. This is not an actual printed poster; I just cut out the front of a jumbo Pepero box because it was a limited edition New Jeans collaboration version. New Jeans is my favorite KPOP group of all time and I doubt they will be dethroned for a very long time. This collaboration that I was not aware of was only available in South Korea. Good thing my father happened to be in South Korea visiting his parents in Seoul!! He and my aunt actually surprised me with this jumbo Pepero Box and matching sticker book.">
+      
+            <img src="images_1/furinaposter.png" alt="Overlay 5" class="overlay-image" 
+            data-description="Furina by Frank Liu print. I found this artist on social media while I was deep in the Genshin Impact fandom during quarantine. That sure was... a time... but, regardless of the game and its fandom, Frank Liu's style is so beautiful and distinct. I don't really play Genshin anymore, but I still actively follow Liu to see his artworks.">
+      
+            <img src="images_1/monetposter.png" alt="Overlay 6" class="overlay-image" 
+            data-description="Water Lilies by Claude Monet (Panel 2) MOMA Print.">
+      
+            <img src="images_1/skzrockstarposter.png" alt="Overlay 7" class="overlay-image" 
+            data-description="StrayKids Rockstar Album Poster.">
+          </div>
+          
+          <div class="popup" id="popup">
+            <span id="popup-text"></span>
+          </div>
+      
+          <script>
+            const overlayImages = document.querySelectorAll('.overlay-image');
+            const popup = document.getElementById('popup');
+            const popupText = document.getElementById('popup-text');
+            let activeImage = null;
+          
+            overlayImages.forEach(image => {
+              image.addEventListener('click', function() {
+                const description = this.getAttribute('data-description');
+          
+              
+                if (activeImage === this) {
+                  popup.style.display = 'none';
+                  activeImage = null;
+                } else {
+                  popupText.textContent = description;
+                  popup.style.display = 'block';
+                  activeImage = this; 
+                }
+              });
+            });
+        
+          </script>
+           
+      </body>
+      
+      <body>
+        <p>This page is based on my bedroom wall! Here's a photo:</p>
+        <div class="center-image">
+          <img src="images_1/ikeawallirl.jpg" alt="irlphoto" style="width: 500px; height: auto;">
+        </div>
+      </body>
