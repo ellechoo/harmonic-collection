@@ -34,7 +34,7 @@ p {
 }
 
 .image-container:hover {
-  background-image: url('images_1/cinnapic2.png'); /* hovered image */
+  background-image: url('images_1/amongus2.png'); /* hovered image */
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -42,7 +42,7 @@ p {
 }
 
 .image-container.img-2:hover {
-  background-image: url('images_1/cinnaonslide2.png'); 
+  background-image: url('images_1/anya2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -50,7 +50,7 @@ p {
 }
 
 .image-container.img-3:hover {
-  background-image: url('images_1/tancinna2.png'); 
+  background-image: url('images_1/blueberry2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -58,7 +58,7 @@ p {
 }
 
 .image-container.img-4:hover {
-  background-image: url('images_1/cinnabox2.png'); 
+  background-image: url('images_1/bunnyplush2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -66,7 +66,7 @@ p {
 }
 
 .image-container.img-5:hover {
-  background-image: url('images_1/rengoku2.png'); 
+  background-image: url('images_1/crow2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -74,7 +74,7 @@ p {
 }
 
 .image-container.img-6:hover {
-  background-image: url('images_1/lucina2.png'); 
+  background-image: url('images_1/dogo2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -82,7 +82,7 @@ p {
 }
 
 .image-container.img-7:hover {
-  background-image: url('images_1/peridot2.png'); 
+  background-image: url('images_1/gradplush2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -90,7 +90,7 @@ p {
 }
 
 .image-container.img-8:hover {
-  background-image: url('images_1/yor2.png'); 
+  background-image: url('images_1/kenma2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
@@ -98,38 +98,6 @@ p {
 }
 
 .image-container.img-9:hover {
-  background-image: url('images_1/eve.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-10:hover {
-  background-image: url('images_1/aki2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-11:hover {
-  background-image: url('images_1/walle2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-12:hover {
-  background-image: url('images_1/blake2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-13:hover {
   background-image: url('images_1/kirby2.png'); 
   background-size: cover;
   background-position: center;
@@ -137,48 +105,16 @@ p {
   height: auto;
 }
 
-.image-container.img-14:hover {
-  background-image: url('images_1/darkknight2.png'); 
+.image-container.img-10:hover {
+  background-image: url('images_1/lopsidedcin2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
   height: auto;
 }
 
-.image-container.img-15:hover {
-  background-image: url('images_1/whaleshark2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-16:hover {
-  background-image: url('images_1/gard2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-17:hover {
-  background-image: url('images_1/venti2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-18:hover {
-  background-image: url('images_1/kokomi22.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-19:hover {
-  background-image: url('images_1/kazuha2.png'); 
+.image-container.img-11:hover {
+  background-image: url('images_1/mong2.png'); 
   background-size: cover;
   background-position: center;
   width: 400px;
