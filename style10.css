@@ -93,3 +93,38 @@ body {
     margin-left: 22px; 
     text-align: center;
   }
+
+  /* Container to position images on top of each other */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+/* Base image styling */
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease; /* Smooth fade effect */
+}
+
+/* Overlay image starts hidden */
+#overlay-image {
+  opacity: 0;
+  z-index: 1; /* Place above the original image */
+}
+
+/* Overlay appears when active */
+.active #overlay-image {
+  opacity: 1;
+}
+
+.active #original-image {
+  opacity: 0.5; /* Fade the original image */
+}
