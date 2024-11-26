@@ -108,33 +108,24 @@ body {
     font-family: 'Poppins', sans-serif;
   }
   
-  .section:nth-of-type(odd) {
-    text-align: right;
-  }
-  
-  .section:nth-of-type(even) {
-    text-align: left;
-  }
-  
   .floating-images {
     position: relative;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Ensure images don’t overflow */
-  }
-  
-  /* Individual Floating Images */
-  .float-img {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.float-img {
     position: absolute;
-    width: 100px; /* Set image size */
+    width: 100px;
     height: auto;
-    animation: float 10s infinite ease-in-out;
-    opacity: 0.8; /* Optional for a soft look */
-    z-index: 10; /* Ensure images appear above the background */
-  }
-  
-  /* Animation Keyframes for Floating Effect */
-  @keyframes float {
+    opacity: 0;
+    animation: float 10s infinite ease-in-out, fade 5s infinite ease-in-out;
+    z-index: 10;
+}
+
+/* Animation Keyframes for Floating Effect */
+@keyframes float {
     0% {
         transform: translate(0, 0) rotate(0deg);
     }
@@ -150,4 +141,14 @@ body {
     100% {
         transform: translate(0, 0) rotate(0deg);
     }
-  }
+}
+
+/* Fade In and Out Effect */
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}

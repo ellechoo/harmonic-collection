@@ -30,46 +30,43 @@
     <h1>Collection Seven - Squishies</h1>
 
     <div class="floating-images">
-      <img src="images_1/donut.png" alt="Image 1" class="float-img" style="top: 10%; left: 15%;">
-      <img src="images_1/donutthree.png" alt="Image 2" class="float-img" style="top: 50%; left: 30%;">
-      <img src="images_1/mango.png" alt="Image 3" class="float-img" style="top: 20%; left: 70%;">
-      <img src="images_1/strawberry.png" alt="Image 4" class="float-img" style="top: 20%; left: 70%;">
-      <img src="images_1/panda.png" alt="Image 5" class="float-img" style="top: 20%; left: 70%;">
-      <img src="images_1/pineappledonut.png" alt="Image 6" class="float-img" style="top: 20%; left: 70%;">
-      <img src="images_1/.png" alt="Image 7" class="float-img" style="top: 20%; left: 70%;">
-      <img src="images_1/.png" alt="Image 8" class="float-img" style="top: 20%; left: 70%;">
-      <img src="images_1/.png" alt="Image 9" class="float-img" style="top: 20%; left: 70%;">
-     
+      <img src="images_1/donut.png" alt="Image 1" class="float-img">
+      <img src="images_1/donutthree.png" alt="Image 2" class="float-img"> 
+      <img src="images_1/mango.png" alt="Image 3" class="float-img">
+      <img src="images_1/strawberry.png" alt="Image 4" class="float-img">
+      <img src="images_1/pandabun.png" alt="Image 5" class="float-img">
+      <img src="images_1/pineappledonut.png" alt="Image 6" class="float-img">
+
   </div>
 
-    <div class="section">
-      <h2>Lip Tints</h2>
-      <p><strong>Romand:</strong><br>
-        Blur Fudge Tint (06 Mauvish)<br>
-        Blur Fudge Tint (02 Rosiental)<br>
-        Blur Fudge Tint (13 Cooling Up)<br>
-        Dewyful Water Tint (08 Berry Divine)<br>
-        Dewyful Water Tint (11 Custard Mauve)<br>
-        Dewyful Water Tint (11 Lilac Cream)<br>
-        Glasting Water Gloss (00 Meteor Track)<br>
-        *FAVORITE* Glasting Color Gloss (04 Grapy Way)<br>
-        *FAVORITE* Glasting Melting Balm (07 Mauve Whip)<br>
-        *FAVORITE* Glasting Melting Balm (12 Veiled Rose)<br>
-        *FAVORITE* Glasting Water Tint (14 Mauve Moon)<br>
-        Juicy Lasting Tint (26 Bare Fig)<br>
-        *FAVORITE* Juicy Lasting Tint (33 Bare Vine)
-      </p>
-      <p><strong>Peripera:</strong><br>
-        *FAVORITE* Ink Mood Glowy Tint (Honey Kookie Edition) (19 Mauve Chaos)<br>
-        Ink Airy Velvet (08 Pretty Orange Pink)<br>
-        BBIA Last Velvet Tint (V24 Trendy Note)
-      </p>
-      <p><strong>Miscellaneous Lip Products:</strong><br>
-        The Creme Shop Tinted Lip Balm (Choco Milk)<br>
-        Maybelline SuperStay Ink Crayon Lipstick (30 Seek Adventure)<br>
-        Elf Lip Oil (Rose Envy)<br>
-        Elf Srsly Satin (Taffy)<br>
-        NYX Suede Matte Lipstick (Cold Brew)<br>
-        NYX Suede Matte Lipstick (Lalaland)
-      </p>
-    </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.float-img');
+
+    images.forEach((img) => {
+        // Initial random positioning
+        randomizePosition(img);
+
+        // Randomize animation delays
+        img.style.animationDelay = `${Math.random() * 5}s`;
+
+        // Change position at the end of each animation cycle
+        img.addEventListener('animationiteration', () => {
+            randomizePosition(img);
+        });
+    });
+});
+
+function randomizePosition(element) {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Generate random positions within the viewport
+    const randomX = Math.random() * viewportWidth;
+    const randomY = Math.random() * viewportHeight;
+
+    // Apply new random positions
+    element.style.left = `${randomX}px`;
+    element.style.top = `${randomY}px`;
+}
+  </script>
