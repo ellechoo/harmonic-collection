@@ -99,7 +99,7 @@ body {
   position: relative;
   display: inline-block;
   width: 300px; /* Adjust size as needed */
-  height: 300px; /* Adjust size as needed */
+  height: 500px; /* Adjust size as needed */
   cursor: pointer;
 }
 
