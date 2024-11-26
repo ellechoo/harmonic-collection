@@ -48,20 +48,20 @@
     const images = document.querySelectorAll('.float-img');
 
     images.forEach((img) => {
-        // Initial random positioning
-        randomizePosition(img);
+        // Initial random size and positioning
+        randomizeSizeAndPosition(img);
 
         // Randomize animation delays
         img.style.animationDelay = `${Math.random() * 5}s`;
 
-        // Change position at the end of each animation cycle
+        // Change size and position at the end of each animation cycle
         img.addEventListener('animationiteration', () => {
-            randomizePosition(img);
+            randomizeSizeAndPosition(img);
         });
     });
 });
 
-function randomizePosition(element) {
+function randomizeSizeAndPosition(element) {
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
@@ -69,8 +69,13 @@ function randomizePosition(element) {
     const randomX = Math.random() * viewportWidth;
     const randomY = Math.random() * viewportHeight;
 
-    // Apply new random positions
+    // Generate a random size within a range
+    const randomSize = Math.floor(Math.random() * (150 - 50) + 50); // Sizes between 50px and 150px
+
+    // Apply new random size and positions
     element.style.left = `${randomX}px`;
     element.style.top = `${randomY}px`;
+    element.style.width = `${randomSize}px`;
 }
+
   </script>
