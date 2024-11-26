@@ -124,7 +124,27 @@ body {
     z-index: 10;
 }
 
-/* Animation Keyframes for Floating Effect */
+/* Hover Effect to Increase Size */
+.float-img:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  z-index: 20; /* Brings hovered image to the front */
+}
+
+/* Description Popup Styling */
+.description {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none; /* Initially hidden */
+  z-index: 30;
+  animation: fade-out 0.5s forwards;
+}
+
+/* Floating Effect */
 @keyframes float {
     0% {
         transform: translate(0, 0) rotate(0deg);
@@ -151,4 +171,13 @@ body {
     60% {
         opacity: 0.8;
     }
+}
+
+@keyframes fade-out {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
 }
