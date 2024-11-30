@@ -141,6 +141,18 @@ body {
   transform: scale(1); 
 }
 
+.image-container {
+  .description-box {
+    opacity: 0;
+  }
+}
+
+.image-container.active {
+  .description-box {
+    opacity: 1;
+  }
+}
+
 .description-box {
   position: absolute;
   bottom: 10px; /* Default placement, can be customized */
@@ -163,6 +175,6 @@ body {
 .custom-box {
   width: 200px;
   top: 20px;
-  left: 50%;
+  left: 80%;
   transform: translateX(-50%);
 }
