@@ -118,7 +118,7 @@ p {
 }
 
 .color-bar {
-  height: 300px;
+  height: 250px;
   background-color: #2a49a0;
   margin-bottom: 20px;
   position: absolute;
@@ -213,6 +213,10 @@ button:hover {
   animation: scroll-right 20s linear infinite;
 }
 
+.auto-left, .auto-right {
+  opacity: 0.5; /* Adjust the value (0.0 to 1.0) as needed */
+  transition: opacity 0.3s ease; /* Optional: smooth transition effect */
+}
 
 button {
   background-color: transparent;
@@ -233,21 +237,20 @@ button {
   right: 10px;
 }
 
-/* Scroll animations */
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%); /* Scroll halfway since items are duplicated */
   }
 }
 
 @keyframes scroll-right {
   0% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
 }
