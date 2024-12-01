@@ -155,19 +155,19 @@ body {
 
 .description-box {
   position: absolute;
-  bottom: 10px; /* Default placement, can be customized */
-  left: 10px; /* Default placement, can be customized */
+  bottom: 10px; 
+  left: 10px;
   background-color: rgba(11, 37, 81, 0.8);
   color: white;
   padding: 10px;
   border-radius: 5px;
-  width: 200px; /* Ensure a uniform width */
-  height: 200px; /* Set a fixed height for all boxes */
+  width: 200px; 
+  height: 200px;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 2;
-  overflow-y: auto; /* Add a vertical scrollbar when text overflows */
+  overflow-y: auto;
 }
 
 .image-container.active .description-box {
