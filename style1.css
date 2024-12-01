@@ -23,7 +23,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  transition: transform 0.3s ease, color 0.3s ease; 
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
@@ -48,6 +48,7 @@ nav a:hover {
   background-color: rgba(19, 29, 104, 0.5);
   color: white;
   font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   font-weight: 500;
   padding: 10px;
   border: none;
