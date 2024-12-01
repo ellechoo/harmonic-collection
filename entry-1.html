@@ -31,6 +31,34 @@
     <p>Note: I have a very cool-toned complexion, so *most* of my makeup is suited for Cool Summer and Cool Winter people. I realized that my face has low visual weight (like many East Asians), so over the years, I have pivoted towards more pastel makeup. You will notice that the harsher and more unflattering products in my collection tend to be older. My makeup routine has evolved tremendously over the past four years, as these have been the greatest leaps in my journey of self-discovery and self-expression. On this page, I specifically catalog my lip tint and eyeshadow collection because they happen to be the biggest categories in my makeup collection.</p>
 
     <div class="carousel-container">
+      <div class="carousel auto-carousel auto-left">
+        <div class="carousel-inner">
+          <img src="images_1/grapyway.png" alt="Image 1" class="carousel-item">
+          <img src="images_1/mauvemoon.png" alt="Image 2" class="carousel-item">
+          <img src="images_1/custardmauve.png" alt="Image 3" class="carousel-item">
+          <img src="images_1/berrydivine.png" alt="Image 4" class="carousel-item">
+          <img src="images_1/lilaccream.png" alt="Image 5" class="carousel-item">
+          <img src="images_1/barefig.png" alt="Image 6" class="carousel-item">
+          <img src="images_1/barevine.png" alt="Image 7" class="carousel-item">
+          <img src="images_1/coolingup.png" alt="Image 8" class="carousel-item">
+          <img src="images_1/mauvish.png" alt="Image 9" class="carousel-item">
+          <img src="images_1/Rosiental.png" alt="Image 10" class="carousel-item">
+          <img src="images_1/mauvewhip.png" alt="Image 11" class="carousel-item">
+          <img src="images_1/veiledrose.png" alt="Image 12" class="carousel-item">
+          <img src="images_1/watergloss.png" alt="Image 13" class="carousel-item">
+          <img src="images_1/peripera.png" alt="Image 14" class="carousel-item">
+          <img src="images_1/orangepink.png" alt="Image 15" class="carousel-item">
+          <img src="images_1/bbia.png" alt="Image 16" class="carousel-item">
+          <img src="images_1/cremeshop.png" alt="Image 17" class="carousel-item">
+          <img src="images_1/elfsatin.png" alt="Image 18" class="carousel-item">
+          <img src="images_1/nyxsuedelight.png" alt="Image 19" class="carousel-item">
+          <img src="images_1/nyxsuede.png" alt="Image 20" class="carousel-item">
+          <img src="images_1/superstay.png" alt="Image 21" class="carousel-item">
+          <img src="images_1/roseenvy.png" alt="Image 22" class="carousel-item">
+        </div>
+      </div>
+    
+    <div class="carousel-container">
       <div class="color-bar"></div>
       <div class="carousel">
         <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
@@ -60,7 +88,35 @@
         </div>
         <button class="next" onclick="moveCarousel(1)">&#10095;</button>
       </div>
-    </div>    
+    </div>  
+    
+    <div class="carousel auto-carousel auto-right">
+      <div class="carousel-inner">
+        <img src="images_1/grapyway.png" alt="Image 1" class="carousel-item">
+          <img src="images_1/mauvemoon.png" alt="Image 2" class="carousel-item">
+          <img src="images_1/custardmauve.png" alt="Image 3" class="carousel-item">
+          <img src="images_1/berrydivine.png" alt="Image 4" class="carousel-item">
+          <img src="images_1/lilaccream.png" alt="Image 5" class="carousel-item">
+          <img src="images_1/barefig.png" alt="Image 6" class="carousel-item">
+          <img src="images_1/barevine.png" alt="Image 7" class="carousel-item">
+          <img src="images_1/coolingup.png" alt="Image 8" class="carousel-item">
+          <img src="images_1/mauvish.png" alt="Image 9" class="carousel-item">
+          <img src="images_1/Rosiental.png" alt="Image 10" class="carousel-item">
+          <img src="images_1/mauvewhip.png" alt="Image 11" class="carousel-item">
+          <img src="images_1/veiledrose.png" alt="Image 12" class="carousel-item">
+          <img src="images_1/watergloss.png" alt="Image 13" class="carousel-item">
+          <img src="images_1/peripera.png" alt="Image 14" class="carousel-item">
+          <img src="images_1/orangepink.png" alt="Image 15" class="carousel-item">
+          <img src="images_1/bbia.png" alt="Image 16" class="carousel-item">
+          <img src="images_1/cremeshop.png" alt="Image 17" class="carousel-item">
+          <img src="images_1/elfsatin.png" alt="Image 18" class="carousel-item">
+          <img src="images_1/nyxsuedelight.png" alt="Image 19" class="carousel-item">
+          <img src="images_1/nyxsuede.png" alt="Image 20" class="carousel-item">
+          <img src="images_1/superstay.png" alt="Image 21" class="carousel-item">
+          <img src="images_1/roseenvy.png" alt="Image 22" class="carousel-item">
+      </div>
+    </div>
+  </div>
 
     <div class="section">
       <h2>Lip Tints</h2>
@@ -95,24 +151,32 @@
     </div>
 
     <script>
-      let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const carouselInner = document.querySelector('.carousel-inner');
+      document.addEventListener('DOMContentLoaded', () => {
+  const middleCarousel = document.querySelector('.carousel:not(.auto-carousel) .carousel-inner');
+  const items = middleCarousel.children;
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
 
-function moveCarousel(direction) {
-  // Calculate the new index
-  currentIndex += direction;
+  let currentIndex = 0;
 
-  // Loop the index if it goes out of bounds
-  if (currentIndex < 0) {
-    currentIndex = items.length - 4; // Adjust to show the previous 2 items
-  } else if (currentIndex > items.length - 1) {
-    currentIndex = 0; // Adjust to show the next 2 items
-  }
+  const updateCarousel = () => {
+    middleCarousel.style.transform = `translateX(-${currentIndex * items[0].offsetWidth}px)`;
+  };
 
-  // Adjust the carousel scroll position to show the current 4 items
-  carouselInner.style.transform = `translateX(-${currentIndex * (160)}px)`; // 160px is the width of each image + margin
-}
+  nextButton.addEventListener('click', () => {
+    if (currentIndex < items.length - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+});
  </script>
   
   </body>

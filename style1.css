@@ -113,7 +113,7 @@ p {
 .carousel-container {
   position: relative;
   margin: 20px auto;
-  width: 90%;
+  width: 95%;
   background-color: #091a44;
 }
 
@@ -123,7 +123,7 @@ p {
   margin-bottom: 20px;
   position: absolute;
   left: -50vw;
-  width: 200vw;
+  width: 145vw;
   z-index: 0;
 }
 
@@ -174,28 +174,80 @@ button {
   right: 10px;
 }
 
-/* Optional: Add some hover effect for the buttons */
 button:hover {
   cursor: pointer;
   opacity: 0.7;
 }
 
-.collapsible-note summary {
-  cursor: pointer;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  padding: 5px 10px;
-  background-color: rgba(47, 74, 149, 0.9);
-  border-radius: 5px;
+
+/* Main carousel styles */
+.carousel:not(.auto-carousel) {
+  height: 250px; /* Larger height for the main carousel */
 }
 
-.collapsible-note summary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.carousel:not(.auto-carousel) .carousel-item {
+  max-width: 200px; /* Larger PNGs for the main carousel */
+  max-height: 200px; /* Ensures the images fit nicely */
 }
 
-.collapsible-note p {
-  margin-left: 20px;
-  margin-right: 20px;
-  line-height: 1.8;
-  font-family: 'Poppins', sans-serif;
+/* Auto-scrolling carousels */
+.auto-carousel {
+  height: 150px; /* Smaller height for the decorative carousels */
+}
+
+.auto-carousel .carousel-item {
+  max-width: 100px; /* Smaller PNGs for decorative carousels */
+  max-height: 100px; /* Ensures the images fit within the height */
+}
+
+/* Optional: Add consistent object-fit for images */
+.carousel-item {
+  object-fit: contain; /* Ensures images maintain aspect ratio */
+}
+
+.auto-left .carousel-inner {
+  animation: scroll-left 20s linear infinite;
+}
+
+.auto-right .carousel-inner {
+  animation: scroll-right 20s linear infinite;
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Scroll animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
