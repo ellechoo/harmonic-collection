@@ -124,21 +124,17 @@
     </div>
     
     <script>
-      function toggleImages(container) {
-  container.classList.toggle('active');
-}
-
-// Get all image-container elements
 const imageContainers = document.querySelectorAll('.image-container');
 
 imageContainers.forEach((container) => {
-  // Add click event listener to each container
   container.addEventListener('click', () => {
-    // Remove the "active" class from all containers
+    const isActive = container.classList.contains('active');
+
     imageContainers.forEach((item) => item.classList.remove('active'));
 
-    // Add the "active" class to the clicked container
-    container.classList.add('active');
+    if (!isActive) {
+      container.classList.add('active');
+    }
   });
 });
 
