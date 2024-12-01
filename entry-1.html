@@ -226,7 +226,7 @@
         const prevButton = document.querySelector('.prev');
         const nextButton = document.querySelector('.next');
     
-        // Clone the first and last images
+        // Clone the first and last images for seamless loop
         const firstItem = items[0];
         const lastItem = items[items.length - 1];
         const firstClone = firstItem.cloneNode(true);
@@ -242,40 +242,69 @@
         middleCarousel.style.width = `${totalWidth}px`;
     
         let currentIndex = 1; // Start at the first original item (after the last clone)
+        let intervalId = null; // To store the interval ID
     
         const updateCarousel = () => {
           middleCarousel.style.transition = 'transform 0.5s ease'; // Smooth transition
           middleCarousel.style.transform = `translateX(-${currentIndex * firstItem.offsetWidth}px)`;
         };
     
-        nextButton.addEventListener('click', () => {
+        // Move carousel to the next item
+        const moveNext = () => {
           if (currentIndex < allItems.length - 1) {
             currentIndex++;
           } else {
             // Reset to the second original item after reaching the last clone
             currentIndex = 1;
-            middleCarousel.style.transition = 'none'; // Remove transition for instant jump
+            middleCarousel.style.transition = 'none'; // Instant jump to the first original item
             middleCarousel.style.transform = `translateX(-${currentIndex * firstItem.offsetWidth}px)`;
             setTimeout(() => {
-              middleCarousel.style.transition = 'transform 0.5s ease'; // Add back the transition
-            }, 50); // Wait for the jump to take effect
+              middleCarousel.style.transition = 'transform 0.5s ease'; // Re-enable smooth transition
+            }, 50);
           }
           updateCarousel();
-        });
+        };
     
-        prevButton.addEventListener('click', () => {
+        // Move carousel to the previous item
+        const movePrev = () => {
           if (currentIndex > 1) {
             currentIndex--;
           } else {
             // Jump to the last original item after reaching the first clone
             currentIndex = allItems.length - 2;
-            middleCarousel.style.transition = 'none'; // Remove transition for instant jump
+            middleCarousel.style.transition = 'none'; // Instant jump to the last original item
             middleCarousel.style.transform = `translateX(-${currentIndex * firstItem.offsetWidth}px)`;
             setTimeout(() => {
-              middleCarousel.style.transition = 'transform 0.5s ease'; // Add back the transition
-            }, 50); // Wait for the jump to take effect
+              middleCarousel.style.transition = 'transform 0.5s ease'; // Re-enable smooth transition
+            }, 50);
           }
           updateCarousel();
+        };
+    
+        // Event listener for the next button
+        nextButton.addEventListener('mousedown', () => {
+          intervalId = setInterval(moveNext, 150); // Move right continuously
+        });
+    
+        nextButton.addEventListener('mouseup', () => {
+          clearInterval(intervalId); // Stop moving when button is released
+        });
+    
+        nextButton.addEventListener('mouseleave', () => {
+          clearInterval(intervalId); // Stop moving if the mouse leaves the button
+        });
+    
+        // Event listener for the prev button
+        prevButton.addEventListener('mousedown', () => {
+          intervalId = setInterval(movePrev, 150); // Move left continuously
+        });
+    
+        prevButton.addEventListener('mouseup', () => {
+          clearInterval(intervalId); // Stop moving when button is released
+        });
+    
+        prevButton.addEventListener('mouseleave', () => {
+          clearInterval(intervalId); // Stop moving if the mouse leaves the button
         });
       });
     </script>    
