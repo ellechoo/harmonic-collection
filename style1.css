@@ -1,21 +1,18 @@
 body {
+  background-color: #091239;
+  position: relative;
+  margin-top: 80px;
   font-family: 'Poppins', sans-serif;
-  color: white;
-  font-weight: bold;
-  background-color: rgb(52, 75, 121);
-  text-align: center; 
-  margin-top: 60px;
-  padding: 0;
 }
 
 nav {
-  position: fixed; /* Keeps nav at the top of the screen */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   text-align: left;
   padding: 10px 0;
-  z-index: 3; /* Higher than the carousel and content */
+  z-index: 3; 
   display: flex;
   align-items: center;
 }
@@ -26,12 +23,12 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+  transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 nav a:hover {
-  transform: scale(1.2); /* Increase size when hovering */
-  color: #FFD700; /* Change color to gold (or any color you prefer) */
+  transform: scale(1.2); 
+  color: #FFD700;
 }
 
 .home-btn {
@@ -82,9 +79,11 @@ nav a:hover {
   display: block;
 }
 
-img {
-  display: block; 
-  margin: 0 auto; 
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-left: 18px;
+  text-align: center;
 }
 
 footer {
@@ -98,6 +97,7 @@ h2 {
   margin-left: 60px;
   margin-right: 60px;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
 p {
@@ -106,48 +106,95 @@ p {
   margin-right: 60px;
   line-height: 1.8;
   font-family: 'Poppins', sans-serif;
+  color: white;
 }
 
-.section:nth-of-type(odd) {
-  text-align: right;
-}
-
-.section:nth-of-type(even) {
-  text-align: left;
-}
-
-.floating-images {
+.carousel-container {
   position: relative;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Ensure images don’t overflow */
+  margin: 20px auto;
+  width: 90%;
+  background-color: #091a44;
 }
 
-/* Individual Floating Images */
-.float-img {
+.color-bar {
+  height: 300px;
+  background-color: #2a49a0;
+  margin-bottom: 20px;
   position: absolute;
-  width: 100px; /* Set image size */
-  height: auto;
-  animation: float 10s infinite ease-in-out;
-  opacity: 0.8; /* Optional for a soft look */
-  z-index: 10; /* Ensure images appear above the background */
+  left: -50vw;
+  width: 200vw;
+  z-index: 0;
 }
 
-/* Animation Keyframes for Floating Effect */
-@keyframes float {
-  0% {
-      transform: translate(0, 0) rotate(0deg);
-  }
-  25% {
-      transform: translate(-20px, 30px) rotate(10deg);
-  }
-  50% {
-      transform: translate(20px, -20px) rotate(-10deg);
-  }
-  75% {
-      transform: translate(-10px, 20px) rotate(5deg);
-  }
-  100% {
-      transform: translate(0, 0) rotate(0deg);
-  }
+/* Carousel styling */
+.carousel {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Styling for each image in the carousel */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  max-width: 150px;
+  margin: 0 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.1); /* Slightly increase size */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Optional: Add some hover effect for the buttons */
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.collapsible-note summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px 10px;
+  background-color: rgba(47, 74, 149, 0.9);
+  border-radius: 5px;
+}
+
+.collapsible-note summary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.collapsible-note p {
+  margin-left: 20px;
+  margin-right: 20px;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
 }
