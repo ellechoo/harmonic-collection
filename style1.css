@@ -267,7 +267,7 @@ button:hover {
 .carousel-overlay2 {
   position: fixed;
   top: 401px;
-  left: 20%;
+  left: 19%;
   transform: translateX(-50%);
   z-index: 10;
   color: white;
