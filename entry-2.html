@@ -26,107 +26,249 @@
     </nav>
 
     <h1>Collection Two - Albums</h1>
-    <p>Hover</p>
-    
-<div class="container">
-  <div class ="section-1">
-    <div class="image-container img-1">
-      <img src="images_1/newjeansnewjeans2.png" alt="Image 1">
-    </div>
-    
-    <div class="image-container img-2">
-      <img src="images_1/nwjns_weverse.png" alt="Image 2">
-    </div>
-    
-    <div class="image-container img-3">
-      <img src="images_1/getup.png" alt="Image 3">
-    </div>
-    
-    <div class="image-container img-4">
-      <img src="images_1/omgditto.png" alt="Image 4">
-    </div>
-    
-    <div class="image-container img-5">
-      <img src="images_1/dittoweverse.png" alt="Image 5">
-    </div>
-    
-    <div class="image-container img-6">
-      <img src="images_1/supernatural.png" alt="Image 6">
-    </div>
 
-    <div class="image-container img-7">
-      <img src="images_1/howsweet2.png" alt="Image 7">
-    </div>
+    <div class="container">
+      <!-- Left Column: Image Containers -->
+      <div class="left-column">
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/newjeansnewjeans2.png" alt="Original" />
+          <img id="overlay-image" src="/harmonic-collection/images_1/newjeansnewjeans.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>
+        </div>
+    
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/haerintote.png" alt="Original" />
+          <img id="overlay-image" src="/harmonic-collection/images_1/lightstick.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>
+        </div>
+    
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/parsonstote.png" alt="Original" />
+          <img id="overlay-image" class="custom-size" src="/harmonic-collection/images_1/laptoptote.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>
+        </div>
+    
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/camtote.png" alt="Original" />
+          <img id="overlay-image" class="custom-size" src="/harmonic-collection/images_1/knit.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>
+        </div>
+    
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/apg.png" alt="Original" />
+          <img id="overlay-image" src="/harmonic-collection/images_1/tennisracket.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>
+        </div>
+    
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/flowerstripe.png" alt="Original" />
+          <img id="overlay-image" class="custom-size" src="/harmonic-collection/images_1/yellowswitch.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>
+        </div>
+    
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/walktote.png" alt="Original" />
+          <img id="overlay-image" class="custom-size" src="/harmonic-collection/images_1/himi.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>    
+        </div>
+    
+        <div class="image-container" onclick="toggleImages(this)">
+          <img id="original-image" src="/harmonic-collection/images_1/flowertote.png" alt="Original" />
+          <img id="overlay-image" src="/harmonic-collection/images_1/ukele.png" alt="Overlay" />
+          <div class="description-box custom-box">desc</div>
+        </div>
+      </div>
+    
+      <!-- Right Column: Spotify Players -->
+      <div class="right-column">
+        <div class="spotify-player-container">
+          <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/album/1HMLpmZAnNyl9pxvOnTovV?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameborder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+        
+        <div class="spotify-player-container">
+          <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/album/45ozep8uHHnj5CCittuyXj?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameborder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+        
+        <div class="spotify-player-container">
+          <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/album/4N1fROq2oeyLGAlQ1C1j18?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameborder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/album/0EhZEM4RRz0yioTgucDhJq?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+            style="border-radius:12px;" 
+            src="https://open.spotify.com/embed/album/1FVw30SoC91lq1UZ6N9rwN?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/album/4SboBpuYojDm02qS4iFeJC?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+            <iframe 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/album/1HfTA0xDoZ0mswFO3GB3ef?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+          style="border-radius:12px" 
+         src="https://open.spotify.com/embed/album/3WdsoMKRqtw5Sgg67YrpnY?utm_source=generator" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/album/0aJnGEZWIc1VCYlZOXv05a?utm_source=generator" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/album/3Pel3gWsPxVpZVrciU0Fm6?utm_source=generator" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/album/0T6hYH0UyDjNraWZk2mZWi?utm_source=generator" 
+          width="100%" 
+         height="352" 
+         frameBorder="0" 
+         allowfullscreen="" 
+         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/album/0Gmf4pfe0POEQq2FgGAj2q?utm_source=generator" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+          </iframe>
+        </div>
+    
+        <div class="spotify-player-container">
+          <iframe 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/album/558tpdCejjVQNFAumRAeQj?utm_source=generator" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+          </iframe>
+        </div>
 
-    <div class="image-container img-1">
-      <img src="images_1/newjeansnewjeans2.png" alt="Image 1">
+      </div>
     </div>
     
-    <div class="image-container img-2">
-      <img src="images_1/nwjns_weverse.png" alt="Image 2">
-    </div>
     
-    <div class="image-container img-3">
-      <img src="images_1/getup.png" alt="Image 3">
-    </div>
-    
-    <div class="image-container img-4">
-      <img src="images_1/omgditto.png" alt="Image 4">
-    </div>
-    
-    <div class="image-container img-5">
-      <img src="images_1/dittoweverse.png" alt="Image 5">
-    </div>
-    
-    <div class="image-container img-6">
-      <img src="images_1/supernatural.png" alt="Image 6">
-    </div>
-
-    <div class="image-container img-7">
-      <img src="images_1/howsweet2.png" alt="Image 7">
-    </div>
-  </div>
-
-  <div class="section-2">
-    <div class="image-container img-8">
-      <img src="images_1/maxident.png" alt="Image 8">
-    </div>
-    
-    <div class="image-container img-9">
-      <img src="images_1/fivestar.png" alt="Image 9">
-    </div>
-
-    <div class="image-container img-10">
-      <img src="images_1/rockstar.png" alt="Image 10">
-    </div>
-
-    <div class="image-container img-11">
-      <img src="images_1/rockstarhan.png" alt="Image 11">
-    </div>
-
-    <div class="image-container img-12">
-      <img src="images_1/rockstarroll.png" alt="Image 12">
-    </div>
-    
-    <div class="image-container img-8">
-      <img src="images_1/maxident.png" alt="Image 8">
-    </div>
-    
-    <div class="image-container img-9">
-      <img src="images_1/fivestar.png" alt="Image 9">
-    </div>
-
-    <div class="image-container img-10">
-      <img src="images_1/rockstar.png" alt="Image 10">
-    </div>
-
-    <div class="image-container img-11">
-      <img src="images_1/rockstarhan.png" alt="Image 11">
-    </div>
-
-    <div class="image-container img-12">
-      <img src="images_1/rockstarroll.png" alt="Image 12">
-    </div>
-  </div>
-</div>
   </body>
+
+  <script>
+    const imageContainers = document.querySelectorAll('.image-container');
+    
+    imageContainers.forEach((container) => {
+      container.addEventListener('click', () => {
+        const isActive = container.classList.contains('active');
+    
+        imageContainers.forEach((item) => item.classList.remove('active'));
+    
+        if (!isActive) {
+          container.classList.add('active');
+        }
+      });
+    });
+    
+        </script>
