@@ -247,33 +247,25 @@ button:hover {
 
 .carousel-overlay {
   position: fixed;
-  top: 20px; /* Adjust this to place the text where you want */
-  left: 50%;
+  top: 78px;
+  left: 90%;
   transform: translateX(-50%);
   z-index: 10;
   color: white;
   padding: 10px;
-  text-align: center;
+  text-align: right;
+  opacity: 80%
 }
 
 .carousel-overlay2 {
   position: fixed;
-  top: 470px;
+  top: 401px;
   left: 20%;
   transform: translateX(-50%);
   z-index: 10;
   color: white;
   padding: 10px;
-}
-
-.carousel-overlay3 {
-  position: fixed;
-  top: 470px;
-  left: 20%;
-  transform: translateX(-50%);
-  z-index: 10;
-  color: white;
-  padding: 10px;
+  opacity: 80%
 }
 
 .carousel-title {
@@ -297,7 +289,7 @@ button:hover {
   text-align: right;
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  line-height: 1.1;
+  line-height: 0.9;
 }
 
 @keyframes scroll-left {
