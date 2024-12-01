@@ -234,3 +234,14 @@ p {
   align-items: center; /* Align items vertically */
   gap: 20px; /* Space between the image container and the Spotify player */
 }
+
+.left-column .image-container {
+  width: 250px;   /* Smaller width */
+  height: 350px;  /* Smaller height */
+  margin-bottom: 20px; /* Adds space between images */
+}
+
+.left-column .image-container img {
+  width: 100%; /* Ensures the image fits within the container */
+  height: 100%; /* Ensures the image fits within the container */
+}
