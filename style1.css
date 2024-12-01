@@ -122,7 +122,6 @@ p {
   position: relative;
   margin: 20px auto;
   width: 100%;
-  background-color: #091a44;
 }
 
 .color-bar {
@@ -158,8 +157,8 @@ p {
 }
 
 .carousel-item:hover {
-  transform: scale(1.1); /* Slightly increase size */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
   cursor: pointer;
 }
 
@@ -256,13 +255,13 @@ button:hover {
 .carousel-overlay {
   position: fixed;
   top: 78px;
-  left: 90%;
+  left: 91%;
   transform: translateX(-50%);
   z-index: 10;
   color: white;
   padding: 10px;
   text-align: right;
-  opacity: 80%
+  opacity: 90%
 }
 
 .carousel-overlay2 {
@@ -273,7 +272,7 @@ button:hover {
   z-index: 10;
   color: white;
   padding: 10px;
-  opacity: 80%
+  opacity: 90%
 }
 
 .carousel-title {
