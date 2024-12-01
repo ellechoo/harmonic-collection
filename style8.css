@@ -1,183 +1,185 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    font-weight: bold;
-    background-color: rgb(68, 91, 138);
-    text-align: center; 
-    margin-top: 60px;
-    padding: 0;
-  }
-  
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    padding: 10px 0;
-    z-index: 3; 
-    display: flex;
-    align-items: center;
-  }
-  
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  
-  nav a:hover {
-    transform: scale(1.2);
-    color: #FFD700; 
-  }
-  
-  .home-btn {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropbtn {
-    background-color: rgba(19, 29, 104, 0.5);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(47, 74, 149, 0.9);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  img {
-    display: block; 
-    margin: 0 auto; 
-  }
-  
-  footer {
-    margin-top: 20px; 
-    padding-bottom: 50px; 
-    text-align: center; 
-  }
-  
-  h2 {
-    margin-bottom: 30px;
-    margin-left: 60px;
-    margin-right: 60px;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  p {
-    margin-bottom: 50px;
-    margin-left: 60px;
-    margin-right: 60px;
-    line-height: 1.8;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .floating-images {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(68, 91, 138);
+  text-align: center; 
+  margin-top: 60px;
+  padding: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  z-index: 3; 
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.2);
+  color: #FFD700; 
+}
+
+.home-btn {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: rgba(19, 29, 104, 0.5);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(47, 74, 149, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+img {
+  display: block; 
+  margin: 0 auto; 
+}
+
+footer {
+  margin-top: 20px; 
+  padding-bottom: 50px; 
+  text-align: center; 
+}
+
+h2 {
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  margin-bottom: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+}
+
+.floating-images {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.float-img-container {
+  position: relative;
+  display: inline-block;
 }
 
 .float-img {
-    position: absolute;
-    width: 100px;
-    height: auto;
-    opacity: 0;
-    animation: float 10s infinite ease-in-out, fade 5s infinite ease-in-out;
-    z-index: 10;
-}
-
-/* Hover Effect to Increase Size */
-.float-img:hover {
-  transform: scale(1.5);
-  transition: transform 0.3s ease;
-  z-index: 20; /* Brings hovered image to the front */
-}
-
-/* Description Popup Styling */
-.description {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
+  width: 100px;
+  height: auto;
+  opacity: 1; /* Ensure image is visible */
+  animation: float 10s infinite ease-in-out, fade 5s infinite ease-in-out;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.float-img:hover {
+  animation-play-state: paused; /* Pause floating animation */
+  z-index: 20; /* Bring to front */
+  /* Removed the scaling effect */
+}
+
+/* Label styling */
+.image-label {
+  position: absolute;
+  top: -20px; /* Adjust the position of the label above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
   font-size: 14px;
-  display: none; /* Initially hidden */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade in and out */
   z-index: 30;
-  animation: fade-out 0.5s forwards;
+}
+
+.float-img-container:hover .image-label {
+  opacity: 1; /* Show label when image is hovered */
 }
 
 /* Floating Effect */
 @keyframes float {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate(-20px, 30px) rotate(10deg);
-    }
-    50% {
-        transform: translate(20px, -20px) rotate(-10deg);
-    }
-    75% {
-        transform: translate(-10px, 20px) rotate(5deg);
-    }
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
+  0% {
+      transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+      transform: translate(-20px, 30px) rotate(10deg);
+  }
+  50% {
+      transform: translate(20px, -20px) rotate(-10deg);
+  }
+  75% {
+      transform: translate(-10px, 20px) rotate(5deg);
+  }
+  100% {
+      transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 /* Fade In and Out Effect */
 @keyframes fade {
-    0%, 100% {
-        opacity: 0;
-    }
-    60% {
-        opacity: 0.8;
-    }
-}
-
-@keyframes fade-out {
-  0% {
-      opacity: 1;
+  0%, 100% {
+      filter: opacity(0); /* Visual fading, keeps hoverable */
   }
-  100% {
-      opacity: 0;
+  60% {
+      filter: opacity(1);
   }
 }
