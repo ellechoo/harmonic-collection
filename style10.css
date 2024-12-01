@@ -161,10 +161,13 @@ body {
   color: white;
   padding: 10px;
   border-radius: 5px;
+  width: 200px; /* Ensure a uniform width */
+  height: 200px; /* Set a fixed height for all boxes */
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
   z-index: 2;
+  overflow-y: auto; /* Add a vertical scrollbar when text overflows */
 }
 
 .image-container.active .description-box {
@@ -177,4 +180,21 @@ body {
   top: 20px;
   left: 80%;
   transform: translateX(-50%);
+}
+
+.description-box::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.description-box::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Track color */
+}
+
+.description-box::-webkit-scrollbar-thumb {
+  background: rgba(164, 187, 255, 0.5); /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded edges */
+}
+
+.description-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(164, 187, 255, 0.7); /* Hover state color */
 }
