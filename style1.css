@@ -245,6 +245,61 @@ button:hover {
   transform: translateY(-50%) scale(3);
 }
 
+.carousel-overlay {
+  position: fixed;
+  top: 20px; /* Adjust this to place the text where you want */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-overlay2 {
+  position: fixed;
+  top: 470px;
+  left: 20%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: white;
+  padding: 10px;
+}
+
+.carousel-overlay3 {
+  position: fixed;
+  top: 470px;
+  left: 20%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: white;
+  padding: 10px;
+}
+
+.carousel-title {
+  font-size: 1.95rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.carousel-title2 {
+  font-size: 8rem;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.carousel-title3 {
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1.1;
+}
+
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
