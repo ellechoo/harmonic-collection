@@ -1,328 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style3.css">
-  <title>Collection Six - Kpop Photocards</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style3.css">
+ <title>Collection Six - Kpop Photocards</title>
+ <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
+
 <body>
-  <nav>
-    <a href="/harmonic-collection/index.html" class="home-btn">Home</a>
-    <div class="dropdown">
-      <button class="dropbtn">Entries</button>
-      <div class="dropdown-content">
-        <a href="/harmonic-collection/entry-1.html">liptints</a>
-        <a href="/harmonic-collection/entry-2.html">albums</a>
-        <a href="/harmonic-collection/entry-3.html">photocards</a>
-        <a href="/harmonic-collection/entry-4.html">posters</a>
-        <a href="/harmonic-collection/entry-6.html">manga</a>
-        <a href="/harmonic-collection/entry-7.html">figurines</a>
-        <a href="/harmonic-collection/entry-8.html">squishies</a>
-        <a href="/harmonic-collection/entry-9.html">plushies</a>
-        <a href="/harmonic-collection/entry-10.html">totes</a> 
-      </div>
-    </div>
-  </nav>
+ <nav>
+   <a href="/harmonic-collection/index.html" class="home-btn">Home</a>
+   <div class="dropdown">
+     <button class="dropbtn">Entries</button>
+     <div class="dropdown-content">
+       <a href="/harmonic-collection/entry-1.html">liptints</a>
+       <a href="/harmonic-collection/entry-2.html">albums</a>
+       <a href="/harmonic-collection/entry-3.html">photocards</a>
+       <a href="/harmonic-collection/entry-4.html">posters</a>
+       <a href="/harmonic-collection/entry-6.html">manga</a>
+       <a href="/harmonic-collection/entry-7.html">figurines</a>
+       <a href="/harmonic-collection/entry-8.html">squishies</a>
+       <a href="/harmonic-collection/entry-9.html">plushies</a>
+       <a href="/harmonic-collection/entry-10.html">totes</a>
+     </div>
+   </div>
+ </nav>
 
-  <h1>COLLECTION <br> </h1> <h2>THREE</h2>
-    <h3>PHOTOCARDS</h3>
-  <p>Click on the binder!</p>
 
-  <div class="binder-container">
-    <!-- Closed Binder Image -->
-    <img src="images_1/binder.png" alt="Closed Binder" id="closedBinder" onclick="openBinder()" class="binder-img">
-    
-    <!-- Open Binder Image with Photos, initially hidden -->
-    <div id="openBinderContainer" style="display: none;">
-      <img src="images_1/insidebinder.png" alt="Open Binder" class="binder-img">
-      
-      <!-- Infinite Carousel of Photos -->
-      <div class="carousel" id="carouselContainer" style="display: none;">
-        <img src="images_1/njcards1.png" alt="Photo 1" class="carousel-photo">
-        <img src="images_1/njcards2.png" alt="Photo 2" class="carousel-photo">
-        <img src="images_1/njcards3.png" alt="Photo 3" class="carousel-photo">
-        <!-- Add more images as needed -->
-      </div>
-      
-      <!-- Reset Button -->
-      <button onclick="resetBinder()" class="reset-button">Close Binder</button>
-    </div>
-  </div>    
+ <h1>COLLECTION <br> </h1> <h2>THREE</h2>
+   <h3>PHOTOCARDS</h3>
+ <p>Click on the binder!</p>
+ <p>Note: Cards that have two idols in one photo have been split into seperate entities for this chart.</p>
 
-  <script>
-    let currentImageIndex = 0;
-    let carouselInterval;
 
-    function openBinder() {
-      document.getElementById("closedBinder").style.display = "none";
-      document.getElementById("openBinderContainer").style.display = "block";
-      startCarousel(); // Start the carousel when the binder is opened
+
+ <div id="controls">
+  <button id="sort-ascending">Sort Ascending</button>
+  <button id="sort-descending">Sort Descending</button>
+  <button id="sort-alphabetical">Sort Alphabetical</button>
+</div>
+
+
+ <script>
+ const photocardsData = {
+    "NewJeans": {
+      "sets": {
+        "Get Up - Bunny Beach Bag Hanni Version": [
+          { "id": 1, "name": "Hanni" },
+          { "id": 2, "name": "Hanni" },
+          { "id": 3, "name": "Hanni" },
+          { "id": 4, "name": "Hanni" },
+          { "id": 5, "name": "Hanni" }
+        ],
+        "OMG & Ditto": [
+          { "id": 1, "name": "Minji" },
+          { "id": 2, "name": "Hanni" },
+          { "id": 3, "name": "Danielle" },
+          { "id": 4, "name": "Haerin" },
+          { "id": 5, "name": "Hyein" }
+        ],
+        "OMG & Ditto - Weverse Version": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "Supernatural - NJ X MURAKAMI Drawstring Bag Version": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "How Sweet": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "New Jeans New Jeans": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+    ],
+    "New Jeans New Jeans - Weverse Version": [
+      { "id": 1, "name": "Minji" },
+      { "id": 2, "name": "Hanni" },
+      { "id": 3, "name": "Danielle" },
+      { "id": 4, "name": "Haerin" },
+      { "id": 5, "name": "Hyein" }
+      ]
     }
-
-    function resetBinder() {
-      document.getElementById("openBinderContainer").style.display = "none";
-      document.getElementById("closedBinder").style.display = "block";
-      stopCarousel(); // Stop the carousel when the binder is closed
-    }
-
-    function startCarousel() {
-      showImage(currentImageIndex);
-      document.getElementById("carouselContainer").style.display = "flex"; // Show carousel
-      carouselInterval = setInterval(() => {
-        currentImageIndex = (currentImageIndex + 1) % document.querySelectorAll('.carousel-photo').length;
-        showImage(currentImageIndex);
-      }, 3000); // Change image every 3 seconds
-    }
-
-    function stopCarousel() {
-      clearInterval(carouselInterval);
-      carouselInterval = null; // Set to null to indicate the carousel is stopped
-    }
-
-    function showImage(index) {
-      const images = document.querySelectorAll('.carousel-photo');
-      images.forEach((img, i) => {
-        img.style.opacity = i === index ? '1' : '0';
-      });
-    }
-
-    function skipToImage(index) {
-      currentImageIndex = index;
-      showImage(currentImageIndex);
-      stopCarousel(); // Optionally stop the carousel when skipping
-    }
-
-    function toggleCarousel() {
-      if (carouselInterval) {
-        stopCarousel(); // If running, stop the carousel
-      } else {
-        startCarousel(); // If stopped, start the carousel
-      }
-    }
-  </script>
-</body>
-</html>
-
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script>
-  const photocardsData = {
-     "NewJeans": {
-       "sets": {
-         "Get Up - Bunny Beach Bag Hanni Version": [
-           { "id": 1, "name": "Hanni" },
-           { "id": 2, "name": "Hanni" },
-           { "id": 3, "name": "Hanni" },
-           { "id": 4, "name": "Hanni" },
-           { "id": 5, "name": "Hanni" }
-         ],
-         "OMG & Ditto": [
-           { "id": 1, "name": "Minji" },
-           { "id": 2, "name": "Hanni" },
-           { "id": 3, "name": "Danielle" },
-           { "id": 4, "name": "Haerin" },
-           { "id": 5, "name": "Hyein" }
-         ],
-         "OMG & Ditto - Weverse Version": [
-       { "id": 1, "name": "Minji" },
-       { "id": 2, "name": "Hanni" },
-       { "id": 3, "name": "Danielle" },
-       { "id": 4, "name": "Haerin" },
-       { "id": 5, "name": "Hyein" }
-     ],
-     "Supernatural - NJ X MURAKAMI Drawstring Bag Version": [
-       { "id": 1, "name": "Minji" },
-       { "id": 2, "name": "Hanni" },
-       { "id": 3, "name": "Danielle" },
-       { "id": 4, "name": "Haerin" },
-       { "id": 5, "name": "Hyein" }
-     ],
-     "How Sweet": [
-       { "id": 1, "name": "Minji" },
-       { "id": 2, "name": "Hanni" },
-       { "id": 3, "name": "Danielle" },
-       { "id": 4, "name": "Haerin" },
-       { "id": 5, "name": "Hyein" }
-     ],
-     "New Jeans New Jeans": [
-       { "id": 1, "name": "Minji" },
-       { "id": 2, "name": "Hanni" },
-       { "id": 3, "name": "Danielle" },
-       { "id": 4, "name": "Haerin" },
-       { "id": 5, "name": "Hyein" }
-     ],
-     "New Jeans New Jeans - Weverse Version": [
-       { "id": 1, "name": "Minji" },
-       { "id": 2, "name": "Hanni" },
-       { "id": 3, "name": "Danielle" },
-       { "id": 4, "name": "Haerin" },
-       { "id": 5, "name": "Hyein" }
-     ]
-   }
- },
-     "StrayKids": {
-   "sets": {
-     "NoEasy": [
-       { "id": 1, "name": "Han" },
-       { "id": 2, "name": "I.N" },
-       { "id": 2, "name": "Bang Chan" }
-     ],
+  },
+    "StrayKids": {
+  "sets": {
+    "NoEasy": [
+      { "id": 1, "name": "Han" },
+      { "id": 2, "name": "I.N" },
+      { "id": 2, "name": "Bang Chan" }
+    ],
 
 
-     "Maxident": [
-       { "id": 1, "name": "Han" },
-       { "id": 2, "name": "Hyunjin" },
-       { "id": 3, "name": "I.N" }
-     ],
 
 
-     "Five Star": [
-       { "id": 1, "name": "Lee Know" },
-       { "id": 2, "name": "Han" }
-     ],
+    "Maxident": [
+      { "id": 1, "name": "Han" },
+      { "id": 2, "name": "Hyunjin" },
+      { "id": 3, "name": "I.N" }
+    ],
 
 
-     "Rockstar - Limited Star Version": [
-       { "id": 1, "name": "Han" },
-       { "id": 2, "name": "Han" },
-       { "id": 3, "name": "Seungmin" },
-       { "id": 4, "name": "Felix" },
-       { "id": 5, "name": "Bang Chan" },
-       { "id": 6, "name": "Lee Know" },
-       { "id": 7, "name": "Changbin" },
-       { "id": 8, "name": "Hyunjin" },
-       { "id": 9, "name": "Han" },
-       { "id": 10, "name": "Felix" },
-       { "id": 11, "name": "Seungmin" },
-       { "id": 12, "name": "I.N" },
-       { "id": 13, "name": "Lee Know" },
-       { "id": 14, "name": "Hyunjin" },
-       { "id": 15, "name": "I.N" }
 
 
-     ],
-     "Rockstar - Postcard Han Version": [
-       { "id": 1, "name": "Seungmin" },
-       { "id": 2, "name": "I.N" }
-     ],
-   }
- },
+    "Five Star": [
+      { "id": 1, "name": "Lee Know" },
+      { "id": 2, "name": "Han" }
+    ],
 
 
- "Kiss of Life": {
-   "sets": {
-     "Midas Touch": [
-       { "id": 1, "name": "Julie" },
-       { "id": 2, "name": "Hanuel" },
-       { "id": 2, "name": "Natty" }
-     ]
-   }
- },
- "Aespa": {
-   "sets": {
-     "Armageddon - Superbeing Version": [
-       { "id": 1, "name": "Winter" }
-     ],
-   }
+
+
+    "Rockstar - Limited Star Version": [
+      { "id": 1, "name": "Han" },
+      { "id": 2, "name": "Han" },
+      { "id": 3, "name": "Seungmin" },
+      { "id": 4, "name": "Felix" },
+      { "id": 5, "name": "Bang Chan" },
+      { "id": 6, "name": "Lee Know" },
+      { "id": 7, "name": "Changbin" },
+      { "id": 8, "name": "Hyunjin" },
+      { "id": 9, "name": "Han" },
+      { "id": 10, "name": "Felix" },
+      { "id": 11, "name": "Seungmin" },
+      { "id": 12, "name": "I.N" },
+      { "id": 13, "name": "Lee Know" },
+      { "id": 14, "name": "Hyunjin" },
+      { "id": 15, "name": "I.N" }
+
+
+
+
+    ],
+    "Rockstar - Postcard Han Version": [
+      { "id": 1, "name": "Seungmin" },
+      { "id": 2, "name": "I.N" }
+    ],
+  }
+  },
+
+
+
+
+  "Kiss of Life": {
+  "sets": {
+    "Midas Touch": [
+      { "id": 1, "name": "Julie" },
+      { "id": 2, "name": "Hanuel" },
+      { "id": 2, "name": "Natty" }
+    ]
+  }
+  },
+  "Aespa": {
+  "sets": {
+    "Armageddon - Superbeing Version": [
+      { "id": 1, "name": "Winter" }
+    ],
+  }
  }
-};
+ };
+
 
    // Aggregate data by album
    const flattenedAlbumData = [];
-  for (const group in photocardsData) {
-    const sets = photocardsData[group].sets;
-    for (const setName in sets) {
-      const set = sets[setName];
-      flattenedAlbumData.push({
-        letter: setName, // Use the set name as the x-axis label
-        frequency: set.length, // Use the count of cards as the y-axis value
-      });
+   for (const group in photocardsData) {
+     const sets = photocardsData[group].sets;
+     for (const setName in sets) {
+       const set = sets[setName];
+       flattenedAlbumData.push({
+         letter: setName, // Use the set name as the x-axis label
+         frequency: set.length, // Use the count of cards as the y-axis value
+       });
+     }
+   }
+
+
+   // Aggregate data by idol
+   const idolData = {};
+   for (const group in photocardsData) {
+     const sets = photocardsData[group].sets;
+     for (const setName in sets) {
+       const set = sets[setName];
+       for (const card of set) {
+         const idol = card.name;
+         idolData[idol] = (idolData[idol] || 0) + 1;
+       }
+     }
+   }
+
+
+   const flattenedIdolData = Object.entries(idolData).map(([idol, count]) => ({
+     letter: idol, // Idol's name
+     frequency: count, // Count of cards
+   }));
+
+
+   // Chart function
+   function chart(data) {
+     const width = 640;
+     const height = 400;
+     const marginTop = 20;
+     const marginRight = 0;
+     const marginBottom = 50;
+     const marginLeft = 40;
+
+
+     const x = d3.scaleBand()
+       .domain(data.map(d => d.letter))
+       .range([marginLeft, width - marginRight])
+       .padding(0.1);
+
+
+     const y = d3.scaleLinear()
+       .domain([0, d3.max(data, d => d.frequency)]).nice()
+       .range([height - marginBottom, marginTop]);
+
+
+     const xAxis = d3.axisBottom(x).tickSizeOuter(0);
+
+
+     const svg = d3.create("svg")
+       .attr("viewBox", [0, 0, width, height])
+       .attr("style", `max-width: ${width}px; height: auto; font: 10px sans-serif; overflow: visible;`);
+
+
+     const bar = svg.append("g")
+       .attr("fill", "steelblue")
+       .selectAll("rect")
+       .data(data)
+       .join("rect")
+       .style("mix-blend-mode", "multiply")
+       .attr("x", d => x(d.letter))
+       .attr("y", d => y(d.frequency))
+       .attr("height", d => y(0) - y(d.frequency))
+       .attr("width", x.bandwidth());
+
+
+     const gx = svg.append("g")
+       .attr("transform", `translate(0,${height - marginBottom})`)
+       .call(xAxis)
+       .selectAll("text")
+       .attr("transform", "rotate(-45)")
+       .style("text-anchor", "end");
+
+
+     const gy = svg.append("g")
+       .attr("transform", `translate(${marginLeft},0)`)
+       .call(d3.axisLeft(y).ticks(null, "s"))
+       .call(g => g.select(".domain").remove());
+
+
+     function update(order) {
+       x.domain(data.sort(order).map(d => d.letter));
+       const t = svg.transition().duration(750);
+
+
+       bar.data(data, d => d.letter)
+         .order()
+         .transition(t)
+         .delay((d, i) => i * 20)
+         .attr("x", d => x(d.letter));
+
+
+       gx.transition(t)
+         .call(xAxis)
+         .selectAll(".tick")
+         .delay((d, i) => i * 20);
+     }
+
+
+     return Object.assign(svg.node(), { update });
+   }
+
+
+   const albumChart = chart(flattenedAlbumData);
+    document.body.appendChild(albumChart);
+
+    const idolChart = chart(flattenedIdolData);
+    document.body.appendChild(idolChart);
+
+   
+    document.getElementById("sort-ascending").addEventListener("click", () => {
+    albumChart.update((a, b) => a.frequency - b.frequency);
+    idolChart.update((a, b) => a.frequency - b.frequency);
+    });
+
+    document.getElementById("sort-descending").addEventListener("click", () => {
+    albumChart.update((a, b) => b.frequency - a.frequency);
+    idolChart.update((a, b) => b.frequency - a.frequency);
+    });
+
+    document.getElementById("sort-alphabetical").addEventListener("click", () => {
+    albumChart.update((a, b) => a.letter.localeCompare(b.letter));
+    idolChart.update((a, b) => a.letter.localeCompare(b.letter));
+    });
+   </script>
+
+
+    <div class="binder-container">
+    <!-- Closed Binder Image -->
+    <img src="images_1/binder.png" alt="Closed Binder" id="closedBinder" onclick="openBinder()" class="binder-img">
+    <!-- Open Binder Image with Photos, initially hidden -->
+    <div id="openBinderContainer" style="display: none;">
+   <img src="images_1/insidebinder.png" alt="Open Binder" class="binder-img">
+  
+   <!-- Infinite Carousel of Photos -->
+   <div class="carousel" id="carouselContainer" style="display: none;">
+     <img src="images_1/njcards1.png" alt="Photo 1" class="carousel-photo">
+     <img src="images_1/njcards2.png" alt="Photo 2" class="carousel-photo">
+     <img src="images_1/njcards3.png" alt="Photo 3" class="carousel-photo">
+     <!-- Add more images as needed -->
+   </div>
+  
+   <!-- Reset Button -->
+   <button onclick="resetBinder()" class="reset-button">Close Binder</button>
+ </div>
+  </div>   
+
+
+  <script>
+ let currentImageIndex = 0;
+ let carouselInterval;
+
+
+ function openBinder() {
+   document.getElementById("closedBinder").style.display = "none";
+   document.getElementById("openBinderContainer").style.display = "block";
+   startCarousel(); // Start the carousel when the binder is opened
+ }
+
+
+ function resetBinder() {
+   document.getElementById("openBinderContainer").style.display = "none";
+   document.getElementById("closedBinder").style.display = "block";
+   stopCarousel(); // Stop the carousel when the binder is closed
+ }
+
+
+ function startCarousel() {
+   showImage(currentImageIndex);
+   document.getElementById("carouselContainer").style.display = "flex"; // Show carousel
+   carouselInterval = setInterval(() => {
+     currentImageIndex = (currentImageIndex + 1) % document.querySelectorAll('.carousel-photo').length;
+     showImage(currentImageIndex);
+   }, 3000); // Change image every 3 seconds
+ }
+
+
+    function stopCarousel() {
+   clearInterval(carouselInterval);
+   carouselInterval = null; // Set to null to indicate the carousel is stopped
     }
-  }
 
-  // Aggregate data by idol
-  const idolData = {};
-  for (const group in photocardsData) {
-    const sets = photocardsData[group].sets;
-    for (const setName in sets) {
-      const set = sets[setName];
-      for (const card of set) {
-        const idol = card.name;
-        idolData[idol] = (idolData[idol] || 0) + 1;
-      }
+
+    function showImage(index) {
+   const images = document.querySelectorAll('.carousel-photo');
+   images.forEach((img, i) => {
+     img.style.opacity = i === index ? '1' : '0';
+   });
     }
-  }
 
-  const flattenedIdolData = Object.entries(idolData).map(([idol, count]) => ({
-    letter: idol, // Idol's name
-    frequency: count, // Count of cards
-  }));
 
-  console.log(flattenedAlbumData); // Check transformed album data
-  console.log(flattenedIdolData);  // Check transformed idol data
+    function skipToImage(index) {
+   currentImageIndex = index;
+   showImage(currentImageIndex);
+   stopCarousel(); // Optionally stop the carousel when skipping
+    }
 
-  // D3.js Chart Function
-  function chart(data) {
-    const width = 640;
-    const height = 400;
-    const marginTop = 20;
-    const marginRight = 0;
-    const marginBottom = 50;
-    const marginLeft = 40;
 
-    const x = d3.scaleBand()
-      .domain(data.map(d => d.letter))
-      .range([marginLeft, width - marginRight])
-      .padding(0.1);
+    function toggleCarousel() {
+   if (carouselInterval) {
+     stopCarousel(); // If running, stop the carousel
+   } else {
+     startCarousel(); // If stopped, start the carousel
+   }
+   }
+    </script>
 
-    const y = d3.scaleLinear()
-      .domain([0, d3.max(data, d => d.frequency)]).nice()
-      .range([height - marginBottom, marginTop]);
-
-    const xAxis = d3.axisBottom(x).tickSizeOuter(0);
-
-    const svg = d3.create("svg")
-      .attr("viewBox", [0, 0, width, height])
-      .attr("style", `max-width: ${width}px; height: auto; font: 10px sans-serif; overflow: visible;`);
-
-    const bar = svg.append("g")
-      .attr("fill", "steelblue")
-      .selectAll("rect")
-      .data(data)
-      .join("rect")
-      .style("mix-blend-mode", "multiply")
-      .attr("x", d => x(d.letter))
-      .attr("y", d => y(d.frequency))
-      .attr("height", d => y(0) - y(d.frequency))
-      .attr("width", x.bandwidth());
-
-    const gx = svg.append("g")
-      .attr("transform", `translate(0,${height - marginBottom})`)
-      .call(xAxis)
-      .selectAll("text")
-      .attr("transform", "rotate(-45)") // Rotate x-axis labels
-      .style("text-anchor", "end"); // Adjust alignment
-
-    const gy = svg.append("g")
-      .attr("transform", `translate(${marginLeft},0)`)
-      .call(d3.axisLeft(y).ticks(null, "s"))
-      .call(g => g.select(".domain").remove());
-
-    return svg.node();
-  }
-
-  // Render the Album Chart
-  const albumChart = chart(flattenedAlbumData);
-  document.body.appendChild(albumChart);
-
-  // Render the Idol Chart
-  const idolChart = chart(flattenedIdolData);
-  document.body.appendChild(idolChart);
-</script>
-
-  <p>Note: Cards that have two idols in one photo have been split into seperate entities for this chart.</p>
-</body>
+  </body>
 </html>
+
