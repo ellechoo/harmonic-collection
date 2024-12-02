@@ -1,125 +1,318 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    font-weight: bold;
-    background-color: rgb(28, 56, 113);
-    margin-top: 60px;
+  background-color: #091239;
+  position: relative;
+  margin-top: 80px;
+  font-family: 'Poppins', sans-serif;
 }
-  
-h1 {
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    margin-left: 18px; 
-  }  
 
-  p {
-    font-family: 'Poppins', sans-serif;
-    color: rgb(159, 189, 235);
-    margin-left: 22px;
+nav {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  z-index: 3; 
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.2); 
+  color: #FFD700;
+}
+
+.home-btn {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: rgba(19, 29, 104, 0.5);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(47, 74, 149, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  margin-left: 18px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 20px; 
+  padding-bottom: 50px; 
+  text-align: center; 
+}
+
+h2 {
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+p {
+  margin-bottom: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.right-align {
+  text-align: right;
+  padding-right: 10px; 
+  margin: 0;
+  max-width: none;
+  margin-left: 550px;
+}
+
+.carousel-container {
+  position: relative;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.color-bar {
+  height: 250px;
+  background-color: #2a49a0;
+  margin-bottom: 20px;
+  position: absolute;
+  left: -50vw;
+  width: 150vw;
+  z-index: 0;
+}
+
+/* Carousel styling */
+.carousel {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Styling for each image in the carousel */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  max-width: 150px;
+  margin: 0 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+
+/* Main carousel styles */
+.carousel:not(.auto-carousel) {
+  height: 250px; /* Larger height for the main carousel */
+}
+
+.carousel:not(.auto-carousel) .carousel-item {
+  max-width: 200px; /* Larger PNGs for the main carousel */
+  max-height: 200px; /* Ensures the images fit nicely */
+}
+
+/* Auto-scrolling carousels */
+.auto-carousel {
+  height: 150px; /* Smaller height for the decorative carousels */
+}
+
+.auto-carousel .carousel-item {
+  max-width: 100px; /* Smaller PNGs for decorative carousels */
+  max-height: 100px; /* Ensures the images fit within the height */
+}
+
+/* Optional: Add consistent object-fit for images */
+.carousel-item {
+  object-fit: contain; /* Ensures images maintain aspect ratio */
+}
+
+.auto-left .carousel-inner {
+  animation: scroll-left 20s linear infinite;
+}
+
+.auto-right .carousel-inner {
+  animation: scroll-right 20s linear infinite;
+}
+
+.auto-left, .auto-right {
+  opacity: 0.5; /* Adjust the value (0.0 to 1.0) as needed */
+  transition: opacity 0.3s ease; /* Optional: smooth transition effect */
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem; /* Increase font size */
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  padding: 10px; /* Optional: Add padding for easier clickability */
+  margin: 0 5px; /* Optional: Adjust margin for spacing */
+}
+
+.prev {
+  left: 20px; /* Adjust positioning as needed */
+}
+
+.next {
+  right: 20px; /* Adjust positioning as needed */
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: translateY(-50%) scale(3);
+}
+
+.carousel-overlay {
+  position: fixed;
+  top: 78px;
+  left: 91%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: white;
+  padding: 10px;
+  text-align: right;
+  opacity: 90%
+}
+
+.carousel-overlay2 {
+  position: fixed;
+  top: 401px;
+  left: 19%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: white;
+  padding: 10px;
+  opacity: 90%
+}
+
+.carousel-title {
+  font-size: 1.95rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.carousel-title2 {
+  font-size: 8rem;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+}
+
+.carousel-title3 {
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 0.9;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
-  
-    .gif-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 10px; 
-      justify-content: center; 
-      padding: 10px;
-    }
-    
-    .gif-grid img {
-      width: 100%; 
-      height: auto; 
-      max-width: 200px; 
-      object-fit: cover; 
+  100% {
+    transform: translateX(-50%); /* Scroll halfway since items are duplicated */
   }
-  
-  img {
-    display: block; 
-    margin: 0 auto; 
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
   }
-  
-  nav {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    padding: 10px 0;
-    z-index: 3; 
-    display: flex;
-    align-items: center;
+  100% {
+    transform: translateX(0);
   }
-  
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    transition: transform 0.3s ease, color 0.3s ease; 
-  }
-  
-  nav a:hover {
-    transform: scale(1.2); 
-    color: #FFD700;
-  }
-  
-  .home-btn {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 10px;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropbtn {
-    background-color: rgba(19, 29, 104, 0.5);
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(47, 74, 149, 0.9);
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .small-gif {
-    width: 500px;
-    height: auto;
-  }
-  
-  footer {
-    margin-top: 20px; 
-    padding-bottom: 50px; 
-    text-align: center; 
-  }
-  
+}
