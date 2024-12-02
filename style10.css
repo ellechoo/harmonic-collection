@@ -81,9 +81,35 @@ nav a:hover {
 
 h1 {
   color: rgb(255, 255, 255);
-  font-size: 20px;
-  margin-left: 18px;
-  text-align: center;
+  font-size: 27.6px;
+  position: fixed; 
+  top: 4%;
+  left: 86%; 
+  margin: 0; 
+  text-align: right;
+  z-index: 2; 
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 76px;
+  position: fixed;
+  top: 6.5%;
+  left: 86%; 
+  margin: 0; 
+  text-align: right;
+  z-index: 2; 
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 87px;
+  position: fixed;
+  top: 5%; 
+  left: 1.5%; 
+  margin: 0; 
+  text-align: left;
+  z-index: 2; */
 }
 
 p {

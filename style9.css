@@ -6,8 +6,35 @@ body {
 
 h1 {
   color: rgb(255, 255, 255);
-  font-size: 50px;
-  margin-left: 18px; 
+  font-size: 30px;
+  position: fixed; 
+  top: 4%;
+  left: 85%; 
+  margin: 0; 
+  text-align: right;
+  z-index: 2; 
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 65px;
+  position: fixed;
+  top: 7%; 
+  left: 85%; 
+  margin: 0; 
+  text-align: right;
+  z-index: 2; 
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 87px;
+  position: fixed;
+  top: 5%; 
+  left: 1.5%; 
+  margin: 0; 
+  text-align: left;
+  z-index: 2; */
 }
 
 p {
