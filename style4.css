@@ -166,8 +166,14 @@ p {
 }
 
 .overlay-image:nth-child(7) {
-  top: 480px;
+  top: 500px;
   left: 120px;
+  width: 330px; 
+}
+
+.overlay-image:nth-child(8) {
+  top: 500px;
+  left: 320px;
   width: 330px; 
 }
 
