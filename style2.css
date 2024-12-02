@@ -123,9 +123,10 @@ p {
 }
 
 .spotify-player-container {
-  max-width: 500px;
+  max-width: 600px; /* Increase the maximum width */
+  width: 100%;      /* Ensure it stretches to its container's width */
   margin-left: auto; /* Aligns to the right */
-  margin-right: 20px; /* Optional: adds space on the right side */
+  margin-right: 20px; /* Adds space on the right side */
   margin-bottom: 20px; /* Adds spacing between boxes */
   padding: 10px;
   background-color: #1c1c1c; /* Optional: dark background */
