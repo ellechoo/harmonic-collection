@@ -102,7 +102,14 @@ p {
 }
 
 .left-column {
-  flex: 1; /* Makes the left column take available space */
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stacks the images vertically */
+  align-items: flex-end;
+}
+
+.left-column .image-container {
+  margin-right: 20px; /* Adds spacing between the images and the Spotify boxes */
 }
 
 .right-column {
