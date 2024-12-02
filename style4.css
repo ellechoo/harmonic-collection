@@ -80,10 +80,36 @@ nav a:hover {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  margin-left: 18px; 
-  text-align: center;
+  color: rgb(14, 42, 85);
+  font-size: 30px;
+  position: fixed; /* Fix position relative to the viewport */
+  top: 4%;
+  left: 85%; 
+  margin: 0; /* Remove unnecessary margins */
+  text-align: right;
+  z-index: 2; /* Ensure it's above other content */
+}
+
+h2 {
+  color: rgb(14, 42, 85);
+  font-size: 73px;
+  position: fixed;
+  top: 7%; 
+  left: 85%; 
+  margin: 0; /* Remove unnecessary margins */
+  text-align: right;
+  z-index: 2; /* Ensure it's above other content */
+}
+
+h3 {
+  color: rgb(14, 42, 85);
+  font-size: 87px;
+  position: fixed;
+  top: 5%; 
+  left: 1.5%; 
+  margin: 0; 
+  text-align: left;
+  z-index: 2; */
 }
 
 p {
@@ -131,60 +157,62 @@ p {
 }
 
 .overlay-image:hover {
-  transform: scale(1.1); /* Makes the image 20% larger on hover */
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px rgba(14, 42, 85, 0.8); /* White glowing effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .overlay-image:nth-child(1) { 
-  top: 180px;
+  top: 110px;
   left: 250px;
   width: 250px; 
 }
 
 .overlay-image:nth-child(2) {
-  top: 220px;
+  top: 150px;
   left: 540px;
   width: 340px; 
 }
 
 .overlay-image:nth-child(3) {
-  top: 156px;
+  top: 84px;
   left: 940px;
   width: 260px; 
 }
 
 .overlay-image:nth-child(4) {
-  top: 450px;
+  top: 380px;
   left: 1150px;
   width: 170px; 
 }
 
 .overlay-image:nth-child(5) {
-  top: 160px;
+  top: 90px;
   left: 80px;
   width: 140px; 
 }
 
 .overlay-image:nth-child(6) {
-  top: 565px;
+  top: 485px;
   left: 880px;
   width: 230px; 
 }
 
 .overlay-image:nth-child(7) {
-  top: 420px;
+  top: 340px;
   left: 93px;
   width: 180px;
 }
 
 .overlay-image:nth-child(8) {
-  top: 540px;
+  top: 460px;
   left: 330px;
   width: 225px; 
 }
 
 .popup {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
