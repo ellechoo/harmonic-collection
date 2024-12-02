@@ -28,17 +28,9 @@
     </div>
   </nav>
 
-  <h1>Collection Three - Photocards</h1>
+  <h1>COLLECTION <br> </h1> <h2>THREE</h2>
+    <h3>PHOTOCARDS</h3>
   <p>Click on the binder!</p>
-
-  <div class="sidebar">
-    <h3>Image Menu</h3>
-    <button onclick="skipToImage(0)">Image 1</button>
-    <button onclick="skipToImage(1)">Image 2</button>
-    <button onclick="skipToImage(2)">Image 3</button>
-    <!-- Add more buttons as needed for more images -->
-    <button onclick="toggleCarousel()">Pause/Resume Carousel</button>
-  </div>
 
   <div class="binder-container">
     <!-- Closed Binder Image -->
@@ -115,172 +107,221 @@
 </body>
 </html>
 
-<canvas id="idolChart" width="400" height="200"></canvas>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+  const photocardsData = {
+     "NewJeans": {
+       "sets": {
+         "Get Up - Bunny Beach Bag Hanni Version": [
+           { "id": 1, "name": "Hanni" },
+           { "id": 2, "name": "Hanni" },
+           { "id": 3, "name": "Hanni" },
+           { "id": 4, "name": "Hanni" },
+           { "id": 5, "name": "Hanni" }
+         ],
+         "OMG & Ditto": [
+           { "id": 1, "name": "Minji" },
+           { "id": 2, "name": "Hanni" },
+           { "id": 3, "name": "Danielle" },
+           { "id": 4, "name": "Haerin" },
+           { "id": 5, "name": "Hyein" }
+         ],
+         "OMG & Ditto - Weverse Version": [
+       { "id": 1, "name": "Minji" },
+       { "id": 2, "name": "Hanni" },
+       { "id": 3, "name": "Danielle" },
+       { "id": 4, "name": "Haerin" },
+       { "id": 5, "name": "Hyein" }
+     ],
+     "Supernatural - NJ X MURAKAMI Drawstring Bag Version": [
+       { "id": 1, "name": "Minji" },
+       { "id": 2, "name": "Hanni" },
+       { "id": 3, "name": "Danielle" },
+       { "id": 4, "name": "Haerin" },
+       { "id": 5, "name": "Hyein" }
+     ],
+     "How Sweet": [
+       { "id": 1, "name": "Minji" },
+       { "id": 2, "name": "Hanni" },
+       { "id": 3, "name": "Danielle" },
+       { "id": 4, "name": "Haerin" },
+       { "id": 5, "name": "Hyein" }
+     ],
+     "New Jeans New Jeans": [
+       { "id": 1, "name": "Minji" },
+       { "id": 2, "name": "Hanni" },
+       { "id": 3, "name": "Danielle" },
+       { "id": 4, "name": "Haerin" },
+       { "id": 5, "name": "Hyein" }
+     ],
+     "New Jeans New Jeans - Weverse Version": [
+       { "id": 1, "name": "Minji" },
+       { "id": 2, "name": "Hanni" },
+       { "id": 3, "name": "Danielle" },
+       { "id": 4, "name": "Haerin" },
+       { "id": 5, "name": "Hyein" }
+     ]
+   }
+ },
+     "StrayKids": {
+   "sets": {
+     "NoEasy": [
+       { "id": 1, "name": "Han" },
+       { "id": 2, "name": "I.N" },
+       { "id": 2, "name": "Bang Chan" }
+     ],
 
-  <script>
-    const photocardsData = {
-      "NewJeans": {
-        "sets": {
-          "Get Up - Bunny Beach Bag Hanni Version": [
-            { "id": 1, "name": "Hanni" },
-            { "id": 2, "name": "Hanni" },
-            { "id": 3, "name": "Hanni" },
-            { "id": 4, "name": "Hanni" },
-            { "id": 5, "name": "Hanni" }
-          ],
-          "OMG & Ditto": [
-            { "id": 1, "name": "Minji" },
-            { "id": 2, "name": "Hanni" },
-            { "id": 3, "name": "Danielle" },
-            { "id": 4, "name": "Haerin" },
-            { "id": 5, "name": "Hyein" }
-          ],
-          "OMG & Ditto - Weverse Version": [
-        { "id": 1, "name": "Minji" },
-        { "id": 2, "name": "Hanni" },
-        { "id": 3, "name": "Danielle" },
-        { "id": 4, "name": "Haerin" },
-        { "id": 5, "name": "Hyein" }
-      ],
-      "Supernatural - NJ X MURAKAMI Drawstring Bag Version": [
-        { "id": 1, "name": "Minji" },
-        { "id": 2, "name": "Hanni" },
-        { "id": 3, "name": "Danielle" },
-        { "id": 4, "name": "Haerin" },
-        { "id": 5, "name": "Hyein" }
-      ],
-      "How Sweet": [
-        { "id": 1, "name": "Minji" },
-        { "id": 2, "name": "Hanni" },
-        { "id": 3, "name": "Danielle" },
-        { "id": 4, "name": "Haerin" },
-        { "id": 5, "name": "Hyein" }
-      ],
-      "New Jeans New Jeans": [
-        { "id": 1, "name": "Minji" },
-        { "id": 2, "name": "Hanni" },
-        { "id": 3, "name": "Danielle" },
-        { "id": 4, "name": "Haerin" },
-        { "id": 5, "name": "Hyein" }
-      ],
-      "New Jeans New Jeans - Weverse Version": [
-        { "id": 1, "name": "Minji" },
-        { "id": 2, "name": "Hanni" },
-        { "id": 3, "name": "Danielle" },
-        { "id": 4, "name": "Haerin" },
-        { "id": 5, "name": "Hyein" }
-      ]
-    }
-  },
-      "StrayKids": {
-    "sets": {
-      "NoEasy": [
-        { "id": 1, "name": "Han" },
-        { "id": 2, "name": "I.N" },
-        { "id": 2, "name": "Bang Chan" }
-      ],
 
-      "Maxident": [
-        { "id": 1, "name": "Han" },
-        { "id": 2, "name": "Hyunjin" },
-        { "id": 3, "name": "I.N" }
-      ],
+     "Maxident": [
+       { "id": 1, "name": "Han" },
+       { "id": 2, "name": "Hyunjin" },
+       { "id": 3, "name": "I.N" }
+     ],
 
-      "Five Star": [
-        { "id": 1, "name": "Lee Know" },
-        { "id": 2, "name": "Han" }
-      ],
 
-      "Rockstar - Limited Star Version": [
-        { "id": 1, "name": "Han" },
-        { "id": 2, "name": "Han" },
-        { "id": 3, "name": "Seungmin" },
-        { "id": 4, "name": "Felix" },
-        { "id": 5, "name": "Bang Chan" },
-        { "id": 6, "name": "Lee Know" },
-        { "id": 7, "name": "Changbin" },
-        { "id": 8, "name": "Hyunjin" },
-        { "id": 9, "name": "Han" },
-        { "id": 10, "name": "Felix" },
-        { "id": 11, "name": "Seungmin" },
-        { "id": 12, "name": "I.N" },
-        { "id": 13, "name": "Lee Know" },
-        { "id": 14, "name": "Hyunjin" },
-        { "id": 15, "name": "I.N" }
+     "Five Star": [
+       { "id": 1, "name": "Lee Know" },
+       { "id": 2, "name": "Han" }
+     ],
 
-      ],
-      "Rockstar - Postcard Han Version": [
-        { "id": 1, "name": "Seungmin" },
-        { "id": 2, "name": "I.N" }
-      ],
-    }
-  },
 
-  "Kiss of Life": {
-    "sets": {
-      "Midas Touch": [
-        { "id": 1, "name": "Julie" },
-        { "id": 2, "name": "Hanuel" },
-        { "id": 2, "name": "Natty" }
-      ]
-    }
-  },
-  "Aespa": {
-    "sets": {
-      "Armageddon - Superbeing Version": [
-        { "id": 1, "name": "Winter" }
-      ],
-    }
-  }
+     "Rockstar - Limited Star Version": [
+       { "id": 1, "name": "Han" },
+       { "id": 2, "name": "Han" },
+       { "id": 3, "name": "Seungmin" },
+       { "id": 4, "name": "Felix" },
+       { "id": 5, "name": "Bang Chan" },
+       { "id": 6, "name": "Lee Know" },
+       { "id": 7, "name": "Changbin" },
+       { "id": 8, "name": "Hyunjin" },
+       { "id": 9, "name": "Han" },
+       { "id": 10, "name": "Felix" },
+       { "id": 11, "name": "Seungmin" },
+       { "id": 12, "name": "I.N" },
+       { "id": 13, "name": "Lee Know" },
+       { "id": 14, "name": "Hyunjin" },
+       { "id": 15, "name": "I.N" }
+
+
+     ],
+     "Rockstar - Postcard Han Version": [
+       { "id": 1, "name": "Seungmin" },
+       { "id": 2, "name": "I.N" }
+     ],
+   }
+ },
+
+
+ "Kiss of Life": {
+   "sets": {
+     "Midas Touch": [
+       { "id": 1, "name": "Julie" },
+       { "id": 2, "name": "Hanuel" },
+       { "id": 2, "name": "Natty" }
+     ]
+   }
+ },
+ "Aespa": {
+   "sets": {
+     "Armageddon - Superbeing Version": [
+       { "id": 1, "name": "Winter" }
+     ],
+   }
+ }
 };
 
-    const idolCounts = {};
+   // Aggregate data by album
+   const flattenedAlbumData = [];
+  for (const group in photocardsData) {
+    const sets = photocardsData[group].sets;
+    for (const setName in sets) {
+      const set = sets[setName];
+      flattenedAlbumData.push({
+        letter: setName, // Use the set name as the x-axis label
+        frequency: set.length, // Use the count of cards as the y-axis value
+      });
+    }
+  }
 
-    for (const bandName in photocardsData) {
-      const sets = photocardsData[bandName].sets;
-      for (const setName in sets) {
-        sets[setName].forEach(photocard => {
-          const idolName = photocard.name;
-          idolCounts[idolName] = (idolCounts[idolName] || 0) + 1;
-        });
+  // Aggregate data by idol
+  const idolData = {};
+  for (const group in photocardsData) {
+    const sets = photocardsData[group].sets;
+    for (const setName in sets) {
+      const set = sets[setName];
+      for (const card of set) {
+        const idol = card.name;
+        idolData[idol] = (idolData[idol] || 0) + 1;
       }
     }
+  }
 
-    const labels = Object.keys(idolCounts);
-    const counts = Object.values(idolCounts);
+  const flattenedIdolData = Object.entries(idolData).map(([idol, count]) => ({
+    letter: idol, // Idol's name
+    frequency: count, // Count of cards
+  }));
 
-    const ctx = document.getElementById('idolChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'Number of Photocards',
-          data: counts,
-          backgroundColor: 'rgba(175, 92, 192, 0.5)',
-          borderColor: 'rgba(175, 92, 192, 1)',
-          borderWidth: 0.5
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: '[Number of Photocards]'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: '[Idol Stage Name]'
-            }
-          }
-        }
-      }
-    });
-  </script>
+  console.log(flattenedAlbumData); // Check transformed album data
+  console.log(flattenedIdolData);  // Check transformed idol data
+
+  // D3.js Chart Function
+  function chart(data) {
+    const width = 640;
+    const height = 400;
+    const marginTop = 20;
+    const marginRight = 0;
+    const marginBottom = 50;
+    const marginLeft = 40;
+
+    const x = d3.scaleBand()
+      .domain(data.map(d => d.letter))
+      .range([marginLeft, width - marginRight])
+      .padding(0.1);
+
+    const y = d3.scaleLinear()
+      .domain([0, d3.max(data, d => d.frequency)]).nice()
+      .range([height - marginBottom, marginTop]);
+
+    const xAxis = d3.axisBottom(x).tickSizeOuter(0);
+
+    const svg = d3.create("svg")
+      .attr("viewBox", [0, 0, width, height])
+      .attr("style", `max-width: ${width}px; height: auto; font: 10px sans-serif; overflow: visible;`);
+
+    const bar = svg.append("g")
+      .attr("fill", "steelblue")
+      .selectAll("rect")
+      .data(data)
+      .join("rect")
+      .style("mix-blend-mode", "multiply")
+      .attr("x", d => x(d.letter))
+      .attr("y", d => y(d.frequency))
+      .attr("height", d => y(0) - y(d.frequency))
+      .attr("width", x.bandwidth());
+
+    const gx = svg.append("g")
+      .attr("transform", `translate(0,${height - marginBottom})`)
+      .call(xAxis)
+      .selectAll("text")
+      .attr("transform", "rotate(-45)") // Rotate x-axis labels
+      .style("text-anchor", "end"); // Adjust alignment
+
+    const gy = svg.append("g")
+      .attr("transform", `translate(${marginLeft},0)`)
+      .call(d3.axisLeft(y).ticks(null, "s"))
+      .call(g => g.select(".domain").remove());
+
+    return svg.node();
+  }
+
+  // Render the Album Chart
+  const albumChart = chart(flattenedAlbumData);
+  document.body.appendChild(albumChart);
+
+  // Render the Idol Chart
+  const idolChart = chart(flattenedIdolData);
+  document.body.appendChild(idolChart);
+</script>
 
   <p>Note: Cards that have two idols in one photo have been split into seperate entities for this chart.</p>
 </body>
