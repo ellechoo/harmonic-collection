@@ -93,11 +93,37 @@ footer {
   text-align: center; 
 }
 
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  position: fixed; 
+  top: 4%;
+  left: 85%; 
+  margin: 0; 
+  text-align: right;
+  z-index: 2; 
+}
+
 h2 {
-  margin-bottom: 30px;
-  margin-left: 60px;
-  margin-right: 60px;
-  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  position: fixed;
+  top: 7%; 
+  left: 85%; 
+  margin: 0; 
+  text-align: right;
+  z-index: 2; 
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  position: fixed;
+  top: 6%; 
+  left: 1.5%; 
+  margin: 0; 
+  text-align: left;
+  z-index: 2; */
 }
 
 p {
