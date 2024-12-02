@@ -96,9 +96,9 @@ p {
 
 .container {
   display: flex;
-  justify-content: space-between; /* Ensures space between the two columns */
-  gap: 20px; /* Space between the columns */
-  padding: 0 20px; /* Optional padding on the sides */
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
 }
 
 .left-column {
@@ -114,19 +114,6 @@ p {
 
 .right-column {
   flex: 1; /* Makes the right column take available space */
-}
-
-/* Connecting line between images in left and right columns */
-.image-container::after {
-  content: '';
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  width: 2px;
-  height: 50px;
-  background-color: #ffffff; /* Change color to match your design */
-  transform: translateX(20px);
-  z-index: -1; /* Place the line behind the image */
 }
 
 .spotify-player-container {
