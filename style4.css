@@ -126,55 +126,60 @@ p {
   width: 150px; /* Fixed size */
   height: auto; 
   cursor: pointer;
-  z-index: 1; /* overlays on top of background images */
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.overlay-image:hover {
+  transform: scale(1.1); /* Makes the image 20% larger on hover */
 }
 
 .overlay-image:nth-child(1) { 
   top: 180px;
-  left: 220px;
+  left: 250px;
   width: 250px; 
 }
 
 .overlay-image:nth-child(2) {
   top: 220px;
-  left: 510px;
-  width: 320px; 
+  left: 540px;
+  width: 340px; 
 }
 
 .overlay-image:nth-child(3) {
   top: 156px;
-  left: 910px;
+  left: 940px;
   width: 260px; 
 }
 
 .overlay-image:nth-child(4) {
   top: 450px;
-  left: 1130px;
+  left: 1150px;
   width: 170px; 
 }
 
 .overlay-image:nth-child(5) {
   top: 160px;
-  left: 50px;
+  left: 80px;
   width: 140px; 
 }
 
 .overlay-image:nth-child(6) {
   top: 565px;
-  left: 850px;
+  left: 880px;
   width: 230px; 
 }
 
 .overlay-image:nth-child(7) {
-  top: 500px;
-  left: 120px;
-  width: 330px; 
+  top: 420px;
+  left: 93px;
+  width: 180px;
 }
 
 .overlay-image:nth-child(8) {
-  top: 500px;
-  left: 320px;
-  width: 330px; 
+  top: 540px;
+  left: 330px;
+  width: 225px; 
 }
 
 .popup {
