@@ -1,7 +1,76 @@
-body {
-  background-color: rgb(61, 74, 147);
+nav {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+  z-index: 3; 
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  margin-top: 60px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.2); 
+  color: #FFD700;
+}
+
+.home-btn {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: rgba(19, 29, 104, 0.5);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(47, 74, 149, 0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 h1 {
@@ -43,181 +112,216 @@ p {
   margin-left: 22px; 
 }
 
+/* General body and font styles */
+body {
+  background-color: rgb(61, 74, 147);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0; /* Remove any margin at the top */
+}
 
-.image-container {
-  display: inline-block;
+.right-align {
+  text-align: right;
+  padding-right: 10px; 
+  margin: 0;
+  max-width: none;
+  margin-left: 550px;
+}
+
+.carousel-container {
   position: relative;
-}
-
-.image-container img {
-  width: 400px; /* Set width */
-  height: auto;
-  transition: opacity 0.3s ease-in-out;
-  display: block;
-}
-
-.image-container:hover img {
-  opacity: 0; /* Hides original pic */
-}
-
-.image-container:hover {
-  background-image: url('images_1/amongus2.png'); /* hovered image */
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-2:hover {
-  background-image: url('images_1/anya2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-3:hover {
-  background-image: url('images_1/blueberry2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-4:hover {
-  background-image: url('images_1/bunnyplush2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-5:hover {
-  background-image: url('images_1/crow2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-6:hover {
-  background-image: url('images_1/dogo2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-7:hover {
-  background-image: url('images_1/gradplush2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-8:hover {
-  background-image: url('images_1/kenma2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-9:hover {
-  background-image: url('images_1/kirbyplush2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-10:hover {
-  background-image: url('images_1/lopsidedcin2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-.image-container.img-11:hover {
-  background-image: url('images_1/mong2.png'); 
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: auto;
-}
-
-nav {
-  position: fixed; 
-  top: 0;
-  left: 0;
+  margin: 20px auto;
   width: 100%;
-  text-align: left;
-  padding: 10px 0;
-  z-index: 3; 
+}
+
+.color-bar {
+  height: 250px;
+  background-color: #2a49a0;
+  margin-bottom: 20px;
+  position: absolute;
+  left: -50vw;
+  width: 150vw;
+  z-index: 0;
+}
+
+/* Carousel styling */
+.carousel {
   display: flex;
   align-items: center;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  transition: transform 0.3s ease, color 0.3s ease; 
-}
-
-nav a:hover {
-  transform: scale(1.2); 
-  color: #FFD700;
-}
-
-.home-btn {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px;
-}
-
-.dropdown {
+  overflow: hidden;
   position: relative;
-  display: inline-block;
 }
 
-.dropbtn {
-  background-color: rgba(19, 29, 104, 0.5);
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  padding: 10px;
-  border: none;
+/* Styling for each image in the carousel */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  max-width: 150px;
+  margin: 0 10px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
   cursor: pointer;
 }
 
-.dropdown-content {
-  display: none;
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ffffff;
   position: absolute;
-  background-color: rgba(47, 74, 149, 0.9);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1;
 }
 
-.dropdown-content a {
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+
+/* Main carousel styles */
+.carousel:not(.auto-carousel) {
+  height: 250px; /* Larger height for the main carousel */
+}
+
+.carousel:not(.auto-carousel) .carousel-item {
+  max-width: 200px; /* Larger PNGs for the main carousel */
+  max-height: 200px; /* Ensures the images fit nicely */
+}
+
+/* Auto-scrolling carousels */
+.auto-carousel {
+  height: 150px; /* Smaller height for the decorative carousels */
+}
+
+.auto-carousel .carousel-item {
+  max-width: 100px; /* Smaller PNGs for decorative carousels */
+  max-height: 100px; /* Ensures the images fit within the height */
+}
+
+/* Optional: Add consistent object-fit for images */
+.carousel-item {
+  object-fit: contain; /* Ensures images maintain aspect ratio */
+}
+
+.auto-left .carousel-inner {
+  animation: scroll-left 20s linear infinite;
+}
+
+.auto-right .carousel-inner {
+  animation: scroll-right 20s linear infinite;
+}
+
+.auto-left, .auto-right {
+  opacity: 0.5; /* Adjust the value (0.0 to 1.0) as needed */
+  transition: opacity 0.3s ease; /* Optional: smooth transition effect */
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem; /* Increase font size */
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  padding: 10px; /* Optional: Add padding for easier clickability */
+  margin: 0 5px; /* Optional: Adjust margin for spacing */
+}
+
+.prev {
+  left: 20px; /* Adjust positioning as needed */
+}
+
+.next {
+  right: 20px; /* Adjust positioning as needed */
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: translateY(-50%) scale(3);
+}
+
+.carousel-overlay {
+  position: fixed;
+  top: 78px;
+  left: 91%;
+  transform: translateX(-50%);
+  z-index: 10;
   color: white;
   padding: 10px;
-  text-decoration: none;
-  display: block;
+  text-align: right;
+  opacity: 90%
+}
+
+.carousel-overlay2 {
+  position: fixed;
+  top: 401px;
+  left: 19%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: white;
+  padding: 10px;
+  opacity: 90%
+}
+
+.carousel-title {
+  font-size: 1.95rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.carousel-title2 {
+  font-size: 8rem;
+  font-weight: bold;
+  text-align: left;
   font-family: 'Poppins', sans-serif;
 }
 
-.dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.carousel-title3 {
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 0.9;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll halfway since items are duplicated */
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
