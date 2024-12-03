@@ -147,15 +147,15 @@ p {
   width: 300px;
   height: 500px;
   cursor: pointer;
-  margin-bottom: 20px; /* Adds spacing between images */
+  margin-top: 30px;
 }
 
 .image-container img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   transition: transform 0.3s ease, opacity 0.5s ease;
 }
