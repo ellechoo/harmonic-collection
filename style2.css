@@ -85,7 +85,7 @@ h1 {
   text-align: left;
   position: relative;
   top: 20px;
-  left: 5px;
+  left: 9px;
 }
 
 h2 {
@@ -94,8 +94,8 @@ h2 {
   text-align: left;
   position: relative;
   top: 10px;
-  left: 5px;
-  line-height: 0.2;
+  left: 9px;
+  line-height: 0.005;
 }
 
 p {
@@ -147,7 +147,7 @@ p {
   width: 300px;
   height: 500px;
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .image-container img {
