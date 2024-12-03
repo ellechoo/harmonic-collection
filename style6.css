@@ -1,5 +1,5 @@
 body {
-  background-color: #091239;
+  background-color: #21137D;
   position: relative;
   margin-top: 80px;
   font-family: 'Poppins', sans-serif;
@@ -28,11 +28,11 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2); 
-  color: #FFD700;
+  color: #ffffff;
 }
 
 .home-btn {
-  color: white;
+  color: #845DEF;
   margin-right: 15px;
   text-decoration: none;
   font-weight: 500;
@@ -46,7 +46,7 @@ nav a:hover {
 
 .dropbtn {
   background-color: rgba(19, 29, 104, 0.5);
-  color: white;
+  color: #845DEF;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -58,14 +58,14 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(47, 74, 149, 0.9);
+  background-color: rgb(112, 65, 219, 0.9);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: white;
+  color: #af92ff;
   padding: 10px;
   text-decoration: none;
   display: block;
@@ -81,7 +81,7 @@ nav a:hover {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: #af92ff;
   font-size: 20px;
   margin-left: 18px;
   text-align: center;
@@ -98,7 +98,7 @@ h2 {
   margin-left: 60px;
   margin-right: 60px;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #af92ff;
 }
 
 p {
@@ -107,7 +107,7 @@ p {
   margin-right: 60px;
   line-height: 1.8;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #845DEF;
 }
 
 .right-align {
@@ -126,7 +126,7 @@ p {
 
 .color-bar {
   height: 250px;
-  background-color: #2a49a0;
+  background-color: #1A0865;
   margin-bottom: 20px;
   position: absolute;
   left: -50vw;
