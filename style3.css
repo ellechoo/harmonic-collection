@@ -1,5 +1,5 @@
 body {
-  background-color: #61176a;
+  background-color: #a33fb0;
   position: relative;
   margin-top: 60px;
   font-family: 'Poppins', sans-serif;
@@ -117,8 +117,19 @@ p {
   font-size: 12px;
   color: white;
   margin-left: 22px;
-  text-align: center;
+  margin-top: 300px;
+  text-align: left;
 }
+
+p1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: white;
+  margin-left: 90px;
+  margin-top: 200px;
+  text-align: left;
+}
+
 
 /* Binder Container */
 .binder-container {
@@ -224,29 +235,3 @@ p {
 .carousel-photo:nth-child(1) { animation-delay: 0s; }
 .carousel-photo:nth-child(2) { animation-delay: 1s; }
 .carousel-photo:nth-child(3) { animation-delay: 2s; }
-
-.sidebar {
-  position: fixed;
-  top: 60px; /* Below the nav */
-  left: 1200px;
-  width: 200px; /* Adjust as necessary */
-  background-color: rgba(19, 29, 104, 0.8); /* Background color */
-  color: white;
-  padding: 15px;
-  z-index: 2; /* Ensure it is above other content */
-}
-
-.sidebar button {
-  display: block; /* Each button on a new line */
-  margin: 10px 0;
-  padding: 10px;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.sidebar button:hover {
-  background-color: #0056b3; /* Darker on hover */
-}

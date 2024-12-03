@@ -32,23 +32,12 @@
 
  <h1>COLLECTION <br> </h1> <h2>THREE</h2>
    <h3>PHOTOCARDS</h3>
- <p>Click on the binder!</p>
- <p>Note: Cards that have two idols in one photo have been split into seperate entities for this chart.</p>
-
-
-
- <div id="controls">
-  <button id="sort-ascending">Sort Ascending</button>
-  <button id="sort-descending">Sort Descending</button>
-  <button id="sort-alphabetical">Sort Alphabetical</button>
-</div>
-
-
+ 
  <script>
  const photocardsData = {
     "NewJeans": {
       "sets": {
-        "Get Up - Bunny Beach Bag Hanni Version": [
+        "Get Up - Hanni Ver": [
           { "id": 1, "name": "Hanni" },
           { "id": 2, "name": "Hanni" },
           { "id": 3, "name": "Hanni" },
@@ -295,21 +284,19 @@
     const idolChart = chart(flattenedIdolData);
     document.body.appendChild(idolChart);
 
-   
-    document.getElementById("sort-ascending").addEventListener("click", () => {
-    albumChart.update((a, b) => a.frequency - b.frequency);
-    idolChart.update((a, b) => a.frequency - b.frequency);
-    });
+    // Append album chart
+  const albumChartContainer = document.createElement("div");
+  albumChartContainer.innerHTML = "<p>Number of Photocards Per Album</p>";
+  albumChartContainer.appendChild(albumChart);
+  document.body.appendChild(albumChartContainer);
 
-    document.getElementById("sort-descending").addEventListener("click", () => {
-    albumChart.update((a, b) => b.frequency - a.frequency);
-    idolChart.update((a, b) => b.frequency - a.frequency);
-    });
+  // Append idol chart
+  const idolChartContainer = document.createElement("div");
+  idolChartContainer.innerHTML = "<p>Number of Photocards Per Idol</p>";
+  idolChartContainer.appendChild(idolChart);
+  document.body.appendChild(idolChartContainer);
 
-    document.getElementById("sort-alphabetical").addEventListener("click", () => {
-    albumChart.update((a, b) => a.letter.localeCompare(b.letter));
-    idolChart.update((a, b) => a.letter.localeCompare(b.letter));
-    });
+
    </script>
 
 
@@ -323,9 +310,8 @@
    <!-- Infinite Carousel of Photos -->
    <div class="carousel" id="carouselContainer" style="display: none;">
      <img src="images_1/njcards1.png" alt="Photo 1" class="carousel-photo">
-     <img src="images_1/njcards2.png" alt="Photo 2" class="carousel-photo">
-     <img src="images_1/njcards3.png" alt="Photo 3" class="carousel-photo">
-     <!-- Add more images as needed -->
+     <img src="images_1/skzpolo.png" alt="Photo 2" class="carousel-photo">
+     <img src="images_1/howsweetpcs.png" alt="Photo 3" class="carousel-photo">
    </div>
   
    <!-- Reset Button -->
