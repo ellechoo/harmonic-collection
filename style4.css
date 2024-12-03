@@ -1,5 +1,5 @@
 body {
-  background-color: #7facc2;
+  background-color: #66bce0;
   position: relative;
   margin-top: 80px;
   font-family: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #E42693;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -28,11 +28,11 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2); 
-  color: #FFD700;
+  color: #0a5986;
 }
 
 .home-btn {
-  color: white;
+  color: #E42693;
   margin-right: 15px;
   text-decoration: none;
   font-weight: 500;
@@ -45,8 +45,8 @@ nav a:hover {
 }
 
 .dropbtn {
-  background-color: rgba(19, 29, 104, 0.5);
-  color: white;
+  background-color: rgb(228, 38, 147, 0.5);
+  color: #ffffff;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   padding: 10px;
@@ -57,7 +57,7 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(47, 74, 149, 0.9);
+  background-color: rgb(203, 6, 115, 0.9);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 h1 {
-  color: rgb(14, 42, 85);
+  color: #CB0673;
   font-size: 30px;
   position: fixed; /* Fix position relative to the viewport */
   top: 4%;
@@ -91,7 +91,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(14, 42, 85);
+  color: #CB0673;
   font-size: 73px;
   position: fixed;
   top: 7%; 
@@ -102,7 +102,7 @@ h2 {
 }
 
 h3 {
-  color: rgb(14, 42, 85);
+  color: #CB0673;
   font-size: 87px;
   position: fixed;
   top: 5%; 
@@ -114,8 +114,8 @@ h3 {
 
 p {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  color: white;
+  font-size: 20px;
+  color: #E42693;
   margin-left: 22px; 
   text-align: center;
 }
@@ -158,7 +158,7 @@ p {
 
 .overlay-image:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 15px 5px rgba(14, 42, 85, 0.8); /* White glowing effect */
+  box-shadow: 0 0 15px 5px rgb(203, 6, 115, 0.8);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
