@@ -29,8 +29,10 @@ body {
   p {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    position: fixed;
     color: #FBD5C1;
     margin-left: 1190px; 
+    z-index: 2
   }
 
 
@@ -215,7 +217,7 @@ body {
   }
   
   nav a {
-    color: white;
+    color: #FFEADE;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -225,11 +227,11 @@ body {
   
   nav a:hover {
     transform: scale(1.2); 
-    color: #FFD700;
+    color: #b17b63;
   }
   
   .home-btn {
-    color: white;
+    color: #FFEADE;
     margin-right: 15px;
     text-decoration: none;
     font-weight: 500;
@@ -242,8 +244,8 @@ body {
   }
   
   .dropbtn {
-    background-color: rgba(19, 29, 104, 0.5);
-    color: white;
+    background-color: rgb(5, 114, 87, 0.5);
+    color: #FFEADE;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     padding: 10px;
@@ -254,14 +256,14 @@ body {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(47, 74, 149, 0.9);
+    background-color: rgb(5, 114, 87, 0.9);
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   
   .dropdown-content a {
-    color: white;
+    color: #FFEADE;
     padding: 10px;
     text-decoration: none;
     display: block;
