@@ -28,7 +28,7 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2); 
-  color: #FFD700;
+  color: #C596F6;
 }
 
 .home-btn {
@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: #F3DAFC;
   font-size: 31.5px;
   position: fixed; 
   top: 4%;
@@ -91,7 +91,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(255, 255, 255);
+  color: #F3DAFC;
   font-size: 65px;
   position: fixed;
   top: 7%; 
@@ -102,7 +102,7 @@ h2 {
 }
 
 h3 {
-  color: rgb(255, 255, 255);
+  color: #F3DAFC;
   font-size: 75px;
   position: fixed;
   top: 6%; 
@@ -114,8 +114,8 @@ h3 {
 
 p {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  color: white;
+  font-size: 14px;
+  color: #F3DAFC;
   margin-left: 22px;
   margin-top: 300px;
   text-align: left;
