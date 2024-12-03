@@ -21,11 +21,11 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2); 
-  color: #FFD700;
+  color: #0A316D;
 }
 
 .home-btn {
-  color: white;
+  color: #0A316D;
   margin-right: 15px;
   text-decoration: none;
   font-weight: 500;
@@ -74,7 +74,7 @@ nav a:hover {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: #FBE0F1;
   font-size: 30px;
   position: fixed; 
   top: 4%;
@@ -85,7 +85,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(255, 255, 255);
+  color: #FBE0F1;
   font-size: 65px;
   position: fixed;
   top: 7%; 
@@ -96,7 +96,7 @@ h2 {
 }
 
 h3 {
-  color: rgb(255, 255, 255);
+  color: #FBE0F1;
   font-size: 87px;
   position: fixed;
   top: 5%; 
@@ -107,14 +107,16 @@ h3 {
 }
 
 p {
+  font-size: 18px;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #0A316D;
   margin-left: 22px; 
 }
 
-/* General body and font styles */
+
+
 body {
-  background-color: rgb(61, 74, 147);
+  background-color: #a33fb0;
   font-family: 'Poppins', sans-serif;
   margin-top: 0; /* Remove any margin at the top */
 }
@@ -135,7 +137,7 @@ body {
 
 .color-bar {
   height: 250px;
-  background-color: #2a49a0;
+  background-color: #0A316D;
   margin-bottom: 20px;
   position: absolute;
   left: -50vw;
@@ -177,7 +179,7 @@ button {
   background-color: transparent;
   border: none;
   font-size: 2rem;
-  color: #ffffff;
+  color: #FBE0F1;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -240,7 +242,7 @@ button {
   background-color: transparent;
   border: none;
   font-size: 3rem; /* Increase font size */
-  color: #ffffff;
+  color: #FBE0F1;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
