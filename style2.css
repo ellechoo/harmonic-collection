@@ -28,7 +28,7 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2); 
-  color: #BD88A7;
+  color: #7596E0;
 }
 
 .home-btn {
@@ -81,21 +81,24 @@ nav a:hover {
 
 h1 {
   color: #FBE0F1;
-  font-size: 30px;
-  text-align: left;
-  position: relative;
-  top: 20px;
-  left: 9px;
+  font-size: 38.6px;
+  position: fixed; /* Fix position relative to the viewport */
+  top: 19%;
+  left: 1.6%; 
+  margin: 0; /* Remove unnecessary margins */
+  text-align: right;
+  z-index: 2; /* Ensure it's above other content */
 }
 
-h2 {
+h3 {
   color: #FBE0F1;
-  font-size: 67px;
+  font-size: 87px;
+  position: fixed;
+  top: 5%; 
+  left: 1.5%; 
+  margin: 0; 
   text-align: left;
-  position: relative;
-  top: 10px;
-  left: 9px;
-  line-height: 0.005;
+  z-index: 2; */
 }
 
 p {
