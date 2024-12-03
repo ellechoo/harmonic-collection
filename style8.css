@@ -2,7 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: white;
   font-weight: bold;
-  background-color: rgb(68, 91, 138);
+  background-color: #1D022F;
   text-align: center; 
   margin-top: 60px;
   padding: 0;
@@ -21,7 +21,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #A9326B;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -31,11 +31,11 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2);
-  color: #FFD700; 
+  color: #D863A2; 
 }
 
 .home-btn {
-  color: white;
+  color: #A9326B;
   margin-right: 15px;
   text-decoration: none;
   font-weight: 500;
@@ -48,8 +48,8 @@ nav a:hover {
 }
 
 .dropbtn {
-  background-color: rgba(19, 29, 104, 0.5);
-  color: white;
+  background-color: rgb(65, 22, 94, 0.5);
+  color: #A9326B;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   padding: 10px;
@@ -60,14 +60,14 @@ nav a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(47, 74, 149, 0.9);
+  background-color: rgb(65, 22, 94, 0.9);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: white;
+  color: #BF4583;
   padding: 10px;
   text-decoration: none;
   display: block;
@@ -94,7 +94,7 @@ footer {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: #BF4583;
   font-size: 30px;
   position: fixed; 
   top: 4%;
@@ -105,7 +105,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(255, 255, 255);
+  color: #BF4583;
   font-size: 60px;
   position: fixed;
   top: 7%; 
@@ -116,7 +116,7 @@ h2 {
 }
 
 h3 {
-  color: rgb(255, 255, 255);
+  color: #BF4583;
   font-size: 70px;
   position: fixed;
   top: 6%; 
@@ -127,6 +127,7 @@ h3 {
 }
 
 p {
+  color: #BF4583;
   margin-bottom: 50px;
   margin-left: 60px;
   margin-right: 60px;
