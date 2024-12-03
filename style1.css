@@ -1,5 +1,5 @@
 body {
-  background-color: #091239;
+  background-color: #4F1032;
   position: relative;
   margin-top: 80px;
   font-family: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: #FB6B95;
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
@@ -28,11 +28,11 @@ nav a {
 
 nav a:hover {
   transform: scale(1.2); 
-  color: #FFD700;
+  color: #B6062E;
 }
 
 .home-btn {
-  color: white;
+  color: #FB6B95;
   margin-right: 15px;
   text-decoration: none;
   font-weight: 500;
@@ -46,7 +46,7 @@ nav a:hover {
 
 .dropbtn {
   background-color: rgba(19, 29, 104, 0.5);
-  color: white;
+  color: #FB6B95;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -81,7 +81,7 @@ nav a:hover {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: #FB6B95;
   font-size: 20px;
   margin-left: 18px;
   text-align: center;
@@ -98,7 +98,7 @@ h2 {
   margin-left: 60px;
   margin-right: 60px;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #FB6B95;
 }
 
 p {
@@ -107,7 +107,7 @@ p {
   margin-right: 60px;
   line-height: 1.8;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #E74671;
 }
 
 .right-align {
@@ -126,7 +126,7 @@ p {
 
 .color-bar {
   height: 250px;
-  background-color: #2a49a0;
+  background-color: #E74671;
   margin-bottom: 20px;
   position: absolute;
   left: -50vw;
