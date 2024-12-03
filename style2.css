@@ -144,7 +144,7 @@ p {
 .image-container {
   position: relative;
   display: inline-block;
-  width: 300px;
+  width: 500px;
   height: 500px;
   cursor: pointer;
   margin-top: 35px;
